@@ -1,0 +1,322 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Medieninformatik</title>
+    <meta name="description" content="Organisatorisches, Lehrveranstaltungen, Passwörter, etc.">
+    <meta name="author" content="656C6C77">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #000;
+            vertical-align: baseline;
+        }
+
+        #canvas {
+
+          display: block;
+          position: absolute;
+          width: 100%;
+        }
+
+
+        a {
+            position: relative;
+            color: #000;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #A31F34;
+            color: #A31F34;
+            
+        }
+
+        .toc a:after{background: none;
+        padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+        }
+
+        a:after{background:url('data:image/svg+xml;utf8,<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><title>link</title><path d="M10 0v4H9V1.707L5.853 4.854l-.706-.707L8.293 1H6V0h4zM0 10V0h4v1H1v8h8V6h1v4H0z" fill="#A31F34" fill-rule="evenodd"/></svg>') center no-repeat;padding-right:10px;content:"";margin-left:5px;margin-right:3px}
+
+        
+        p {
+            line-height: 1.6em;
+        }
+        .box {
+            padding: 20px;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            border: 1px solid #000;
+            background: #fff;
+            position: relative;
+            vertical-align: baseline;
+            line-height: 14px;
+        }
+        .box.green {
+            border: 1px solid #A31F34;
+        }
+        .box.green:before {
+            border-color: #A31F34;
+            color: #A31F34;
+            background: url('data:image/svg+xml;utf8,<svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><title>user</title><path id="canvas_background" fill="none" d="M-1-1h18v17H-1z"/><title>Layer 1</title><path d="M8 7a3.5 3.5 0 1 0-3.5-3.5A3.5 3.5 0 0 0 8 7zm0-6a2.5 2.5 0 1 1-2.5 2.5A2.5 2.5 0 0 1 8 1zm6.68 10.051A2.986 2.986 0 0 0 11.84 9H4.16a2.986 2.986 0 0 0-2.84 2.051L0 15h16l-1.32-3.949zM1.39 14l.88-2.633A1.988 1.988 0 0 1 4.16 10h7.68a1.988 1.988 0 0 1 1.89 1.367L14.61 14H1.39z" fill="#A31F34" fill-rule="evenodd"/></svg>') no-repeat 9px center;
+            content: "";
+            display: block;
+            height: 36px;
+    width: 36px;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 15px;
+    padding-top: 9px;
+        }
+        h1 {
+                -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    vertical-align: baseline;
+        margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.2em;
+        font-weight: bold;
+            margin-bottom: .5em;
+            font-size: 2em;
+            color: #A31F34;
+            text-align:center;
+        }
+        h2 {
+            line-height: 1.2em;
+            margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    text-transform: none;
+    border-bottom: none;
+    border-left: none;
+    clear: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+        }
+        .text {
+            margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+            line-height: 1.6em;
+    margin-bottom: 1em;
+        }
+        ul {
+            font: inherit;
+    vertical-align: baseline;
+            margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+            line-height: 1.6em;
+    list-style-position: outside;
+    margin-bottom: 1em;
+    margin-left: 1.1em;
+                list-style-type: square;
+        }
+        li {
+            margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+        }
+        .header {
+                margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    margin-bottom: 10px;
+        }
+        #content a:before {
+          height: 1px;
+        }
+        #content {
+          padding: 50px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        svg {
+            height: 0.7em;
+            vertical-align: baseline;
+        }
+        @media (min-width: 800px) {
+            #content {
+                width:800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]><p class="browserupgrade">You are using an <b>outdated</b> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+    <div id="canvas">
+        
+        <div id="content">
+        <h1><img src="https://github.com/andreasellw/andreasellw.github.io/raw/master/edu/mibw.jpg" style="height:4em;"></img></h1>
+            <!--<h1><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="100%"
+   id="svg2"
+   version="1.1"
+   x="0px" y="0px"
+   viewBox="0 0 350 160"
+   xml:space="preserve"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="LMU-Logo.svg">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="511"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="1.1628571"
+     inkscape:cx="175"
+     inkscape:cy="78.280098"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <path
+     d="M289.28195 159.31415C264.73858 157.35077 249.13888 145.4265 244.61324 125.16974C243.08962 118.35001 243.19213 122.88937 243.108 58.508452L243.03155 0L259.39154 0L275.75155 0L275.8342 57.085772C275.89908 101.88872 275.98211 114.6052 276.22011 116.18701C277.98205 127.89766 283.12169 134.29881 292.02359 135.86938C294.57742 136.31997 300.53376 136.06232 302.79758 135.40337C310.97876 133.02194 315.39839 126.79773 316.7749 115.71902C316.94342 114.36281 317.02456 95.230527 317.02456 56.854862L317.02456 0L333.51229 0L350 0L349.91987 58.034222C349.83246 121.37068 349.91849 117.30508 348.52924 123.76386C344.74304 141.36643 332.14108 153.6595 313.65431 157.78398C306.39701 159.4031 297.43078 159.96604 289.28195 159.31415zM82.042257 0.474231L114.5049 0.474231L114.72239 1.244859C116.25187 6.664441 153.99636 132.01583 154.14721 132.17658C154.2614 132.29828 154.41853 132.33417 154.49639 132.25633L194.58796 0.592781L211.10983 0.53191L227.6317 0.471008L227.6317 157.44527L207.71392 157.44527C207.71392 157.44527 207.65185 17.527792 207.42458 17.603532L163.19977 157.32671L144.35605 157.32671C144.35605 157.32671 101.18677 17.644531 101.04047 17.595761L100.77445 157.44527L82.042257 157.44527L82.042257 0.474231zM0 0L13.752739 0L13.752739 145.35232L65.918348 145.35232L65.918348 156.97104L0 156.97104L0 0z"
+     id="path4"
+     fill="#A31F34" />
+</svg> Medieninformatik</h1><h2>Linksammlung</h2>   
+                    <p class="toc"><a>Klausurtermine, Verbuchte Prüfungen & Kontoauszug</a>, WLAN & VPN</p>   -->        
+            <div class="box">
+                <div class="header">
+                    <h2>Klausurtermine, Verbuchte Prüfungen & Kontoauszug</h2>    
+                </div>    
+                <p class="text">
+                    Studiengangskoordinator <a href="http://www2.tcs.ifi.lmu.de/~letz/" title="Opens external link in new window" target="_blank">Dr. Reinhold Letz</a> führt Buch über aktuelle, als auch vergangene Klausurtermine. Eine Liste aller verbuchten Prüfungen gibt Aufschluß darüber, welche Prüfungsergebnisse bereits von Dr. Letz verbucht wurden. Im Kontoauszug kann jeweils der aktuelle Stand eigener Studienergebnisse eingesehen werden. Dieser ist beim PVI zu finden.
+                </p>    
+                <ul>
+                    <li>Klausurtermine im <a href="http://www2.tcs.ifi.lmu.de/~letz/bachelor/klausuren-ws16/" title="Opens external link in new window" target="_blank">WS16</a>, <a href="http://www2.tcs.ifi.lmu.de/~letz/bachelor/klausuren-ss16/" title="Opens external link in new window" target="_blank">SS16</a>, <a href="http://www2.tcs.ifi.lmu.de/~letz/bachelor/klausuren-ws15/" title="Opens external link in new window" target="_blank">WS15</a></li>
+                    <li><a href="http://www2.tcs.ifi.lmu.de/~letz/verbuchte_pruefungen/" title="Opens external link in new window" target="_blank">Liste der bereits verbuchten Prüfungen</a></li>
+                    <li><a href="https://pvineu.ifi.lmu.de/" title="Opens external link in new window" target="_blank">Prüfungsverwaltungs- und Informationssystem (PVI)</a></li>
+                </ul>    
+            </div> 
+            <div class="box">
+                <div class="header">
+                    <h2>WLAN & VPN</h2>    
+                </div>    
+                <p class="text">
+                    Eduroam bietet Wissenschaftler/innen und Studierenden aus München und vielen anderen europäischen Universitäten kostenlosen Internetzugang. Eine VPN-Verbindung gestattet Zugriff auf zugangsbeschränkte, interne MWN-Dienste über fremde Internet-Anbieter.
+                </p>    
+                <ul>
+                    <li><a href="https://www.lrz.de/services/netz/wlan/eduroam/" title="Opens external link in new window" target="_blank">eduroam (DFN Roaming)</a></li>
+                    <li><a href="https://www.lrz.de/services/netz/mobil/vpn/" title="Opens external link in new window" target="_blank">VPN im Münchner Wissenschaftsnetz (MWN)</a></li>
+                </ul>    
+            </div>    
+            <div class="box">
+                <div class="header">
+                    <h2>Offizielle Social Media Kanäle</h2>    
+                </div>        
+                <ul>
+                    <li><a href="https://mediainformatics.wordpress.com/" title="Opens external link in new window" target="_blank">WordPress Blog</a></li>
+                    <li><a href="https://twitter.com/mimuc?lang=de" title="Opens external link in new window" target="_blank">Twitter Account</a></li>
+                    <li><a href="https://www.facebook.com/LMU.Medieninformatik/" title="Opens external link in new window" target="_blank">Facebook Seite</a></li>
+                </ul>    
+            </div> 
+            <div class="box">
+                <div class="header">
+                    <h2>Fachschaft Medieninformatik der LMU München</h2>    
+                </div>        
+                <ul>
+                    <li><a href="https://www.facebook.com/FS.Medieninformatik.LMU/" title="Opens external link in new window" target="_blank">Facebook Seite</a></li>
+                </ul>    
+            </div>
+            <div class="box">
+                <div class="header">
+                    <h2>Facebook Gruppen</h2>    
+                </div>        
+                <ul>
+                    <li><a href="https://www.facebook.com/groups/mimuc/" title="Opens external link in new window" target="_blank">LMU Medieninformatik</a></li>
+                    <li><a href="https://www.facebook.com/groups/mminteraktion/" title="Opens external link in new window" target="_blank">Anwendungsfach MMI</a></li>
+                    <li><a href="https://www.facebook.com/groups/478469192314044/" title="Opens external link in new window" target="_blank">Beginn 2015/16</a></li>
+                    <li><a href="https://www.facebook.com/groups/mimuc14/" title="Opens external link in new window" target="_blank">Beginn 2014/15</a></li>
+                    <li><a href="https://www.facebook.com/groups/1374230816149336/" title="Opens external link in new window" target="_blank">Beginn 2013/14</a></li>
+                    <li><a href="https://www.facebook.com/groups/425776210814828/" title="Opens external link in new window" target="_blank">Beginn 2012/13</a></li>
+                </ul>
+            </div> 
+            <div class="box">
+                <div class="header">
+                    <h2>Messaging Apps</h2>    
+                </div>    
+                <p>Die Registrierung ist nur mit einer eigenen, gültigen @cip.ifi.lmu.de oder @ifi.lmu.de E-Mail-Adresse möglich.
+                <ul>
+                    <li><a href="https://mimuc.slack.com/" title="Opens external link in new window" target="_blank">Slack</a></li>
+                    <li><a href="https://chat.medien.ifi.lmu.de/mimuc/" title="Opens external link in new window" target="_blank">Mattermost</a></li>
+                </ul>    
+            </div>  
+            <div class="box green">
+                <div class="header">
+                    <h2>Fehlt ein Link?</h2>    
+                </div>     
+                <ul>
+                    <li>Die Website wurde zuletzt am 30. September 2016 aktualisiert und befindet sich noch im Aufbau. Anregungen nehmen wir gerne entgegen.</li>
+                </ul>    
+            </div> 
+    </div>
+</div>    
+</body>
+
+</html>

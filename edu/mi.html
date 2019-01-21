@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Medieninformatik</title>
+    <meta name="description" content="Organisatorisches, Lehrveranstaltungen, Passwörter, etc.">
+    <meta name="author" content="656C6C77">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+        min-height: 100%;
+    }
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #000;
+            background: #fff;
+        }
+
+        #canvas {
+
+          display: block;
+          position: absolute;
+          width: 100%;
+        }
+
+        #news {
+            padding: 50px;
+            text-align: left;
+            height: 100vh;
+            font-size: 30px;
+            line-height: 42px;
+            font-weight: 300;
+            background: #A31F34;
+        }
+
+
+        a {
+            position: relative;
+            color: #000;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.25s ease-in-out 0s;
+            transition: all 0.25s ease-in-out 0s;
+        }
+
+        a:hover:before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        #content a:before {
+          height: 1px;
+        }
+        #content {
+          padding: 50px;
+        }
+        @media (max-width: 800px) {
+            #news, #content {
+                width:800px;
+            }
+            #news {
+              height:600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]><p class="browserupgrade">You are using an <b>outdated</b> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+    <div id="canvas">
+        <div id="news">
+            <ol>
+                <li><a href="#org">Organisatorisches</a></li>
+                <li><a href="#vl">Lehrveranstaltungen</a></li>
+                <li>Passwörter (nur offline)</li>
+                <li><a href="#social">Social Media Präsenzen</a></li>
+                <li><a href="#chat">Chaträume</a></li>
+                <li><a href="#groups">fb Gruppen</a><br/></li>
+            </ol>
+<p>Update: 28. September 2016</p>
+        </div>
+        <div id="content">
+            <p id="org"><b>Organisatorisches</b></p>
+            <ul>
+                <li>Studienordnung ( <a href="http://www.medien.ifi.lmu.de/studierende/studienordnung/bachelor/">bachelor</a>, <a href="http://www.medien.ifi.lmu.de/studierende/studienordnung/master/">master</a> )</li>
+                <li>Semesterplanung Bachelor ( <a href="http://www.medien.ifi.lmu.de/studierende/semesterplanung/bachelor/mediengestaltung/">gestaltung</a>, <a href="http://www.medien.ifi.lmu.de/studierende/semesterplanung/bachelor/mmi/">mmi</a>, <a href="http://www.medien.ifi.lmu.de/studierende/semesterplanung/bachelor/medienwirkung/">wirkung</a>,
+                    <a href="http://www.medien.ifi.lmu.de/studierende/semesterplanung/bachelor/medienwirtschaft/">wirtschaft</a> )</li>
+                <li>Medieninformtik-Wiki ( <a href="https://wiki.medien.ifi.lmu.de/">www</a> )</li>
+            </ul>
+            <ul>
+                <li>Informationen bzgl. Vertiefende Themen und Seminare ( <a href="http://www2.tcs.ifi.lmu.de/~letz/informationen.shtml">bachelor</a>, <a href="http://www2.tcs.ifi.lmu.de/~letz/informationen-master.shtml">master</a> )</li>
+                <li>Letz - Klausurtermine ( <a href="http://www2.tcs.ifi.lmu.de/~letz/bachelor/klausuren-ss16/">SS16</a>, <a href="http://www2.tcs.ifi.lmu.de/~letz/bachelor/klausuren-ws16/">WS16</a> )</li>
+                <li>Letz - Verbuchte Prüfungen ( <a href="http://www2.tcs.ifi.lmu.de/~letz/verbuchte_pruefungen/SS16.html">SS16</a>, <a href="http://www2.tcs.ifi.lmu.de/~letz/verbuchte_pruefungen/WS16.html">WS16</a> )</li>
+                <li>Letz - Kontoauszug ( <a href="https://pvineu.ifi.lmu.de/">www</a> )</li>
+            </ul>
+            <ul>
+                <li>UniWorX ( <a href="https://uniworx.ifi.lmu.de/">www</a> )</li>
+                <li>LMU Portal ( <a href="https://login.portal.uni-muenchen.de/login/loginapp/login.html">www</a> )</li>
+                <li>Beitragskonto ( <a href="https://qissos.verwaltung.uni-muenchen.de/">www</a> )</li>
+            </ul>
+            <ul>
+                <li>LSF ( <a href="https://lsf.verwaltung.uni-muenchen.de/">www</a> )</li>
+                <li>Lehrveranstaltungen Informatik ( <a href="http://www.ifi.lmu.de/lehrangebot1">www</a> )</li>
+                <li>Lehrveranstaltungen Mathematik ( <a href="http://www.mathematik.uni-muenchen.de/studium/kommvorlverz/index.shtml">www</a> )</li>
+                <li>Veranstaltungsübersicht LMU ( <a href="http://www.uni-muenchen.de/studium/studienangebot/vorlesungsverz/vvz_20161/index.html">www</a> )</li>
+            </ul>
+            <ul>
+                <li>Gebäudeübersichten ( <a href="http://www.uni-muenchen.de/ueber_die_lmu/standorte/lageplaene/index.html">www</a> )</li>
+                <li>Rechner-Pools ( <a href="https://www.ifi.lmu.de/studium/rechner-pools">www</a> )</li>
+                <li>Mensa ( <a href="http://www.studentenwerk-muenchen.de/mensa/speiseplan/index-de.html">www</a> )</li>
+            </ul>
+            <ul>
+                <li>Fachschaft Medieninformatik ( <a href="https://mi.fs.lmu.de/">www</a> )</li>
+                <li>Gruppe aktiver Fachschaftika ( <a href="https://gaf.fs.lmu.de/aktuelles/nachrichten">www</a> )</li>
+                <li>GAF Klausuren ( <a href="https://gaf.fs.lmu.de/studenten/pruefungsprotokolle-und-klausuren">www</a> )</li>
+            </ul>
+            <ul>
+                <li>LRZ - eduroam ( <a href="https://www.lrz.de/services/netz/wlan/eduroam/">www</a> )</li>
+                <li>LRZ - VPN ( <a href="https://www.lrz.de/services/netz/mobil/vpn/">www</a> )</li>
+                <li>RBG ( <a href="http://www.rz.ifi.lmu.de/">www</a> )</li>
+            </ul>
+            <ul>
+                <li>OPAC UB LMU ( <a href="https://opac.ub.uni-muenchen.de/">www</a> )</li>
+                <li>E-Medien-Login ( <a href="http://www.ub.uni-muenchen.de/ausleihe-online/digitaler-zugriff/e-medien-login/index.html#login_bookmarklet">www</a> )</li>
+            </ul>
+            <p id="vl"><b>Lehrveranstaltungen - SS16</b></p>
+            <ul>
+                <li>Algorithmen und Datenstrukturen ( <a href="https://www.tcs.ifi.lmu.de/lehre/ss-2016/algodat">www</a>, <a href="https://videoonline.edu.lmu.de/de">video</a>, Übungsblätter nur auf UniWorX )</li>
+                <li>Computergrafik 1 ( <a href="http://www.medien.ifi.lmu.de/lehre/ss16/cg1/">www</a> )</li>
+                <li>Grundbegriffe der Psychologie 2 ( <a href="https://lsf.verwaltung.uni-muenchen.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=575502&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">www</a> )</li>
+                <li>Human Factors in Engineering 2 ( <a href="http://www.psy.lmu.de/exp/teaching/courses/index.html">www</a> )</li>
+                <li>Interaction Design ( <a href="http://www.medien.ifi.lmu.de/lehre/ss16/id/">www</a> )</li>
+                <li>Medientechnik ( <a href="http://www.medien.ifi.lmu.de/lehre/ss16/mt/">www</a> )</li>
+                <li>Programmierung und Modellierung ( <a href="http://www.pms.ifi.lmu.de/lehre/pum/16ss/">www</a>, <a href="https://backstage.pms.ifi.lmu.de/">backstage</a> )</li>
+                <li>Rechnerarchitektur ( <a href="http://www.mobile.ifi.lmu.de/lehrveranstaltungen/rechnerarchitektur-sose16/">www</a> )</li>
+                <li>Rechnernetze und verteilte Systeme ( <a href="http://www.nm.ifi.lmu.de/teaching/Vorlesungen/2016ss/rn/">www</a>, Übungsblätter nur auf UniWorX )</li>
+                <li>Theoretische Informatik für Medieninformatiker ( <a href="https://www.tcs.ifi.lmu.de/lehre/ss-2016/timi">www</a> )</ul>
+            <ul>
+                <li>Datenbanksysteme 2 ( <a href="http://www.dbs.ifi.lmu.de/cms/Datenbanksysteme_II_16">www</a> )</li>
+                <li>e-Xplore Technical English ( <a href="https://kurse.vhb.org/VHBPORTAL/kursprogramm/studierende.jsp">www</a> )</li>
+                <li>IT-Management ( <a href="http://www.nm.ifi.lmu.de/teaching/Vorlesungen/2016ss/itmgmt/">www</a> )</li>
+                <li>Intellectual Property &amp; Information Technology ( <a href="http://www.mobile.ifi.lmu.de/lehrveranstaltungen/intellectual-property-information-technology-sose16/">www</a> )</li>
+                <li>Multimedia-Programmierung ( <a href="http://www.medien.ifi.lmu.de/lehre/ss16/mmp/">www</a> )</li>
+            </ul>
+
+            <p id="social"><b>Social Media Präsenzen</b></p>
+            <ul>
+                <li>Blog ( <a href="https://mediainformatics.wordpress.com/">www</a> )</li>
+                <li>Twitter ( <a href="https://twitter.com/mimuc?lang=de">www</a> )</li>
+                <li>Facebook ( <a href="https://www.facebook.com/LMU.Medieninformatik/">www</a> )</li>
+                <li>Facebook Fachschaft ( <a href="https://www.facebook.com/FS.Medieninformatik.LMU/">www</a> )</li>
+            </ul>
+            <p id="chat"><b>Chaträume</b></p>
+            <ul>
+                <li>Slack ( <a href="https://mimuc.slack.com">www</a>, mit @cip.ifi.lmu.de )</li>
+                <li>Mattermost ( <a href="https://chat.medien.ifi.lmu.de/mimuc/">www</a>, mit @cip.ifi.lmu.de )</li>
+            </ul>
+            <p id="groups"><b>fb Gruppen</b></p>
+            <ul>
+                <li>LMU Medieninformatik ( <a href="https://www.facebook.com/groups/mimuc/">www</a> )</li>
+                <li>Anwendungsfach MMI ( <a href="https://www.facebook.com/groups/mminteraktion/">www</a> )</li>
+                <li>Beginn 2012/13 ( <a href="https://www.facebook.com/groups/425776210814828/">www</a> )</li>
+                <li>Beginn 2013/14 ( <a href="https://www.facebook.com/groups/1374230816149336/">www</a> )</li>
+                <li>Beginn 2014/15 ( <a href="https://www.facebook.com/groups/mimuc14/">www</a> )</li>
+                <li>Beginn 2015/16 ( <a href="https://www.facebook.com/groups/478469192314044/">www</a> )</li>
+            </ul>
+        </div><div class="space" style="background: #fff;"></div>
+    </div>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80816870-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
