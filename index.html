@@ -1,120 +1,225 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Andreas Ellwanger">
+
     <!-- Primary Meta Tags -->
     <title>Andreas Ellwanger</title>
+    <meta name="author" content="Andreas Ellwanger">
     <meta name="title" content="Andreas Ellwanger">
-    <meta name="description" content="Currently, I am pursuing my Master’s degree in Computer Science at the Ludwig Maximilian University of Munich. I graduated in April 2018 from LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
+    <meta name="description"
+        content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.andreasellwanger.com/">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="cache/apple-touch-icon.png?v=rMqp4OEOKJ">
+    <link rel="icon" type="image/png" sizes="32x32" href="cache/favicon-32x32.png?v=rMqp4OEOKJ">
+    <link rel="icon" type="image/png" sizes="16x16" href="cache/favicon-16x16.png?v=rMqp4OEOKJ">
+    <link rel="manifest" href="cache/site.webmanifest?v=rMqp4OEOKJ">
+    <link rel="mask-icon" href="cache/safari-pinned-tab.svg?v=rMqp4OEOKJ" color="#010101">
+    <link rel="shortcut icon" href="cache/favicon.ico?v=rMqp4OEOKJ">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="cache/browserconfig.xml?v=rMqp4OEOKJ">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Social -->
+    <meta property="og:image:width" content="279">
+    <meta property="og:image:height" content="279">
     <meta property="og:title" content="Andreas Ellwanger">
-    <meta property="og:description" content="Currently, I am pursuing my Master’s degree in Computer Science at the Ludwig Maximilian University of Munich. I graduated in April 2018 from LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
-    <meta property="og:image" content="https://www.andreasellwanger.com/cache/ae-ogimage.png">
+    <meta property="og:description"
+        content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
+    <meta property="og:url" content="https://www.andreasellwanger.com">
+    <meta property="og:image" content="https://www.andreasellwanger.com/cache/og-image.jpg?v=rMqp4OEOKJ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.andreasellwanger.com/">
     <meta property="twitter:title" content="Andreas Ellwanger">
-    <meta property="twitter:description" content="Currently, I am pursuing my Master’s degree in Computer Science at the Ludwig Maximilian University of Munich. I graduated in April 2018 from LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
-    <meta property="twitter:image" content="https://www.andreasellwanger.com/cache/ae-ogimage.png">
+    <meta property="twitter:description"
+        content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
+    <meta property="twitter:image" content="https://www.andreasellwanger.com/cache/og-image.jpg?v=rMqp4OEOKJ">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="cache/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="cache/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="cache/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="cache/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="cache/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="cache/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="cache/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="cache/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="cache/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="cache/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="cache/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="cache/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="cache/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#A31F34">
-    <meta name="msapplication-TileImage" content="cache/ms-icon-144x144.png">
-    <meta name="theme-color" content="#A31F34">
-    <!--<link rel="dns-prefetch" href="//fonts.googleapis.com/">-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet">
+
     <style>
-        * {
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
+        @import url('https://rsms.me/inter/inter.css');
 
         html {
-            min-height: 100%;
+            font-family: 'Inter', sans-serif;
         }
+
+        @supports (font-variation-settings: normal) {
+            html {
+                font-family: 'Inter var', sans-serif;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-synthesis: none;
+        }
+
+        html {}
 
         body {
-            font-family: monospace;
-            text-rendering: optimizeLegibility;
-            color: #fff;
-            text-align: left;
-            background-color: #fff;
-        }
+            background-color: #ffffff;
+            color: #111;
+            font: 15px/22px 'Inter', system-ui, sans-serif;
 
-        .container {
-            margin: 0 auto;
-            max-width: 700px;
-            padding: 1rem;
-            margin-top: 3rem;
-        }
+            font-size: 15px;
+            line-height: 1.5;
 
-        p,
-        h1 {
-            font-size: 1rem;
+            letter-spacing: -0.004em;
+
             font-weight: 400;
-            color: #000;
+
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+
+            font-kerning: normal;
+            -webkit-font-kerning: normal;
+            -ms-font-kerning: normal;
+            -moz-font-kerning: normal;
+            -o-font-kerning: normal;
+
+            font-variant-ligatures: contextual common-ligatures;
+            -webkit-font-variant-ligatures: contextual common-ligatures;
+            -ms-font-variant-ligatures: contextual common-ligatures;
+            -moz-font-variant-ligatures: contextual common-ligatures;
+            -o-font-variant-ligatures: contextual common-ligatures;
         }
 
         h1 {
-            margin-top: 0;
+            color: #010101;
+            font-size: 81px;
+            letter-spacing: -0.055em;
+            line-height: 0.9em;
+            text-indent: -0.03em;
+            margin-bottom: 4rem;
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 4rem;
+            letter-spacing: -0.07em;
+        }
+
+        ellw {
+            font-weight: 740;
+        }
+
+        h2 {
+            font-size: 15px;
+        }
+
+        h2>a {
+            display: block;
+            color: inherit;
+            text-decoration: none !important;
+            text-shadow: none;
+            background: none;
+            outline: none;
         }
 
         a {
-            position: relative;
-            text-decoration: underline;
+            text-decoration: underline rgba(0, 0, 0, 0.3);
+            color: black;
+            word-break: break-word;
+            word-wrap: break-word;
         }
 
         a:hover {
-            font-style: italic;
-            text-decoration: none;
-
+            color: #F03009;
+            text-decoration: underline;
         }
 
-        @media (max-width: 800px) {
-            .container {
-                padding: 1.5rem;
-            }
+        a:after {
+            content: " \2197";
+        }
+
+        p:hover {
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        .illustration {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .illustration:before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            background: url(cache/illustration.png?v=rMqp4OEOKJ) no-repeat center top fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
     </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <div class="container">
-        <h1><a href="mailto:contact@andreasellwanger.com">Say hi</a> or take a look at my <a href="https://www.andreasellwanger.com/cv.pdf">Curriculum
-                Vitæ (CV)</a> while I am
-            rebuilding my website.</p>
-            <p>Since December '18 I have been working remotely as a Full Stack Developer / UX Researcher at <a href="https://aiderly.de/">Aiderly
-                    GmbH</a> (located in Berlin, Germany).</p>
-            <p>I am going to spend roughly six months in NL on deepening my CS knowledge in the inspiring, creative and
-                renowned environment of the oldest university in the Netherlands.</p>
-            <p>To view some of my latest projects (e.g. <a href="https://doi.org/10.1145/3213526.3213529">ACM full
-                    paper</a>,
-                <a href="https://www.dropbox.com/sh/05l5x0vayr7j12u/AAAx69okNomuRmn3xouJGzNNa?dl=0">DroNet `18</a>) or
-                have
-                a chat about work, send me a message on <a href="https://twitter.com/andreasellw">Twitter</a>, <a href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a>
-                or <a href="mailto:contact@andreasellwanger.com">email</a>.</p>
-    </div>
-    <!--<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>-->
+<body class="min-h-screen">
+    <main class="flex flex-col justify-center min-h-screen px-4  lg:ml-20 illustration">
+        <h1>
+            <ellw>Andreas Ellwanger</ellw>, B.Sc.
+        </h1>
+
+        <div class="flex flex-row mb-3">
+            <h2>About</h2>
+            <p>&nbsp;/&nbsp;<a href="https://www.andreasellwanger.com/cv.pdf">CV</a></p>
+        </div>
+
+        <p class="lg:max-w-lg mb-6">Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
+            Maximilian
+            University of
+            Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich
+            with a
+            Bachelor of Science in Media Informatics and Human-Computer Interaction. At the moment Andreas works
+            remotely
+            for a Berlin-based startup called <a href="https://aiderly.de/">Aiderly GmbH</a> as a Full Stack
+            Developer /
+            UX Researcher. Since last year he is
+            part of the <a href="https://www.tech4germany.org/ueber-uns/">Tech4Germany</a> fellowship, Germany’s
+            first
+            e-Government fellowship with Germany’s Chief of Staff Prof.
+            Helge Braun as patron. Therefore he had been staying in Berlin, Germany for three months to work as a UX
+            Researcher as well as a Frontend Developer for the German government. Together with eight other fellows,
+            they
+            worked on topics related to digitalisation and e-government.</p>
+        <div class="flex flex-row mb-3">
+            <h2>Research</h2>
+            <p>&nbsp;/&nbsp;<a href="https://doi.org/10.1145/3213526.3213529">ACM full paper</a>, <a
+                    href="https://www.dropbox.com/sh/05l5x0vayr7j12u/AAAx69okNomuRmn3xouJGzNNa?dl=0">Talk</a>
+            </p>
+        </div>
+        <p class="lg:max-w-lg mb-6">Andreas submitted the paper with the help of <a
+                href="https://www.axelhoesl.de/">Axel Hösl</a> and <a
+                href="http://www.mmi.ifi.lmu.de/team/andreas.butz/">Andreas Butz</a>. It received
+            overall merit <i>accept</i> and <i>weak accept</i> by two knowledgeable reviewers, and was accepted as one
+            of 6 full
+            papers (out of 26 submissions). Andreas presented the paper at the conference.</p>
+        <div class="flex flex-row mb-6">
+            <h2>Online presence</h2>
+            <p>&nbsp;/&nbsp;<a href="https://twitter.com/andreasellw/">Twitter</a>, <a
+                    href="https://github.com/andreasellw/">GitHub</a> and <a
+                    href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a></p>
+        </div>
+        <p class="lg:max-w-lg">— 👋🏻</p>
+    </main>
 </body>
 
 </html>
