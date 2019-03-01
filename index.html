@@ -1,7 +1,5 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +12,6 @@
         content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
 
     <!-- Favicons -->
-    <!-- Illustration https://absurd.design/ -->
     <link rel="apple-touch-icon" sizes="180x180" href="cache/apple-touch-icon.png?v=rMqp4OEOKJ">
     <link rel="icon" type="image/png" sizes="32x32" href="cache/favicon-32x32.png?v=rMqp4OEOKJ">
     <link rel="icon" type="image/png" sizes="16x16" href="cache/favicon-16x16.png?v=rMqp4OEOKJ">
@@ -42,11 +39,9 @@
         content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction.">
     <meta property="twitter:image" content="https://www.andreasellwanger.com/cache/og-image.jpg?v=rMqp4OEOKJ">
 
-    <!-- Tailwind CSS framework https://tailwindcss.com/ -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet">
 
     <style>
-        /* Inter font family https://rsms.me/inter/ */
         @import url('https://rsms.me/inter/inter.css');
 
         html {
@@ -170,13 +165,39 @@
             height: 100%;
             z-index: -1;
             opacity: 0.05;
-            /* Illustration https://absurd.design/ */
             /* webp converter https://www.aconvert.com/image/png-to-webp/ */
             background: url(cache/illustration.png?v=rMqp4OEOKJ) no-repeat center top fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+        }
+
+        wave {
+            -webkit-animation: movement 0.65s alternate 4;
+            animation: movement 0.65s alternate 4;
+            animation-timing-function: ease-in-out;
+            transform-origin: 50% 90%;
+        }
+
+        @-webkit-keyframes movement {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(60deg);
+            }
+        }
+
+        @keyframes movement {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(60deg);
+            }
         }
     </style>
 
@@ -233,8 +254,12 @@
                     href="https://github.com/andreasellw/">GitHub</a> and <a
                     href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a></p>
         </div>
-        <p class="max-w-lg">— 👋🏻</p>
+        <p class="max-w-lg">—&nbsp;&nbsp;<wave class="inline-block">👋🏻</wave>
+        </p>
     </main>
+    <script>
+        console.log("👋🏻 Special thanks to\n- https://rsms.me/inter/ for the lovely typeface family\n- https://absurd.design/ for the absurd illustration\n- https://tailwindcss.com/ for the utility-first framework");
+    </script>
 </body>
 
 </html>
