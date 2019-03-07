@@ -309,17 +309,6 @@
     </main>
     <script>
         console.log("👋🏻 Special thanks to\n- https://rsms.me/inter/ for the lovely typeface family\n- https://absurd.design/ for the absurd illustration\n- https://tailwindcss.com/ for the utility-first framework");
-
-        // http://joelcalifa.com/blog/revisiting-visited
-        localStorage.setItem('visited-' + window.location.pathname, true);
-        var links = document.getElementsByTagName('a');
-        for (i = 0; i < links.length; i++) {
-            var link = links[i];
-            if (link.host == window.location.host
-                && localStorage.getItem('visited-' + link.pathname + '/')) {
-                link.dataset.visited = true;
-            }
-        }
     </script>
 </body>
 
