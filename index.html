@@ -128,19 +128,44 @@
         }
 
         a {
-            text-decoration: underline rgba(0, 0, 0, 0.3);
-            color: black;
             word-break: break-word;
             word-wrap: break-word;
+            background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
+            background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
+            background: -o-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
+            background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
+            background: linear-gradient(to bottom, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
+            text-decoration: none;
+            color: #010101;
         }
 
         a:hover {
-            color: #F03009;
-            text-decoration: underline;
+            background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
+            background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
+            background: -o-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
+            background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
+            background: linear-gradient(to bottom, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
+            color: #010101;
+        }
+
+        a:visited {
+            background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
+            background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
+            background: -o-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
+            background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
+            background: linear-gradient(to bottom, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
+        }
+
+        a:visited:hover {
+            background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
+            background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
+            background: -o-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
+            background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
+            background: linear-gradient(to bottom, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
         }
 
         a:after {
-            /* color: #F03009; */
+            color: #010101;
             content: " \2197";
         }
 
@@ -284,6 +309,17 @@
     </main>
     <script>
         console.log("👋🏻 Special thanks to\n- https://rsms.me/inter/ for the lovely typeface family\n- https://absurd.design/ for the absurd illustration\n- https://tailwindcss.com/ for the utility-first framework");
+
+        // http://joelcalifa.com/blog/revisiting-visited
+        localStorage.setItem('visited-' + window.location.pathname, true);
+        var links = document.getElementsByTagName('a');
+        for (i = 0; i < links.length; i++) {
+            var link = links[i];
+            if (link.host == window.location.host
+                && localStorage.getItem('visited-' + link.pathname + '/')) {
+                link.dataset.visited = true;
+            }
+        }
     </script>
 </body>
 
