@@ -128,45 +128,49 @@
         }
 
         a {
+            text-decoration: none;
             word-break: break-word;
             word-wrap: break-word;
+
             background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
             background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
             background: -o-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
             background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
             background: linear-gradient(to bottom, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
-            text-decoration: none;
+        }
+
+        a:link,
+        :visited {
             color: #010101;
         }
 
-        a:hover {
+        a:hover,
+        a:visited:hover {
+            color: #010101;
             background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
             background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
             background: -o-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
             background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
             background: linear-gradient(to bottom, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
-            color: #010101;
-        }
-
-        a:visited {
-            background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
-            background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
-            background: -o-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
-            background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
-            background: linear-gradient(to bottom, transparent 0%, transparent 60%, #e2e2e2 60%, #e2e2e2 100%);
-        }
-
-        a:visited:hover {
-            background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
-            background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
-            background: -o-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
-            background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
-            background: linear-gradient(to bottom, transparent 0%, transparent 0%, #e2e2e2 0%, #e2e2e2 100%);
         }
 
         a:after {
+            font-weight: 700;
+            color: #1A67CC;
+            content: " ↗";
+        }
+
+        a:hover:after{
+            color: #1A67CC;
+            
+        }
+
+        a:visited:after {
+            color: #FFE312;
+        }
+
+        a:hover:visited:after {
             color: #010101;
-            content: " \2197";
         }
 
         p {
