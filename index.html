@@ -64,6 +64,7 @@
         /* html {} */
 
         body {
+            /* background-color: #F7F7FC; */
             background-color: #ffffff;
             color: #111;
             font: 15px/22px 'Inter', system-ui, sans-serif;
@@ -95,7 +96,7 @@
         }
 
         h1 {
-            color: var(--black);
+            /* color: var(--black); */
             font-size: 81px;
             letter-spacing: -0.055em;
             line-height: 0.9em;
@@ -128,8 +129,13 @@
         }
 
         :root {
-            --href-color: #b4e7f8;
+            /* --href-color: #b4e7f8; */
             --black: #010101;
+            --href-txt: #F02E09;
+            --href-txt-hover: #F02E09;
+            --href-highlight: transparent;
+            --href-highlight-hover: #F02E09;
+            
         }
 
         a {
@@ -137,23 +143,25 @@
             word-break: break-word;
             word-wrap: break-word;
 
-            -webkit-transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
-            transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
-            border-bottom: 3px solid var(--href-color);
-            -webkit-box-shadow: inset 0 -4px 0 var(--href-color);
-            box-shadow: inset 0 -4px 0 var(--href-color);
+            -webkit-transition: all .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+            transition: all .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+            border-bottom: 3px solid var(--href-highlight);
+            -webkit-box-shadow: inset 0 -4px 0 var(--href-highlight);
+            box-shadow: inset 0 -4px 0 var(--href-highlight);
         }
 
         a:link,
         :visited {
-            color: var(--black);
+            color: var(--href-txt);
         }
 
         a:hover,
         a:visited:hover {
-            color: var(--black);
-            background: var(--href-color);
-            border-top: 3px solid var(--href-color);
+            /* color: var(--href-txt-hover); */
+            color: white;
+            background: var(--href-highlight-hover);
+            border-color: var(--href-highlight-hover);
+            border-top: 3px solid var(--href-highlight-hover);
         }
 
         /* a:after {
@@ -296,6 +304,31 @@
                 transform: rotate(40deg);
             }
         }
+
+        card {
+            overflow: visible;
+            padding: 1.5625rem 1.875rem;
+            margin-bottom: 25px;
+            transition: all .2s;
+            max-width: 53.75rem;
+
+            /* background-color: #fff;
+            box-shadow: 0 2px 5px 0 rgba(51, 51, 79, .07);
+            border-radius: 6px; */
+        }
+
+        .info {
+            box-shadow: none;
+            /* background-color: rgba(96, 120, 255, .05); */
+            background-color: var(--black);
+            color: #ffffff;
+            vertical-align: baseline;
+            font-weight: 700;
+            padding: 1rem 1.875rem;
+            border-radius: 0px;
+        }
+
+        .card-content {}
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
@@ -304,75 +337,102 @@
 
 <body class="min-h-screen">
     <main class="flex flex-col justify-center min-h-screen px-4 py-8 lg:ml-20 illustration">
-        <h1>
-            <ellw>Andreas Ellwanger</ellw>, B.Sc.
-        </h1>
+        <card class="info">
+            <div class="card-content max-w-lg">
+                <h1>
+                    <ellw>Andreas Ellwanger</ellw>, B.Sc.
+                </h1>
 
-        <div class="flex flex-row mb-3">
-            <h2>About</h2>
-            <p>&nbsp;/&nbsp;<a href="https://www.andreasellwanger.com/cv.pdf">
-                    <pdf>CV</pdf>
-                </a></p>
-        </div>
+                — lives in the Netherlands.
+            </div>
+        </card>
+        <card>
+            <div class="card-content max-w-lg">
+                <div class="flex flex-row mb-3">
+                    <h2>About</h2>
+                    <p>&nbsp;/&nbsp;<a href="https://www.andreasellwanger.com/cv.pdf">
+                            <pdf>CV</pdf>
+                        </a></p>
+                </div>
 
-        <p class="max-w-lg mb-6">Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
-            Maximilian
-            University of
-            Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich
-            with a
-            Bachelor of Science in Media Informatics and Human-Computer Interaction. At the moment Andreas works
-            remotely
-            for a Berlin-based startup called <a href="https://aiderly.de/">Aiderly GmbH</a> as a Full Stack
-            Developer /
-            UX Researcher. Since last year he is
-            part of the <a href="https://www.tech4germany.org/en/ueber-uns/">Tech4Germany</a>
-            fellowship, Germany’s
-            first
-            e-Government fellowship with Germany’s Chief of Staff Prof.
-            Helge Braun as patron. Therefore he had been staying in Berlin, Germany for three months to work as a UX
-            Researcher as well as a Frontend Developer for the German government. Together with eight other fellows,
-            they
-            worked on topics related to digitalisation and e-government.</p>
-        <div class="flex flex-row mb-3">
-            <h2>Research</h2>
-            <p>&nbsp;/&nbsp;<a href="https://orcid.org/0000-0003-2024-9439">ORCID</a>,
-                <!-- <a href="https://dl.acm.org/author_page.cfm?id=99659272035&coll=DL&dl=ACM&trk=0">ACM profile</a>,
+                <p>Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
+                    Maximilian
+                    University of
+                    Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU
+                    Munich
+                    with a
+                    Bachelor of Science in Media Informatics and Human-Computer Interaction. At the moment Andreas works
+                    remotely
+                    for a Berlin-based startup called <a href="https://aiderly.de/">Aiderly GmbH</a> as a Full Stack
+                    Developer /
+                    UX Researcher. Since last year he is
+                    part of the <a href="https://www.tech4germany.org/en/ueber-uns/">Tech4Germany</a>
+                    fellowship, Germany’s
+                    first
+                    e-Government fellowship with Germany’s Chief of Staff Prof.
+                    Helge Braun as patron. Therefore he had been staying in Berlin, Germany for three months to work as
+                    a UX
+                    Researcher as well as a Frontend Developer for the German government. Together with eight other
+                    fellows,
+                    they
+                    worked on topics related to digitalisation and e-government.</p>
+            </div>
+        </card>
+        <card>
+            <div class="card-content max-w-lg">
+                <div class="flex flex-row mb-3">
+                    <h2>Research</h2>
+                    <p>&nbsp;/&nbsp;<a href="https://orcid.org/0000-0003-2024-9439">ORCID</a>,
+                        <!-- <a href="https://dl.acm.org/author_page.cfm?id=99659272035&coll=DL&dl=ACM&trk=0">ACM profile</a>,
                 <a href="https://scholar.google.de/citations?user=-ZyjjPAAAAAJ">Google Scholar</a> and -->
-                <a href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas">dblp</a>
-            </p>
-        </div>
-        
-        <p class="max-w-lg mb-2"><ref>Axis+Content</ref> was written
-            & submitted by Andreas with the help of <a href="https://www.axelhoesl.de/">Axel Hösl</a> and <a
-                href="http://www.butz.org/">Andreas Butz</a>. It received overall merit <merit>accept</merit> and
-            <merit>weak
-                accept</merit> by two knowledgeable reviewers, and was accepted as one of 6 full
-            papers (out of 26 submissions). At the <a
-                href="https://www.sigmobile.org/mobisys/2018/workshops/dronet18/program/">conference</a>, Andreas held
-            an <a href="https://www.dropbox.com/sh/05l5x0vayr7j12u/AAAx69okNomuRmn3xouJGzNNa?dl=0">18-minute talk</a> to
-            present
-            the full paper and answer questions in the Q&A afterwards.
-        </p>
-        <p class="max-w-lg mb-6 ref">
-            <u>Andreas Ellwanger</u>, Axel Hoesl, and Andreas Butz. 2018. Axis- plus Content-based
-            Control for Camera Drones: Design and Evaluation of User Interface Concepts. In Proceedings of the
-            4th
-            ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet'18). ACM, New York, NY,
-            USA,
-            9-14. <a href="https://doi.org/10.1145/3213526.3213529">
-                <acm>Paper</acm>
-            </a>, <a href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
-                <pdf>PDF</pdf>
-            </a>
-        </p>
-        <div class="flex flex-row mb-3">
-            <h2>Online<span class="hidden md:inline-block">&nbsp;presence</span></h2>
-            <p>&nbsp;/&nbsp;<a href="https://twitter.com/ndrsllwngr/">Twitter</a>, <a
-                    href="https://github.com/ndrsllwngr/">GitHub</a> and <a
-                    href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a></p>
-        </div>
-        <p class="max-w-lg mb-3">—&nbsp;&nbsp;<wave class="inline-block">👋🏻</wave>
-        </p>
+                        <a href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas">dblp</a>
+                    </p>
+                </div>
+
+                <p class="mb-2">
+                    <ref>Axis+Content</ref> was written
+                    & submitted by Andreas with the help of <a href="https://www.axelhoesl.de/">Axel Hösl</a> and <a
+                        href="http://www.butz.org/">Andreas Butz</a>. It received overall merit <merit>accept</merit>
+                    and
+                    <merit>weak
+                        accept</merit> by two knowledgeable reviewers, and was accepted as one of 6 full
+                    papers (out of 26 submissions). At the <a
+                        href="https://www.sigmobile.org/mobisys/2018/workshops/dronet18/program/">conference</a>,
+                    Andreas
+                    held
+                    an <a href="https://www.dropbox.com/sh/05l5x0vayr7j12u/AAAx69okNomuRmn3xouJGzNNa?dl=0">18-minute
+                        talk</a> to
+                    present
+                    the full paper and answer questions in the Q&A afterwards.
+                </p>
+                <p class="ref">
+                    <u>Andreas Ellwanger</u>, Axel Hoesl, and Andreas Butz. 2018. Axis- plus Content-based
+                    Control for Camera Drones: Design and Evaluation of User Interface Concepts. In Proceedings of the
+                    4th
+                    ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet'18). ACM, New York,
+                    NY,
+                    USA,
+                    9-14. <a href="https://doi.org/10.1145/3213526.3213529">
+                        <acm>Paper</acm>
+                    </a>, <a
+                        href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
+                        <pdf>PDF</pdf>
+                    </a>
+                </p>
+            </div>
+        </card>
+        <card>
+            <div class="card-content max-w-lg">
+                <div class="flex flex-row mb-3">
+                    <h2>Online<span class="hidden md:inline-block">&nbsp;presence</span></h2>
+                    <p>&nbsp;/&nbsp;<a href="https://twitter.com/ndrsllwngr/">Twitter</a>, <a
+                            href="https://github.com/ndrsllwngr/">GitHub</a> and <a
+                            href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a></p>
+                </div>
+                <p>—&nbsp;&nbsp;<wave class="inline-block">👋🏻</wave>
+                </p>
+            </div>
+        </card>
     </main>
     <script>
         console.log("👋🏻 Special thanks to\n- https://rsms.me/inter/ for the lovely typeface family\n- https://absurd.design/ for the absurd illustration\n- https://tailwindcss.com/ for the utility-first framework\n- https://yoksel.github.io/url-encoder/ for the SVG URL-encoder");
