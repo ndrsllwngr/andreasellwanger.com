@@ -153,6 +153,7 @@
         a:visited:hover {
             color: var(--black);
             background: var(--href-color);
+            border-top: 3px solid var(--href-color);
         }
 
         /* a:after {
@@ -216,6 +217,22 @@
 
         merit:after {
             content: "\"";
+        }
+
+        ref:after {
+            font-weight: 700;
+            text-align: right;
+            content: " [1]";
+            font-size: 0.9em;
+            /* margin-left: 0.4em; */
+        }
+
+        .ref:before {
+            font-weight: 700;
+            text-align: left;
+            content: "1.";
+            font-size: 0.9em;
+            margin-right: 0.4em;
         }
 
         /* .button {
@@ -298,7 +315,7 @@
                 </a></p>
         </div>
 
-        <p class="max-w-lg mb-6 ml-3">Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
+        <p class="max-w-lg mb-6">Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
             Maximilian
             University of
             Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich
@@ -324,19 +341,8 @@
                 <a href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas">dblp</a>
             </p>
         </div>
-        <p class="max-w-lg mb-2 ml-3">
-            <u>Andreas Ellwanger</u>, Axel Hoesl, and Andreas Butz. 2018. <b>Axis- plus Content-based
-                Control for Camera Drones: Design and Evaluation of User Interface Concepts.</b> In Proceedings of the
-            4th
-            ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet'18). ACM, New York, NY,
-            USA,
-            9-14. <a href="https://doi.org/10.1145/3213526.3213529">
-                <acm>Paper</acm>
-            </a>, <a href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
-                <pdf>PDF</pdf>
-            </a>
-        </p>
-        <p class="max-w-lg mb-6 ml-3">Axis+Content was written
+        
+        <p class="max-w-lg mb-2"><ref>Axis+Content</ref> was written
             & submitted by Andreas with the help of <a href="https://www.axelhoesl.de/">Axel Hösl</a> and <a
                 href="http://www.butz.org/">Andreas Butz</a>. It received overall merit <merit>accept</merit> and
             <merit>weak
@@ -347,13 +353,25 @@
             present
             the full paper and answer questions in the Q&A afterwards.
         </p>
+        <p class="max-w-lg mb-6 ref">
+            <u>Andreas Ellwanger</u>, Axel Hoesl, and Andreas Butz. 2018. Axis- plus Content-based
+            Control for Camera Drones: Design and Evaluation of User Interface Concepts. In Proceedings of the
+            4th
+            ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet'18). ACM, New York, NY,
+            USA,
+            9-14. <a href="https://doi.org/10.1145/3213526.3213529">
+                <acm>Paper</acm>
+            </a>, <a href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
+                <pdf>PDF</pdf>
+            </a>
+        </p>
         <div class="flex flex-row mb-3">
             <h2>Online<span class="hidden md:inline-block">&nbsp;presence</span></h2>
             <p>&nbsp;/&nbsp;<a href="https://twitter.com/ndrsllwngr/">Twitter</a>, <a
                     href="https://github.com/ndrsllwngr/">GitHub</a> and <a
                     href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a></p>
         </div>
-        <p class="max-w-lg mb-3 ml-3">—&nbsp;&nbsp;<wave class="inline-block">👋🏻</wave>
+        <p class="max-w-lg mb-3">—&nbsp;&nbsp;<wave class="inline-block">👋🏻</wave>
         </p>
     </main>
     <script>
