@@ -95,7 +95,7 @@
         }
 
         h1 {
-            color: #010101;
+            color: var(--black);
             font-size: 81px;
             letter-spacing: -0.055em;
             line-height: 0.9em;
@@ -127,42 +127,43 @@
             outline: none;
         }
 
+        :root {
+            --href-color: #b4e7f8;
+            --black: #010101;
+        }
+
         a {
             text-decoration: none;
             word-break: break-word;
             word-wrap: break-word;
 
-            background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
-            background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
-            background: -o-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
-            background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
-            background: linear-gradient(to bottom, transparent 0%, transparent 60%, #FFE312 60%, #FFE312 100%);
+            -webkit-transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+            transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+            border-bottom: 3px solid var(--href-color);
+            -webkit-box-shadow: inset 0 -4px 0 var(--href-color);
+            box-shadow: inset 0 -4px 0 var(--href-color);
         }
 
         a:link,
         :visited {
-            color: #010101;
+            color: var(--black);
         }
 
         a:hover,
         a:visited:hover {
-            color: #010101;
-            background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
-            background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
-            background: -o-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
-            background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
-            background: linear-gradient(to bottom, transparent 0%, transparent 0%, #FFE312 0%, #FFE312 100%);
+            color: var(--black);
+            background: var(--href-color);
         }
 
-        a:after {
+        /* a:after {
             font-weight: 700;
             color: #1A67CC;
             content: " ↗";
         }
 
-        a:hover:after{
+        a:hover:after {
             color: #1A67CC;
-            
+
         }
 
         a:visited:after {
@@ -171,7 +172,7 @@
 
         a:hover:visited:after {
             color: #010101;
-        }
+        } */
 
         p {
             letter-spacing: -0.06px;
@@ -252,7 +253,7 @@
 
         <div class="flex flex-row mb-3">
             <h2>About</h2>
-            <p>&nbsp;/&nbsp;<a href="https://www.andreasellwanger.com/cv.pdf">CV</a></p>
+            <p>&nbsp;/&nbsp;<a href="https://www.andreasellwanger.com/cv.pdf">Curriculum Vitæ</a></p>
         </div>
 
         <p class="max-w-lg mb-6 ml-3">Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
@@ -275,10 +276,10 @@
             worked on topics related to digitalisation and e-government.</p>
         <div class="flex flex-row mb-3">
             <h2>Research</h2>
-            <p>&nbsp;/&nbsp;<a href="https://orcid.org/0000-0003-2024-9439">ORCID</a>, <a
-                    href="https://dl.acm.org/author_page.cfm?id=99659272035&coll=DL&dl=ACM&trk=0">ACM profile</a>, <a
-                    href="https://scholar.google.de/citations?user=-ZyjjPAAAAAJ">Google Scholar</a> and <a
-                    href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas">dblp</a>
+            <p>&nbsp;/&nbsp;<a href="https://orcid.org/0000-0003-2024-9439">ORCID</a>,
+                <!-- <a href="https://dl.acm.org/author_page.cfm?id=99659272035&coll=DL&dl=ACM&trk=0">ACM profile</a>,
+                <a href="https://scholar.google.de/citations?user=-ZyjjPAAAAAJ">Google Scholar</a> and -->
+                <a href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas">dblp</a>
             </p>
         </div>
         <p class="max-w-lg mb-2 ml-3">
