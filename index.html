@@ -41,8 +41,6 @@
     <meta property="twitter:image" content="https://www.andreasellwanger.com/cache/og-image.jpg?v=rMqp9OEOKL">
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet">
-    <link href="raster.grid.css" rel="stylesheet">
-    <link href="flow.grid.css" rel="stylesheet">
     <style>
         @import url('https://rsms.me/inter/inter.css');
 
@@ -119,18 +117,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /*h1, .h1 {
-  color: #222;
-  font-size: 55px;
-  letter-spacing: -0.038em;
-  line-height: 1.1em;
-  text-indent: -2px;
-  font-weight: 700;
-}
-h1 {
-  margin-bottom: 30px;
-  margin-top: 10px;
-}*/
         h1,
         .h1 {
             margin-left: calc(3rem / -20);
@@ -357,31 +343,18 @@ h1 {
             content: "\"";
         }
 
-        .ref:before {
-            position: absolute;
-            margin-left: -1em;
-            padding-right: 0.5em;
-            display: inline-block;
-            text-decoration: none;
+        ref:after {
+            content: " [1]";
             color: var(--black);
-
-            text-align: left;
-            content: "1.";
-            font-weight: 600;
+            text-align: right;
         }
 
-        /* .button {
-            color: #fff;
-            background: #eb5757;
-            border-radius: 2px;
-            display: inline-block;
-            clear: both;
-            line-height: 16px;
-            padding: 8px 10px;
-            border: none;
-            margin: 0 3px;
-            cursor: pointer;
-        } */
+        .ref:before {
+            content: "1.";
+            color: var(--black);
+            font-weight: 700;
+            text-align: left;
+        }
 
         wave {
             -webkit-animation: movement 0.1s alternate 6 2s;
@@ -411,8 +384,6 @@ h1 {
         }
 
         section {
-            /* vertical-align: baseline;
-            padding: 1rem 1.875rem; */
             padding: 50px;
             display: flex;
             justify-content: center;
@@ -436,6 +407,10 @@ h1 {
             background-color: var(--grey);
         }
 
+        #contact {
+            background-color: #ffffff;
+        }
+
         .projects {
             column-gap: var(--columnGap);
             grid-row-gap: var(--rowGap);
@@ -448,6 +423,21 @@ h1 {
             border-radius: 3px;
         }
 
+        .box:hover {
+            background: white;
+            box-shadow: 0 2px 5px 0 rgba(51, 51, 79, .07);
+        }
+
+        .grey,
+        .grey:hover {
+            background: var(--grey);
+        }
+
+        .yellow,
+        .yellow:hover {
+            background: var(--yellow);
+        }
+
         .illustration {
             background: #ffffff url(cache/illustration.png?v=rMqp9OEOKL) no-repeat right bottom;
             -webkit-background-size: cover;
@@ -456,7 +446,8 @@ h1 {
             background-size: cover;
         }
     </style>
-
+    <link href="raster.grid.css" rel="stylesheet">
+    <link href="flow.grid.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
 
 </head>
@@ -473,6 +464,7 @@ h1 {
                     <li><a href="#about">About</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ol>
             </div>
         </section>
@@ -480,7 +472,7 @@ h1 {
             <div>
                 <h2><a href="#about">About</a></h2>
                 <div flow-cols="2" flow-cols-s="1">
-                    <p>Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
+                    <p class="mb-0">Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig
                         Maximilian
                         University of
                         Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the
@@ -505,13 +497,17 @@ h1 {
                         they
                         worked on topics related to digitalisation and e-government.</p>
                 </div>
+                <div class="box mt-8">
+                    <p class="mb-0"><a href="https://www.andreasellwanger.com/cv.pdf">
+                            <pdf>cv.pdf</pdf></a> provides a more detailed overview.</p>
+                </div>
             </div>
         </section>
         <section id="research">
             <div>
                 <h2><a href="#research">Research</a></h2>
-                <p class="mb-2">
-                    Axis+Content was written
+                <p>
+                    <ref>Axis+Content</ref> was written
                     & submitted by Andreas with the help of <a href="https://www.axelhoesl.de/">Axel Hösl</a> and <a
                         href="http://www.butz.org/">Andreas Butz</a>. It received overall merit <merit>accept</merit>
                     and
@@ -526,43 +522,42 @@ h1 {
                     present
                     the full paper and answer questions in the Q&A afterwards.
                 </p>
-                <ol>
-                    <li>
-                        <p>
-                            Andreas Ellwanger, Axel Hoesl, and Andreas Butz. 2018. Axis- plus Content-based
-                            Control for Camera Drones: Design and Evaluation of User Interface Concepts. In Proceedings
-                            of the
-                            4th
-                            ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet'18). ACM,
-                            New York,
-                            NY,
-                            USA,
-                            9-14. DOI: <a href="https://doi.org/10.1145/3213526.3213529">
-                                <acm>https://doi.org/10.1145/3213526.3213529</acm>
-                            </a>, <a
-                                href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
-                                <pdf>PDF</pdf>
-                            </a>
-                        </p>
-                    </li>
-                </ol>
-
+                <div class="box grey mt-8">
+                    <p class="mb-0 ref">
+                        Andreas Ellwanger, Axel Hoesl, and Andreas Butz. 2018. Axis- plus Content-based
+                        Control for Camera Drones: Design and Evaluation of User Interface Concepts. In
+                        Proceedings
+                        of the
+                        4th
+                        ACM Workshop on Micro Aerial Vehicle Networks, Systems, and Applications (DroNet'18).
+                        ACM,
+                        New York,
+                        NY,
+                        USA,
+                        9-14. DOI: 10.1145/3213526.3213529<br /><a href="https://doi.org/10.1145/3213526.3213529">
+                            <acm>Paper</acm>
+                        </a>, <a
+                            href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
+                            <pdf>PDF</pdf>
+                        </a>
+                    </p>
+                </div>
             </div>
         </section>
-        <section id="projects" class="min-h-screen">
+        <section id="projects">
             <div>
                 <h2><a href="#projects">Projects</a></h2>
-                <p>Take a look at some of the projects at <a href="https://github.com/ndrsllwngr/">GitHub</a> and make
-                    sure to follow Andreas on <a href="https://twitter.com/ndrsllwngr/">Twitter</a>.</p>
+                <p>Many projects Andreas worked on reside on <a href="https://github.com/ndrsllwngr/">GitHub</a>.</p>
                 <grid columns="2" columns-s="1" class="projects">
                     <c class="box">
                         <h4><a href="https://github.com/ndrsllwngr/hll-rust">MIT Chord algorithm implementation</a></h4>
-                        <p>Chord is a protocol and algorithm for a peer-to-peer distributed hash table. Andreas
-                            implemented a proof-of-concept in Rust with Timo Erdelt and Andreas Griesbeck.</p>
+                        <p>Chord is a protocol and algorithm for a peer-to-peer distributed hash table. The
+                            proof-of-concept was build with Rust.</p>
                     </c>
                     <c class="box">
                         <h4><a href="https://github.com/ndrsllwngr/hll-scala">Democratic playlist as webapp</a></h4>
-                        <p>Realtime and interactive, It's time to let everybody in the room decide what's playing. Therefore Andreas implemented with Timo Erdelt, Andreas Griesbeck and Stephan Holzner a webapp with Scala.js as front-end and Scala Akka-http as back-end. </p>
+                        <p>Realtime and interactive - It's time to let everybody in the room decide what's playing. The
+                            webapp was implemented with Scala.js as front-end and Scala Akka-http as back-end.</p>
                     </c>
                     <c class="box">
                         <h4><a href="https://github.com/ndrsllwngr/DichteFideleLurche">Catan board game with multiplayer
@@ -583,10 +578,14 @@ h1 {
                         <p></p>
                     </c>
                 </grid>
-
             </div>
-            <!-- <p>—&nbsp;&nbsp;<wave>👋🏻</wave> -->
-            </p>
+            <!-- <p>—&nbsp;&nbsp;<wave>👋🏻</wave> </p>-->
+        </section>
+        <section id="contact" class="min-h-screen">
+            <div>
+                    <h2><a href="#contact">Contact</a></h2>
+                <p>and make
+                    sure to follow Andreas on <a href="https://twitter.com/ndrsllwngr/">Twitter</a></p>
             </div>
         </section>
     </main>
