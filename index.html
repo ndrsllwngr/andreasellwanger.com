@@ -450,6 +450,10 @@
             background-size: cover;
         }
 
+        .print {
+            page-break-after: always;
+        }
+
         /* .testbg {
             background-image: url(testbg.png);
             background-position: center bottom;
@@ -477,7 +481,7 @@
                 </ol>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="print">
             <div>
                 <h2><a href="#about">About</a></h2>
                 <div flow-cols="2" flow-cols-s="1">
@@ -512,7 +516,7 @@
                 </div>
             </div>
         </section>
-        <section id="research">
+        <section id="research" class="print">
             <div>
                 <h2><a href="#research">Research</a></h2>
                 <p>
@@ -554,7 +558,7 @@
                 </div>
             </div>
         </section>
-        <section id="projects">
+        <section id="projects" class="print">
             <div>
                 <h2><a href="#projects">Projects</a></h2>
                 <!-- <p>Most projects are at <a href="https://github.com/ndrsllwngr/">GitHub</a>.</p> -->
