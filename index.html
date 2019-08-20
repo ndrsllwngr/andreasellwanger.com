@@ -423,7 +423,7 @@
             border-radius: 3px;
         }
 
-        .box > p {
+        .box>p {
             margin-bottom: 0;
         }
 
@@ -458,6 +458,14 @@
             background-image: url(testbg.png);
             background-position: center bottom;
         } */
+        #map {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            z-index: 100;
+        }
     </style>
     <link href="raster.grid.css" rel="stylesheet">
     <link href="flow.grid.css" rel="stylesheet">
@@ -510,7 +518,9 @@
                         worked on topics related to digitalisation and e-government.</p>
                 </div>
                 <div class="box mt-8">
-                    <p class="mb-0"><a href="https://www.andreasellwanger.com/cv.pdf"><pdf>cv.pdf</pdf></a>
+                    <p class="mb-0"><a href="https://www.andreasellwanger.com/cv.pdf">
+                            <pdf>cv.pdf</pdf>
+                        </a>
                         provides a more detailed overview.</p>
                 </div>
             </div>
@@ -520,8 +530,9 @@
                 <h2><a href="#research">Research</a></h2>
                 <p>
                     <ref>Axis+Content</ref> was written
-                    & submitted to DroNet@MobiSys 2018 by Andreas with the help of <a href="https://www.axelhoesl.de/">Axel Hösl</a> and <a
-                        href="http://www.butz.org/">Andreas Butz</a>. It received overall merit <merit>accept</merit>
+                    & submitted to DroNet@MobiSys 2018 by Andreas with the help of <a
+                        href="https://www.axelhoesl.de/">Axel Hösl</a> and <a href="http://www.butz.org/">Andreas
+                        Butz</a>. It received overall merit <merit>accept</merit>
                     and
                     <merit>weak
                         accept</merit> by two knowledgeable reviewers, and was accepted as one of 6 full
@@ -548,7 +559,8 @@
                         USA,
                         9-14. DOI: 10.1145/3213526.3213529<br />
                         <a href="https://doi.org/10.1145/3213526.3213529">
-                            <acm>Paper</acm></a>,
+                            <acm>Paper</acm>
+                        </a>,
                         <a
                             href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
                             <pdf>PDF</pdf>
@@ -573,7 +585,8 @@
                             webapp was implemented with Scala.js as front-end and Scala Akka-http as back-end.</p>
                     </c>
                     <c class="box">
-                        <h4><a href="https://github.com/ndrsllwngr/DichteFideleLurche">Catan game (multiplayer, AI)</a></h4>
+                        <h4><a href="https://github.com/ndrsllwngr/DichteFideleLurche">Catan game (multiplayer, AI)</a>
+                        </h4>
                         <p></p>
                     </c>
                     <c class="box">
@@ -606,8 +619,15 @@
             </div>
         </section>
     </main>
+    <canvas id="map" width="160" height="439" style="cursor: pointer; width: 160px; height: 439.288px;"></canvas>
+
     <script>
         console.log("👋🏻 Special thanks to\n- https://rsms.me/inter/ for the lovely typeface family\n- https://absurd.design/ for the absurd illustration\n- https://tailwindcss.com/ for the utility-first framework\n- https://yoksel.github.io/url-encoder/ for the SVG URL-encoder");
+    </script>
+    <script src="pagemap.min.js"></script>
+
+    <script>
+        pagemap(document.querySelector('#map'));
     </script>
 </body>
 
