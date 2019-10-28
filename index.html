@@ -453,19 +453,6 @@
         .print {
             page-break-after: always;
         }
-
-        /* .testbg {
-            background-image: url(testbg.png);
-            background-position: center bottom;
-        } */
-        #map {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 100%;
-            z-index: 100;
-        }
     </style>
     <link href="raster.grid.css" rel="stylesheet">
     <link href="flow.grid.css" rel="stylesheet">
@@ -619,16 +606,6 @@
             </div>
         </section>
     </main>
-    <canvas id="map" width="160" height="439" style="cursor: pointer; width: 160px; height: 439.288px;"></canvas>
-
-    <script>
-        console.log("👋🏻 Special thanks to\n- https://rsms.me/inter/ for the lovely typeface family\n- https://absurd.design/ for the absurd illustration\n- https://tailwindcss.com/ for the utility-first framework\n- https://yoksel.github.io/url-encoder/ for the SVG URL-encoder");
-    </script>
-    <script src="pagemap.min.js"></script>
-
-    <script>
-        pagemap(document.querySelector('#map'));
-    </script>
 </body>
 
 </html>
