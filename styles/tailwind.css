@@ -5,7 +5,10 @@
 @import "tailwindcss/utilities";
 
 /* CUSTOM CSS START */
+
+/* purgecss start ignore */
 @import url("https://rsms.me/inter/inter.css");
+
 
 html {
   font-family: "Inter", sans-serif;
@@ -69,6 +72,7 @@ body {
   -moz-font-variant-ligatures: contextual common-ligatures;
   -o-font-variant-ligatures: contextual common-ligatures;
 }
+/* purgecss end ignore */
 
 h1,
 h2,
