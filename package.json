@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://www.andreasellwanger.com",
   "scripts": {
-    "predeploy": "npm run build && npm run export",
+    "predeploy": "rm -rf node_modules/.cache && next build && next export",
     "deploy": "gh-pages -b master -d out",
     "dev": "next dev",
     "build": "next build",

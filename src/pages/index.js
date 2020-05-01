@@ -14,65 +14,6 @@ const LandingPage = () => {
           name="description"
           content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
-
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="cache/apple-touch-icon.png?v=rMqp9OEOKL"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="cache/favicon-32x32.png?v=rMqp9OEOKL"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="cache/favicon-16x16.png?v=rMqp9OEOKL"
-        />
-        <link rel="manifest" href="cache/site.webmanifest?v=rMqp9OEOKL" />
-        <link
-          rel="mask-icon"
-          href="cache/safari-pinned-tab.svg?v=rMqp9OEOKL"
-          color="#010101"
-        />
-        <link rel="shortcut icon" href="cache/favicon.ico?v=rMqp9OEOKL" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta
-          name="msapplication-config"
-          content="cache/browserconfig.xml?v=rMqp9OEOKL"
-        />
-        <meta name="theme-color" content="#ffffff" />
-
-        <meta property="og:image:width" content="279" />
-        <meta property="og:image:height" content="279" />
-        <meta property="og:title" content="Andreas Ellwanger" />
-        <meta
-          property="og:description"
-          content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
-        />
-        <meta property="og:url" content="https://www.andreasellwanger.com" />
-        <meta
-          property="og:image"
-          content="https://www.andreasellwanger.com/cache/og-image.jpg?v=rMqp9OEOKL"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://www.andreasellwanger.com/"
-        />
-        <meta property="twitter:title" content="Andreas Ellwanger" />
-        <meta
-          property="twitter:description"
-          content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
-        />
-        <meta
-          property="twitter:image"
-          content="https://www.andreasellwanger.com/cache/og-image.jpg?v=rMqp9OEOKL"
-        ></meta>
       </Head>
       <main>
         <section id="top" className="pb-12 pt-16">
