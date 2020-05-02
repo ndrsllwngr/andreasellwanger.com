@@ -1,3 +1,3 @@
 export const Layout = ({ children }) => {
-  return <div className="antialiased min-h-screen">{children}</div>;
+  return <div className="antialiased min-h-screen font-sans">{children}</div>;
 };

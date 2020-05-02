@@ -1,4 +1,5 @@
 import Head from "next/head";
+import {Html} from 'next/document';
 import { Layout } from "../components/Layout";
 
 const LandingPage = () => {
@@ -7,7 +8,7 @@ const LandingPage = () => {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Andreas Ellwanger</title>
+        <title>Andreas Ellwanger — Software Engineer.</title>
         <meta name="author" content="Andreas Ellwanger" />
         <meta name="title" content="Andreas Ellwanger" />
         <meta
@@ -21,24 +22,9 @@ const LandingPage = () => {
             <h1 className="mb-32">
               <ellw>Andreas Ellwanger</ellw>, B.Sc.
             </h1>
-            Table of contents
-            <ol className="list-decimal">
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#research">Research</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ol>
           </div>
         </section>
-        <section id="about" className="print">
+        <section id="about" className="bg-my-yellow">
           <div>
             <h2>
               <a href="#about">About</a>
@@ -64,7 +50,7 @@ const LandingPage = () => {
                 worked on topics related to digitalisation and e-government.
               </p>
             </div>
-            <div className="box mt-8">
+            <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
               <p className="mb-0">
                 <a href="https://www.andreasellwanger.com/cv.pdf">
                   <pdf>cv.pdf</pdf>
@@ -74,7 +60,7 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section id="research" className="print">
+        <section id="research" className="bg-my-grey">
           <div>
             <h2>
               <a href="#research">Research</a>
@@ -97,7 +83,7 @@ const LandingPage = () => {
               to present the full paper and answer questions in the Q&A
               afterwards.
             </p>
-            <div className="box grey mt-8">
+            <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
               <p className="mb-0 ref">
                 Andreas Ellwanger, Axel Hoesl, and Andreas Butz. 2018. Axis-
                 plus Content-based Control for Camera Drones: Design and
@@ -117,13 +103,13 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section id="projects" className="print">
+        <section id="projects" className="bg-my-grey">
           <div>
             <h2>
               <a href="#projects">Projects</a>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 projects">
-              <div className="box">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 row-gap-8">
+              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
                 <h4>
                   <a href="https://github.com/ndrsllwngr/hll-rust">
                     MIT Chord algorithm implementation
@@ -135,7 +121,7 @@ const LandingPage = () => {
                   Rust.
                 </p>
               </div>
-              <div className="box">
+              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
                 <h4>
                   <a href="https://github.com/ndrsllwngr/hll-scala">
                     Democratic playlist as webapp
@@ -147,7 +133,7 @@ const LandingPage = () => {
                   Scala.js as front-end and Scala Akka-http as back-end.
                 </p>
               </div>
-              <div className="box">
+              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
                 <h4>
                   <a href="https://github.com/ndrsllwngr/DichteFideleLurche">
                     Catan game (multiplayer, AI)
@@ -155,7 +141,7 @@ const LandingPage = () => {
                 </h4>
                 <p></p>
               </div>
-              <div className="box">
+              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
                 <h4>
                   <a href="https://github.com/ndrsllwngr/FideleForste">
                     Game of life (MVC model)
@@ -166,7 +152,7 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section id="contact" className="min-h-screen">
+        <section id="contact" className="bg-white">
           <div>
             <h2>
               <a href="#contact">Contact</a>
