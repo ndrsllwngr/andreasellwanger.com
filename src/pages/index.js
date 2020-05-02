@@ -1,5 +1,4 @@
 import Head from "next/head";
-import {Html} from 'next/document';
 import { Layout } from "../components/Layout";
 
 const LandingPage = () => {
@@ -66,11 +65,11 @@ const LandingPage = () => {
               <a href="#research">Research</a>
             </h2>
             <p>
-              <ref>Axis+Content</ref> was written & submitted to DroNet@MobiSys
+              <span className="cite">Axis+Content</span> was written & submitted to DroNet@MobiSys
               2018 by Andreas with the help of{" "}
               <a href="https://www.axelhoesl.de/">Axel Hösl</a> and{" "}
               <a href="http://www.butz.org/">Andreas Butz</a>. It received
-              overall merit <merit>accept</merit> and <merit>weak accept</merit>{" "}
+              overall merit <span className="merit">accept</span> and <span className="merit">weak accept</span>{" "}
               by two knowledgeable reviewers, and was accepted as one of 6 full
               papers (out of 26 submissions). At the{" "}
               <a href="https://www.sigmobile.org/mobisys/2018/workshops/dronet18/program/">
@@ -93,11 +92,11 @@ const LandingPage = () => {
                 10.1145/3213526.3213529
                 <br />
                 <a href="https://doi.org/10.1145/3213526.3213529">
-                  <acm>Paper</acm>
+                  <span className="acm">Paper</span>
                 </a>
                 ,{" "}
                 <a href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
-                  <pdf>PDF</pdf>
+                  <span className="pdf">PDF</span>
                 </a>
               </p>
             </div>

@@ -1,4 +1,4 @@
-# pp-nextjs-with-tailwind
+# Personal Website
 
 ## Stack
 - [Next.js](https://nextjs.org/)
