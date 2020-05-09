@@ -13,7 +13,7 @@
     "framer-motion": "^1.10.3",
     "next": "^9.3.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
