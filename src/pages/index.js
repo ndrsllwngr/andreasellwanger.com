@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { Layout } from "../components/Layout";
 
 const LandingPage = () => {
@@ -15,18 +16,39 @@ const LandingPage = () => {
           content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
       </Head>
+      {/* <Navigation></Navigation> */}
       <main>
-        <section id="top" className="pb-12 pt-16">
-          <div>
-            <h1 className="mb-32">
-              <ellw>Andreas Ellwanger</ellw>, B.Sc.
+        <section id="top" className="pb-8 pt-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="mb-32 text-6xl font-normal tracking-tight">
+              <span className="font-black tracking-tighter">
+                Andreas Ellwanger
+              </span>
+              , B.Sc.
             </h1>
+            Table of contents
+            <ol className="list-decimal">
+              <li>
+                <a href="#about" className="text-my-red font-bold">About</a>
+              </li>
+              <li>
+                <a href="#research" className="text-my-red font-bold">Research</a>
+              </li>
+              <li>
+                <a href="#projects" className="text-my-red font-bold">Projects</a>
+              </li>
+              <li>
+                <a href="#contact" className="text-my-red font-bold">Contact</a>
+              </li>
+            </ol>
           </div>
         </section>
-        <section id="about" className="bg-my-yellow">
-          <div>
-            <h2>
-              <a href="#about">About</a>
+        <section id="about" className="bg-my-yellow p-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold pb-6">
+              <Link href="#about">
+                <a className="hover:text-my-red before-symbol">About</a>
+              </Link>
             </h2>
             <div>
               <p className="mb-0">
@@ -35,13 +57,28 @@ const LandingPage = () => {
                 Leiden University, The Netherlands. He graduated in April 2018
                 at the LMU Munich with a Bachelor of Science in Media
                 Informatics and Human-Computer Interaction. In 2020 Andreas
-                joined <a href="https://www.celonis.com/">Celonis</a>, the
-                market leader in Process Mining, as Junior Software Engineer in
-                the Core - Event Collection department. Before that, he worked
-                remotely for a Berlin-based startup called{" "}
-                <a href="https://aiderly.de/">Aiderly GmbH</a> as a Full Stack
-                Developer / UX Researcher. Since 2018 he is part of the{" "}
-                <a href="https://www.tech4germany.org/en/ueber-uns/">
+                joined{" "}
+                <a
+                  href="https://www.celonis.com/"
+                  className="underline hover:text-my-red"
+                >
+                  Celonis
+                </a>
+                , the market leader in Process Mining, as Junior Software
+                Engineer in the Core - Event Collection department. Before that,
+                he worked remotely for a Berlin-based startup called{" "}
+                <a
+                  href="https://aiderly.de/"
+                  className="underline hover:text-my-red"
+                >
+                  Aiderly GmbH
+                </a>{" "}
+                as a Full Stack Developer / UX Researcher. Since 2018 he is part
+                of the{" "}
+                <a
+                  href="https://www.tech4germany.org/en/ueber-uns/"
+                  className="underline hover:text-my-red"
+                >
                   Tech4Germany
                 </a>{" "}
                 fellowship, Germany’s first e-Government fellowship with
@@ -55,32 +92,56 @@ const LandingPage = () => {
             </div>
             <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
               <p className="mb-0">
-                <a href="https://www.andreasellwanger.com/cv.pdf">
-                  <pdf>cv.pdf</pdf>
-                </a>{" "}
+                <Link href="cv.pdf">
+                  <a>
+                    <span className="pdf underline hover:text-my-red">
+                      cv.pdf
+                    </span>
+                  </a>
+                </Link>{" "}
                 provides a more detailed overview.
               </p>
             </div>
           </div>
         </section>
-        <section id="research" className="bg-my-grey">
-          <div>
-            <h2>
-              <a href="#research">Research</a>
+        <section id="research" className="bg-my-grey p-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold pb-6">
+              <a href="#research" className="hover:text-my-red before-symbol">
+                Research
+              </a>
             </h2>
             <p>
-              <span className="cite">Axis+Content</span> was written & submitted to DroNet@MobiSys
-              2018 by Andreas with the help of{" "}
-              <a href="https://www.axelhoesl.de/">Axel Hösl</a> and{" "}
-              <a href="http://www.butz.org/">Andreas Butz</a>. It received
-              overall merit <span className="merit">accept</span> and <span className="merit">weak accept</span>{" "}
-              by two knowledgeable reviewers, and was accepted as one of 6 full
-              papers (out of 26 submissions). At the{" "}
-              <a href="https://www.sigmobile.org/mobisys/2018/workshops/dronet18/program/">
+              <span className="cite">Axis+Content</span> was written & submitted
+              to DroNet@MobiSys 2018 by Andreas with the help of{" "}
+              <a
+                href="https://www.axelhoesl.de/"
+                className="underline hover:text-my-red"
+              >
+                Axel Hösl
+              </a>{" "}
+              and{" "}
+              <a
+                href="http://www.butz.org/"
+                className="underline hover:text-my-red"
+              >
+                Andreas Butz
+              </a>
+              . It received overall merit <span className="merit">accept</span>{" "}
+              and <span className="merit">weak accept</span> by two
+              knowledgeable reviewers, and was accepted as one of 6 full papers
+              (out of 26 submissions). At the{" "}
+              <a
+                href="https://www.sigmobile.org/mobisys/2018/workshops/dronet18/program/"
+                className="underline hover:text-my-red"
+              >
                 conference
               </a>
               , Andreas held an{" "}
-              <a href="https://www.dropbox.com/sh/05l5x0vayr7j12u/AAAx69okNomuRmn3xouJGzNNa?dl=0">
+              <a
+                href="https://www.dropbox.com/sh/05l5x0vayr7j12u/AAAx69okNomuRmn3xouJGzNNa?dl=0"
+                className="underline hover:text-my-red"
+              >
                 18-minute talk
               </a>{" "}
               to present the full paper and answer questions in the Q&A
@@ -96,25 +157,30 @@ const LandingPage = () => {
                 10.1145/3213526.3213529
                 <br />
                 <a href="https://doi.org/10.1145/3213526.3213529">
-                  <span className="acm">Paper</span>
+                  <span className="acm underline hover:text-my-red">Paper</span>
                 </a>
                 ,{" "}
                 <a href="http://www.medien.ifi.lmu.de/pubdb/publications/pub/hoesl2018dronet/hoesl2018dronet.pdf">
-                  <span className="pdf">PDF</span>
+                  <span className="pdf underline hover:text-my-red">PDF</span>
                 </a>
               </p>
             </div>
           </div>
         </section>
-        <section id="projects" className="bg-my-grey">
-          <div>
-            <h2>
-              <a href="#projects">Projects</a>
+        <section id="projects" className="bg-my-grey p-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold">
+              <a href="#projects" className="hover:text-my-red before-symbol">
+                Projects
+              </a>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 row-gap-8">
               <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4>
-                  <a href="https://github.com/ndrsllwngr/hll-rust">
+                <h4 className="font-bold mb-3">
+                  <a
+                    href="https://github.com/ndrsllwngr/hll-rust"
+                    className="hover:text-my-red"
+                  >
                     MIT Chord algorithm implementation
                   </a>
                 </h4>
@@ -125,8 +191,11 @@ const LandingPage = () => {
                 </p>
               </div>
               <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4>
-                  <a href="https://github.com/ndrsllwngr/hll-scala">
+                <h4 className="font-bold mb-3">
+                  <a
+                    href="https://github.com/ndrsllwngr/hll-scala"
+                    className="hover:text-my-red"
+                  >
                     Democratic playlist as webapp
                   </a>
                 </h4>
@@ -137,16 +206,22 @@ const LandingPage = () => {
                 </p>
               </div>
               <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4>
-                  <a href="https://github.com/ndrsllwngr/DichteFideleLurche">
+                <h4 className="font-bold mb-3">
+                  <a
+                    href="https://github.com/ndrsllwngr/DichteFideleLurche"
+                    className="hover:text-my-red"
+                  >
                     Catan game (multiplayer, AI)
                   </a>
                 </h4>
                 <p></p>
               </div>
               <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4>
-                  <a href="https://github.com/ndrsllwngr/FideleForste">
+                <h4 className="font-bold mb-3">
+                  <a
+                    href="https://github.com/ndrsllwngr/FideleForste"
+                    className="hover:text-my-red"
+                  >
                     Game of life (MVC model)
                   </a>
                 </h4>
@@ -155,26 +230,51 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section id="contact" className="bg-white">
-          <div>
-            <h2>
-              <a href="#contact">Contact</a>
+        <section id="contact" className="bg-white p-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold pb-6">
+              <a href="#contact" className="hover:text-my-red before-symbol">
+                Contact
+              </a>
             </h2>
             <ul className="list-disc">
               <li>
-                <a href="https://twitter.com/ndrsllwngr/">Twitter</a>
+                <a
+                  href="https://twitter.com/ndrsllwngr/"
+                  className="underline hover:text-my-red"
+                >
+                  Twitter
+                </a>
               </li>
               <li>
-                <a href="https://github.com/ndrsllwngr/">GitHub</a>
+                <a
+                  href="https://github.com/ndrsllwngr/"
+                  className="underline hover:text-my-red"
+                >
+                  GitHub
+                </a>
               </li>
               <li>
-                <a href="https://de.linkedin.com/in/ellwanger/en/">LinkedIn</a>
+                <a
+                  href="https://de.linkedin.com/in/ellwanger/en/"
+                  className="underline hover:text-my-red"
+                >
+                  LinkedIn
+                </a>
               </li>
               <li>
-                <a href="https://orcid.org/0000-0003-2024-9439">ORCID</a>
+                <a
+                  href="https://orcid.org/0000-0003-2024-9439"
+                  className="underline hover:text-my-red"
+                >
+                  ORCID
+                </a>
               </li>
               <li>
-                <a href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas">
+                <a
+                  href="https://dblp.uni-trier.de/pers/hd/e/Ellwanger:Andreas"
+                  className="underline hover:text-my-red"
+                >
                   dblp
                 </a>
               </li>

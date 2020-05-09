@@ -8,9 +8,9 @@
 /* purgecss start ignore */
 @import url("https://rsms.me/inter/inter.css");
 
-::selection {
+/* ::selection {
   @apply bg-my-yellow text-my-black;
-}
+} */
 
 .pdf:before {
   content: "";
@@ -37,5 +37,10 @@
 .ref:before {
   @apply text-my-black text-left font-bold;
   content: "1. ";
+}
+
+.before-symbol:hover:before {
+  @apply absolute inline-block -ml-8;
+  content: "#";
 }
 /* purgecss end ignore */
