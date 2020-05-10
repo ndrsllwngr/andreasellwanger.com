@@ -14,6 +14,9 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         system: defaultTheme.fontFamily.sans,
       },
+      lineHeight: {
+        '16': '4rem'
+      }
     },
   },
   variants: {},

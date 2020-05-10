@@ -16,11 +16,10 @@ const LandingPage = () => {
           content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
       </Head>
-      {/* <Navigation></Navigation> */}
       <main>
-        <section id="top" className="pb-8 pt-16">
+        <section id="top" className="p-12">
           <div className="max-w-4xl mx-auto">
-            <h1 className="mb-32 text-6xl font-normal tracking-tight">
+            <h1 className="mb-32 text-6xl font-normal tracking-tight leading-16">
               <span className="font-black tracking-tighter">
                 Andreas Ellwanger
               </span>
