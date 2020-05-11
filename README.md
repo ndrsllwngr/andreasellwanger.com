@@ -21,7 +21,7 @@
 - `yarn start` - Runs next start which starts a Next.js production server.
 - `yarn export` - Runs next export which allows you to export your app to static HTML, which can be run standalone without the need of a Node.js server.
   
-Custom commands:
+##### CUSTOM
 - `yarn preview-export` - Runs a HTTP server (`python3 -m http.server`) in `out/` to preview the static HTML output from `yarn export`.
 
 ### Dependency management
