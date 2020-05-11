@@ -20,6 +20,9 @@
 - `yarn build` - Runs next build which creates an optimized production build of your application. The output displays information about each route.
 - `yarn start` - Runs next start which starts a Next.js production server.
 - `yarn export` - Runs next export which allows you to export your app to static HTML, which can be run standalone without the need of a Node.js server.
+  
+Custom commands:
+- `yarn preview-export` - Runs a HTTP server (`python3 -m http.server`) in `out/` to preview the static HTML output from `yarn export`.
 
 ### Dependency management
 - `yarn add <package...>` - Installs the “latest” version of the package.
@@ -28,11 +31,6 @@
 
 ### Absolute Imports and Aliases
 - https://nextjs.org/blog/next-9-4#absolute-imports-and-aliases
-- [`jsconfig`](https://code.visualstudio.com/docs/languages/jsconfig#_jsconfig-options)
-- [`tsconfig`](https://www.typescriptlang.org/tsconfig#baseUrl)
-
-### Preview `next export` output
-1. `cd out`
-2. `python3 -m http.server` - Runs a HTTP server in a folder.
+- [`jsconfig`](https://code.visualstudio.com/docs/languages/jsconfig#_jsconfig-options) / [`tsconfig`](https://www.typescriptlang.org/tsconfig#baseUrl)
 
 
