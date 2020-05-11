@@ -26,6 +26,11 @@
 - `yarn remove <package...>` - Removes the package from your direct dependencies updating your package.json and yarn.lock files in the process.
 - [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) upgrades your package.json dependencies to the latest versions, ignoring specified versions.
 
+### Absolute Imports and Aliases
+- https://nextjs.org/blog/next-9-4#absolute-imports-and-aliases
+- [`jsconfig`](https://code.visualstudio.com/docs/languages/jsconfig#_jsconfig-options)
+- [`tsconfig`](https://www.typescriptlang.org/tsconfig#baseUrl)
+
 ### Preview `next export` output
 1. `cd out`
 2. `python3 -m http.server` - Runs a HTTP server in a folder.
