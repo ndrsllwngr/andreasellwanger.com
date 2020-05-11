@@ -1,21 +1,11 @@
-import Head from "next/head";
 import Link from "next/link";
 import { Layout } from "components/Layout";
+import { Header } from "components/Header";
 
 const LandingPage = () => {
   return (
     <Layout>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Andreas Ellwanger — Software Engineer.</title>
-        <meta name="author" content="Andreas Ellwanger" />
-        <meta name="title" content="Andreas Ellwanger" />
-        <meta
-          name="description"
-          content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
-        />
-      </Head>
+      <Header title="Andreas Ellwanger — Software Engineer." />
       <main>
         <section id="top" className="p-12">
           <div className="max-w-4xl mx-auto">
@@ -28,16 +18,24 @@ const LandingPage = () => {
             Table of contents
             <ol className="list-decimal">
               <li>
-                <a href="#about" className="text-my-red font-bold">About</a>
+                <a href="#about" className="text-my-red font-bold">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#research" className="text-my-red font-bold">Research</a>
+                <a href="#research" className="text-my-red font-bold">
+                  Research
+                </a>
               </li>
               <li>
-                <a href="#projects" className="text-my-red font-bold">Projects</a>
+                <a href="#projects" className="text-my-red font-bold">
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#contact" className="text-my-red font-bold">Contact</a>
+                <a href="#contact" className="text-my-red font-bold">
+                  Contact
+                </a>
               </li>
             </ol>
           </div>
