@@ -1,29 +1,32 @@
 {
   "name": "ndrsllwngr.github.io",
+  "description": "Personal website of Andreas Ellwanger",
+  "author": {
+    "name": "Andreas Ellwanger",
+    "url": "https://www.andreasellwanger.com"
+  },
   "version": "1.0.0",
-  "private": true,
   "homepage": "https://www.andreasellwanger.com",
+  "private": true,
+  "engines": {
+    "node": ">=12.16.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
-    "preview-export": "cd out && python3 -m http.server"
+    "preview-export": "cd out && python3 -m http.server",
+    "start": "next start"
   },
   "dependencies": {
-    "framer-motion": "^1.10.3",
-    "next": "^9.4.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
+    "framer-motion": "^1.11.0",
+    "next": "^9.4.2",
     "postcss-import": "^12.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "tailwindcss": "^1.4.6"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

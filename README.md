@@ -12,7 +12,7 @@
 - MacOS, Windows (including WSL), and Linux are supported
 
 ### Setup
-- `node --version & npm --version && yarn --version` - Ensures that required packages are installed.
+- `node --version && npm --version && yarn --version` - Ensures that required packages are installed.
 - `yarn install` - Installs the project using [Yarn](https://yarnpkg.com/getting-started/install).
 
 ### Commands
