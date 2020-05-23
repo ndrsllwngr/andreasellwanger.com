@@ -1,5 +1,7 @@
 # Personal Website
 
+![Node.js CI](https://github.com/ndrsllwngr/ndrsllwngr.github.io/workflows/Node.js%20CI/badge.svg?branch=develop)
+
 ## Stack
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
