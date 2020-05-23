@@ -1,43 +1,66 @@
 {
-  "name": "ndrsllwngr.github.io",
-  "description": "Personal website of Andreas Ellwanger",
-  "author": {
-    "name": "Andreas Ellwanger",
-    "url": "https://www.andreasellwanger.com"
-  },
-  "version": "1.0.0",
-  "homepage": "https://www.andreasellwanger.com",
-  "private": true,
-  "engines": {
-    "node": ">=12.16.0"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "preview-export": "cd out && python3 -m http.server",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.2.0",
-    "autoprefixer": "^9.8.0",
-    "framer-motion": "^1.11.0",
-    "next": "^9.4.2",
-    "postcss-import": "^12.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tailwindcss": "^1.4.6"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "ndrsllwngr.github.io",
+	"description": "Personal website of Andreas Ellwanger",
+	"version": "1.0.0",
+	"repository": "ndrsllwngr/ndrsllwngr.github.io",
+	"author": "Andreas Ellwanger",
+	"homepage": "https://www.andreasellwanger.com",
+	"bugs": {
+		"url": "https://github.com/ndrsllwngr/ndrsllwngr.github.io/issues"
+	},
+	"license": "UNLICENSED",
+	"private": true,
+	"engines": {
+		"node": ">=12.16.0"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"start": "next start",
+		"build": "next build",
+		"export": "next export",
+		"preview-export": "cd out && python3 -m http.server",
+		"lint": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx",
+		"lint:fix": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx --fix"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"dependencies": {
+		"@fullhuman/postcss-purgecss": "2.2.0",
+		"autoprefixer": "9.8.0",
+		"framer-motion": "1.11.0",
+		"next": "9.4.2",
+		"postcss-import": "12.0.1",
+		"prop-types": "15.7.2",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"tailwindcss": "1.4.6"
+	},
+	"devDependencies": {
+		"babel-eslint": "10.1.0",
+		"eslint": "7.1.0",
+		"eslint-config-prettier": "6.11.0",
+		"eslint-plugin-import": "2.20.2",
+		"eslint-plugin-jsx-a11y": "6.2.3",
+		"eslint-plugin-prettier": "3.1.3",
+		"eslint-plugin-react": "7.20.0",
+		"eslint-plugin-react-hooks": "4.0.2",
+		"husky": "4.2.5",
+		"prettier": "2.0.5",
+		"pretty-quick": "2.0.1"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
