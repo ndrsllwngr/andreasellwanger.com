@@ -7,6 +7,7 @@ import { Header } from 'components/header';
 import { Hero } from 'components/hero';
 import { LogoCloud } from 'components/logo-cloud';
 import { BlogPreview } from 'components/blog-preview';
+import { About } from 'components/about';
 
 const LandingPage = () => {
 	return (
@@ -16,6 +17,7 @@ const LandingPage = () => {
 			<Hero />
 			<BlogPreview />
 			<LogoCloud />
+			<About />
 		</Layout>
 	);
 };
