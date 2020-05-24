@@ -8,7 +8,7 @@ export const Hero = () => {
 				<a className="text-gray-700 hover:underline" href="https://www.celonis.com">
 					Celonis
 				</a>{' '}
-				and pursues Computer Science at{' '}
+				and studies Computer Science at{' '}
 				<a className="text-gray-700 hover:underline" href="https://www.uni-muenchen.de/">
 					LMU Munich
 				</a>

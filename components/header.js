@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { LinkWithSound } from 'components/link-with-sound';
 import EmailIcon from 'assets/svg/email.svg';
 import GitHubIcon from 'assets/svg/github.svg';
+import TwitterIcon from 'assets/svg/twitter.svg';
+import LinkedInIcon from 'assets/svg/linkedin.svg';
+import DocumentDownload from 'assets/svg/document-download.svg';
 
 export const Header = () => {
 	return (
@@ -14,10 +17,22 @@ export const Header = () => {
 				</Link> */}
 				<div></div>
 				<div className="flex flex-row">
-					<LinkWithSound css="ml-2 text-gray-800 hover:text-black w-8 h-8 ml-5" href="mailto:contact@onandoff.io">
+					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="/cv.pdf">
+						<DocumentDownload />
+					</LinkWithSound>
+					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="mailto:contact@onandoff.io">
 						<EmailIcon />
 					</LinkWithSound>
-					<LinkWithSound css="ml-2 text-gray-800 hover:text-black w-8 h-8 ml-5" href="https://github.com/onandoff-dev/">
+					<LinkWithSound
+						css="text-gray-800 hover:text-black w-6 h-6 ml-5"
+						href="https://de.linkedin.com/in/ellwanger/en/"
+					>
+						<LinkedInIcon />
+					</LinkWithSound>
+					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://twitter.com/ndrsllwngr/">
+						<TwitterIcon />
+					</LinkWithSound>
+					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://github.com/onandoff-dev/">
 						<GitHubIcon />
 					</LinkWithSound>
 				</div>
