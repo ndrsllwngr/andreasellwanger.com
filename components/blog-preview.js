@@ -30,7 +30,7 @@ BlogEntry.propTypes = {
 
 export const BlogPreview = () => {
 	return (
-		<div className="container mx-auto px-4 sm:px-0 flex-col justify-center">
+		<div className="container mx-auto px-4 flex-col justify-center">
 			<div className="bg-black rounded-md p-6">
 				<div className="flex flex-col justify-center">
 					<h2 className="uppercase text-white font-medium tracking-wide mb-4">Recently published</h2>

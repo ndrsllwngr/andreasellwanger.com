@@ -11,11 +11,7 @@ import DocumentDownload from 'assets/svg/document-download.svg';
 export const Header = () => {
 	return (
 		<header className="">
-			<div className="flex flex-row container items-center justify-between mx-auto my-12 px-4 sm:px-0">
-				{/* <Link href="/">
-					<a className="font-bold text-2xl tracking-tighter">.</a>
-				</Link> */}
-				<div></div>
+			<div className="flex flex-row container items-center justify-end mx-auto my-12 px-4">
 				<div className="flex flex-row">
 					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="/cv.pdf">
 						<DocumentDownload />
