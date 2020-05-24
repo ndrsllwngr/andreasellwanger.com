@@ -23,7 +23,17 @@ module.exports = {
 				},
 			],
 		});
-
+		config.module.rules.push({
+			test: /\.mp3$/,
+			issuer: {
+				test: /\.(js|ts)x?$/,
+			},
+			use: [
+				{
+					loader: 'file-loader',
+				},
+			],
+		});
 		return config;
 	},
 };

@@ -1,23 +1,30 @@
 import React from 'react';
-import Head from 'next/head';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
+import { LinkWithSound } from 'components/link-with-sound';
+import EmailIcon from 'assets/svg/email.svg';
+import GitHubIcon from 'assets/svg/github.svg';
 
-export const Header = ({ title }) => {
+export const Header = () => {
 	return (
-		<Head>
-			<meta charSet="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<title>{title}</title>
-			<meta name="author" content="Andreas Ellwanger" />
-			<meta name="title" content="Andreas Ellwanger" />
-			<meta
-				name="description"
-				content="Andreas, a postgraduate student, currently pursues Computer Science at the Ludwig Maximilian University of Munich, Germany and the Leiden University, The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
-			/>
-		</Head>
+		<header className="">
+			<div className="flex flex-row container items-center justify-between mx-auto my-12 px-4 sm:px-0">
+				<Link href="/">
+					<a className="font-bold text-2xl tracking-tighter">Andreas Ellwanger</a>
+				</Link>
+				<div className="flex flex-row">
+					<LinkWithSound css="ml-2 text-gray-800 hover:text-black w-8 h-8 ml-5" href="mailto:contact@onandoff.io">
+						<EmailIcon />
+					</LinkWithSound>
+					<LinkWithSound css="ml-2 text-gray-800 hover:text-black w-8 h-8 ml-5" href="https://github.com/onandoff-dev/">
+						<GitHubIcon />
+					</LinkWithSound>
+				</div>
+			</div>
+		</header>
 	);
 };
 
 Header.propTypes = {
-	title: PropTypes.string,
+	children: PropTypes.node,
 };

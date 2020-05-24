@@ -1,20 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import { Layout } from 'components/layout';
+import { HtmlHead } from 'components/html-head';
 import { Header } from 'components/header';
-import { Navigation } from 'components/navigation';
 
 const LandingPage = () => {
 	return (
 		<Layout>
-			<Header title="Andreas Ellwanger — Software Engineer." />
-			<Navigation></Navigation>
+			<HtmlHead title="Andreas Ellwanger — Software Engineer." />
+			<Header />
 			<main>
 				<section id="top" className="p-12">
 					<div className="max-w-4xl mx-auto">
-						<h1 className="mb-32 text-6xl font-normal tracking-tight leading-16">
-							<span className="font-black tracking-tighter">Andreas Ellwanger</span>, B.Sc.
-						</h1>
 						Table of contents
 						<ol className="list-decimal">
 							<li>
