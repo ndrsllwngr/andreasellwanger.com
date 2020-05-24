@@ -2,11 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Layout } from 'components/layout';
 import { Header } from 'components/header';
+import { Navigation } from 'components/navigation';
 
 const LandingPage = () => {
 	return (
 		<Layout>
 			<Header title="Andreas Ellwanger — Software Engineer." />
+			<Navigation></Navigation>
 			<main>
 				<section id="top" className="p-12">
 					<div className="max-w-4xl mx-auto">
