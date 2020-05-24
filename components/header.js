@@ -32,7 +32,7 @@ export const Header = () => {
 					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://twitter.com/ndrsllwngr/">
 						<TwitterIcon />
 					</LinkWithSound>
-					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://github.com/onandoff-dev/">
+					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://github.com/ndrsllwngr">
 						<GitHubIcon />
 					</LinkWithSound>
 				</div>
