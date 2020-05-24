@@ -16,7 +16,7 @@ export const Header = () => {
 					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="/cv.pdf">
 						<DocumentDownload />
 					</LinkWithSound>
-					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="mailto:contact@onandoff.io">
+					<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="mailto:contact@andreasellwanger.com">
 						<EmailIcon />
 					</LinkWithSound>
 					<LinkWithSound
