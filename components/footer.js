@@ -10,10 +10,10 @@ import DocumentDownload from 'assets/svg/document-download.svg';
 
 export const Footer = () => {
 	return (
-		<div className="flex flex-row container items-center justify-between mx-auto my-12 px-4">
-			<p>© 2020-present Andreas Ellwanger. All Rights Reserved.</p>
-			<div className="flex flex-row items-center">
-				<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="/cv.pdf">
+		<div className="flex flex-col-reverse sm:flex-row container items-center justify-between mx-auto my-12 px-4">
+			<p className="mt-8 sm:mt-0">© 2020-present Andreas Ellwanger. All Rights Reserved.</p>
+			<div className="flex flex-row items-center justify-center">
+				<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6" href="/cv.pdf">
 					<DocumentDownload />
 				</LinkWithSound>
 				<LinkWithSound css="text-gray-800 hover:text-black w-6 h-6 ml-5" href="mailto:contact@andreasellwanger.com">
