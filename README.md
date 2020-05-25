@@ -1,6 +1,6 @@
 # Personal Website
 
-![Node.js CI](https://github.com/ndrsllwngr/ndrsllwngr.github.io/workflows/Node.js%20CI/badge.svg?branch=develop)
+![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/workflows/Node.js%20CI/badge.svg?branch=develop)
 
 ## Stack
 - [Next.js](https://nextjs.org/)
@@ -22,7 +22,7 @@
 - `yarn build` - Runs next build which creates an optimized production build of your application. The output displays information about each route.
 - `yarn start` - Runs next start which starts a Next.js production server.
 - `yarn export` - Runs next export which allows you to export your app to static HTML, which can be run standalone without the need of a Node.js server.
-  
+
 ##### CUSTOM
 - `yarn preview-export` - Runs a HTTP server (`python3 -m http.server`) in `out/` to preview the static HTML output from `yarn export`.
 
