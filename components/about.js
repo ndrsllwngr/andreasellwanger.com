@@ -17,7 +17,7 @@ export const About = () => {
 				</a>{' '}
 				as a Full Stack Developer / UX Researcher. Since 2018 he is part of the{' '}
 				<a
-					href="https://www.tech4germany.org/en/ueber-uns/"
+					href="https://tech.4germany.org/ueber-uns/"
 					className="text-gray-800 hover:text-black font-mono uppercase font-bold"
 				>
 					Tech4Germany
