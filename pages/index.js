@@ -13,7 +13,7 @@ import { Footer } from 'components/footer';
 const LandingPage = () => {
 	return (
 		<Layout>
-			<HtmlHead title="Andreas Ellwanger — Software Engineer." />
+			<HtmlHead />
 			<Header />
 			<Hero />
 			<BlogPreview />
