@@ -24,8 +24,8 @@ export const About = () => {
 					Tech4Germany
 				</a>{' '}
 				fellowship, Germany’s first e-Government fellowship with Germany’s Chief of Staff Prof. Helge Braun as a patron,
-				working for three months to work as a UX Researcher as well as a Frontend Developer for the German government in
-				Berlin. Together with eight other fellows, they worked on topics related to digitalisation and e-government.
+				working for three months as a UX Researcher as well as a Frontend Developer for the German government in Berlin.
+				Together with eight other fellows, they worked on topics related to digitalisation and e-government.
 			</p>
 		</div>
 	);
