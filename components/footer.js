@@ -31,7 +31,7 @@ export const Footer = () => {
 					<TwitterIcon />
 					<span className="sr-only">Twitter</span>
 				</a>
-				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5">
+				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://github.com/ndrsllwngr">
 					<GitHubIcon />
 					<span className="sr-only">GitHub</span>
 				</a>
