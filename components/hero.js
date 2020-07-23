@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const Hero = () => {
 	return (
@@ -16,5 +16,5 @@ export const Hero = () => {
 			</h1>
 			<p className="font-normal font-sans uppercase tracking-wide mt-6">Munich, Germany</p>
 		</section>
-	);
-};
+	)
+}

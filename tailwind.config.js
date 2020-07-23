@@ -1,5 +1,5 @@
 // const defaultConfig = require('tailwindcss/defaultConfig')
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
 	purge: false, // using custom postcss with purge, see ./postcss.config.js
@@ -24,4 +24,4 @@ module.exports = {
 	},
 	variants: {},
 	plugins: [],
-};
+}

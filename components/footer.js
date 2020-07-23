@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 // import PropTypes from 'prop-types';
 // import Link from 'next/link';
 // import { LinkWithSound } from 'components/link-with-sound';
-import EmailIcon from 'assets/svg/email.svg';
-import GitHubIcon from 'assets/svg/github.svg';
-import TwitterIcon from 'assets/svg/twitter.svg';
-import LinkedInIcon from 'assets/svg/linkedin.svg';
-import DocumentDownload from 'assets/svg/document-download.svg';
+import EmailIcon from '@assets/svg/email.svg'
+import GitHubIcon from '@assets/svg/github.svg'
+import TwitterIcon from '@assets/svg/twitter.svg'
+import LinkedInIcon from '@assets/svg/linkedin.svg'
+import DocumentDownload from '@assets/svg/document-download.svg'
 
 export const Footer = () => {
 	return (
@@ -35,5 +35,5 @@ export const Footer = () => {
 				</a>
 			</div>
 		</div>
-	);
-};
+	)
+}

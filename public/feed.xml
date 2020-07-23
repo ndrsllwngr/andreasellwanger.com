@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[andreasellwanger.com]]></title>
+        <description><![CDATA[andreasellwanger.com]]></description>
+        <link>https://www.andreasellwanger.com</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 23 Jul 2020 17:13:35 GMT</lastBuildDate>
+        <atom:link href="https://www.andreasellwanger.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[a closure]]></title>
+            <description><![CDATA[<p>Closures are confusing because they are an “invisible” concept.</p>
+<p>When you use an object, a variable, or a function, you do this intentionally. You think: “I’m gonna need a variable here,” and add it to your code.</p>
+<p>Closures are different. By the time most people approach closures, they have already used them unknowingly many times — and it is likely that this is true for yourself, too. So learning closures is less about understanding a <em>new</em> concept and more about recognizing something you have <em>already been doing</em> for a while.</p>
+<h3 id="tldr">tl;dr</h3>
+<p>You have a closure when <strong>a function accesses variables defined outside of it</strong>.</p>
+<p>For example, this code snippet contains a closure:</p>
+<pre><code class="language-js">let users = [&#39;Alice&#39;, &#39;Dan&#39;, &#39;Jessica&#39;];
+let query = &#39;A&#39;;
+let user = users.filter(user =&gt; user.startsWith(query));</code></pre>
+<p>Notice how <code>user =&gt; user.startsWith(query)</code> is itself a function. It uses the <code>query</code> variable. But the <code>query</code> variable is defined <em>outside</em> of that function. That’s a closure.</p>
+<hr>
+<p><strong>You can stop reading here, if you want.</strong> The rest of this article approaches closures in a different way. Instead of explaining what a closure is, it will walk you through the process of <em>discovering</em> closures — like the first programmers did in the 1960s.</p>
+<hr>
+<h3 id="step-1-functions-can-access-outside-variables">Step 1: Functions Can Access Outside Variables</h3>
+<p>To understand closures, we need to be somewhat familiar with variables and functions. In this example, we declare the <code>food</code> variable <em>inside</em> the <code>eat</code> function:</p>
+<pre><code class="language-js">function eat() {
+  let food = &#39;cheese&#39;;
+  console.log(food + &#39; is good&#39;);
+}
+
+eat(); // Logs &#39;cheese is good&#39;</code></pre>
+<p>But what if we wanted to later change the <code>food</code> variable <em>outside</em> of the <code>eat</code> function? To do this, we can move the <code>food</code> variable itself out of our function into the top level:</p>
+<pre><code class="language-js">let food = &#39;cheese&#39;; // We moved it outside
+
+function eat() {
+  console.log(food + &#39; is good&#39;);
+}</code></pre>
+<p>This lets us change the <code>food</code> “from the outside” any time that we want to:</p>
+<pre><code class="language-js">eat(); // Logs &#39;cheese is good&#39;
+food = &#39;pizza&#39;;
+eat(); // Logs &#39;pizza is good&#39;
+food = &#39;sushi&#39;;
+eat(); // Logs &#39;sushi is good&#39;</code></pre>
+<p>In other words, the <code>food</code> variable is no longer <em>local</em> to our <code>eat</code> function, but our <code>eat</code> function nevertheless has no trouble accessing it. <strong>Functions can access variables outside of them.</strong> Stop for a second and make sure that you have no problem with this idea. Once it has settled comfortably in your brain, move to the second step.</p>
+<h3 id="step-2-wrapping-code-in-a-function-call">Step 2: Wrapping Code in a Function Call</h3>
+<p>Let’s say we have some code:</p>
+<pre><code class="language-js">/* A snippet of code */</code></pre>
+<p>It doesn’t matter what that code does. But let’s say that <strong>we want to run it twice</strong>.</p>
+<p>One way to do it would be to copy and paste it:</p>
+<pre><code class="language-js">/* A snippet of code */
+/* A snippet of code */</code></pre>
+<p>Another way to do it would be to use a loop:</p>
+<pre><code class="language-js">for (let i = 0; i &lt; 2; i++) {
+  /* A snippet of code */
+}</code></pre>
+<p>The third way, which we’re particularly interested in today, is to wrap it in a function:</p>
+<pre><code class="language-js">function doTheThing() {
+  /* A snippet of code */
+}
+
+doTheThing();
+doTheThing();</code></pre>
+<p>Using a function gives us the ultimate flexibility because we can run this function any number of times, at any time — and from anywhere in our program.</p>
+<p>In fact, <strong>we can even call our new function only <em>once</em></strong>, if we wanted to:</p>
+<pre><code class="language-js">function doTheThing() {
+  /* A snippet of code */
+}
+
+doTheThing();</code></pre>
+<p>Notice how the code above is equivalent to the original code snippet:</p>
+<pre><code class="language-js">/* A snippet of code */</code></pre>
+<p>In other words, <strong>if we take some piece of code, “wrap” that code in a function, and then call that function exactly once, we haven’t changed what that code is doing</strong>. There are some exceptions to this rule which we will ignore, but generally saying this should make sense. Sit on this idea until your brain feels comfortable with it.</p>
+<h3 id="step-3-discovering-closures">Step 3: Discovering Closures</h3>
+<p>We have traced our way through two different ideas:</p>
+<ul>
+<li><strong>Functions can access variables defined outside of them.</strong></li>
+<li><strong>Wrapping code in a function and calling it once doesn’t change the result.</strong></li>
+</ul>
+<p>Now let’s see what happens if we combine them.</p>
+<p>We’ll take our code example from the first step:</p>
+<pre><code class="language-js">let food = &#39;cheese&#39;;
+
+function eat() {
+  console.log(food + &#39; is good&#39;);
+}
+
+eat();</code></pre>
+<p>Then we’ll wrap <em>this whole example</em> into a function, which we’re going to call once:</p>
+<pre><code class="language-js">function liveADay() {
+  let food = &#39;cheese&#39;;
+
+  function eat() {
+    console.log(food + &#39; is good&#39;);
+  }
+
+  eat();
+}
+
+liveADay();</code></pre>
+<p>Read both snippets one more time and make sure that they are equivalent.</p>
+<p>This code works! But look closer. Notice the <code>eat</code> function is <em>inside</em> the <code>liveADay</code> function. Is that even allowed? Can we really put a function inside another function?</p>
+<p>There are languages in which a code structured this way is <em>not</em> valid. For example, this code is not valid in the C language (which doesn’t have closures). This means that in C, our second conclusion isn’t true — we can’t just take some arbitrary piece of code and wrap it in a function. But JavaScript doesn’t suffer from that limitation.</p>
+<p>Take another good look at this code and notice where <code>food</code> is declared and used:</p>
+<pre><code class="language-js">function liveADay() {
+  let food = &#39;cheese&#39;; // Declare `food`
+
+  function eat() {
+    console.log(food + &#39; is good&#39;); // Read `food`
+  }
+
+  eat();
+}
+
+liveADay();</code></pre>
+<p>Let’s go through this code together — step by step. First, we declare the <code>liveADay</code> function at the top level. We immediately call it. It has a <code>food</code> local variable. It also contains an <code>eat</code> function. Then it calls that <code>eat</code> function. Because <code>eat</code> is inside of <code>liveADay</code>, it “sees” all of its variables. This is why it can read the <code>food</code> variable.</p>
+<p><strong>This is called a closure.</strong></p>
+<p><strong>We say that there is a closure when a function (such as <code>eat</code>) reads or writes a variable (such as <code>food</code>) that is declared outside of it (such as in <code>liveADay</code>).</strong></p>
+<p>Take some time to re-read this, and make sure you can trace this in the code.</p>
+<p>Here is an example we’ve introduced in the tl;dr section:</p>
+<pre><code class="language-js">let users = [&#39;Alice&#39;, &#39;Dan&#39;, &#39;Jessica&#39;];
+let query = &#39;A&#39;;
+let user = users.filter(user =&gt; user.startsWith(query));</code></pre>
+<p>It may be easier to notice the closure if we rewrite it with a function expression:</p>
+<pre><code class="language-js">let users = [&#39;Alice&#39;, &#39;Dan&#39;, &#39;Jessica&#39;];
+// 1. The query variable is declared outside
+let query = &#39;A&#39;;
+let user = users.filter(function(user) {
+  // 2. We are in a nested function
+  // 3. And we read the query variable (which is declared outside!)
+  return user.startsWith(query);
+});</code></pre>
+<p>Whenever a function accesses a variable that is declared outside of it, we say it is a closure. The term itself is used a bit loosely. Some people will refer to the <em>nested function itself</em> as “the closure” in this example. Others might refer to the <em>technique</em> of accessing the outside variables as the closure. Practically, it doesn’t matter.</p>
+<h3 id="a-ghost-of-a-function-call">A Ghost of a Function Call</h3>
+<p>Closures might seem deceptively simple now. This doesn’t mean they’re without their own pitfalls. The fact that a function may read and write variables outside has rather deep consequences if you really think about it. For example, this means that these variables will “survive” for as long as the nested function may be called:</p>
+<pre><code class="language-js">function liveADay() {
+  let food = &#39;cheese&#39;;
+
+  function eat() {
+    console.log(food + &#39; is good&#39;);
+  }
+
+  // Call eat after five seconds
+  setTimeout(eat, 5000);
+}
+
+liveADay();</code></pre>
+<p>Here, <code>food</code> is a local variable inside the <code>liveADay()</code> function call. It’s tempting to think it “disappears” after we exit <code>liveADay</code>, and it won’t come back to haunt us.</p>
+<p>However, inside of <code>liveADay</code> we tell the browser to call <code>eat</code> in five seconds. And <code>eat</code> reads the <code>food</code> variable. <strong>So the JavaScript engine needs to keep the <code>food</code> variable from that particular <code>liveADay()</code> call available until <code>eat</code> has been called.</strong></p>
+<p>In that sense, we can think of closures as of “ghosts” or “memories” of the past function calls. Even though our <code>liveADay()</code> function call has long finished, its variables must continue to exist for as long as the nested <code>eat</code> function may still be called. Luckily, JavaScript does that for us, so we don’t need to think about it.</p>
+<h3 id="why-closures">Why “Closures”?</h3>
+<p>Finally, you might be wondering why closures are called that way. The reason is mostly historical. A person familiar with the computer science jargon might say that an expression like <code>user =&gt; user.startsWith(query)</code> has an “open binding”. In other words, it is clear from it what the <code>user</code> is (a parameter), but it is not clear what <code>query</code> is in isolation. When we say “actually, <code>query</code> refers to the variable declared outside”, we are “closing” that open binding. In other words, we get a <em>closure</em>.</p>
+<p>Not all languages implement closures. For example, in some languages like C, it is not allowed to nest functions at all. As a result, a function may only access its own local variables or global variables, but there is never a situation in which it can access a parent function’s local variables. Naturally, that limitation is painful.</p>
+<p>There are also languages like Rust which implement closures, but have a separate syntax for closures and regular functions. So if you want to read a variable from outside a function, you would have to opt into that in Rust. This is because under the hood, closures may require the engine to keep the outer variables (called “the environment”) around even after the function call. This overhead is acceptable in JavaScript, but it can be a performance concern for the very low-level languages.</p>
+<p>And with that, I hope you can get a closure on the concept of closures!</p>
+<blockquote>
+<p>If you prefer a more visual approach to the JavaScript fundamentals, check out <a href="https://justjavascript.com/" target="_blank" rel="noopener noreferrer">Just JavaScript</a>. It is my illustrated course in collaboration with <a href="https://maggieappleton.com/" target="_blank" rel="noopener noreferrer">Maggie Appleton</a>.</p>
+</blockquote>
+]]></description>
+            <link>https://www.andreasellwanger.com/closure</link>
+            <guid isPermaLink="false">https://www.andreasellwanger.com/closure</guid>
+            <dc:creator><![CDATA[Andreas Ellwanger]]></dc:creator>
+            <pubDate>Fri, 10 Jul 2020 22:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

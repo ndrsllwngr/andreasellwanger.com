@@ -1,4 +1,7 @@
 module.exports = {
+	experimental: {
+		jsconfigPaths: true,
+	},
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/,
@@ -22,7 +25,7 @@ module.exports = {
 					},
 				},
 			],
-		});
+		})
 		config.module.rules.push({
 			test: /\.mp3$/,
 			issuer: {
@@ -33,7 +36,7 @@ module.exports = {
 					loader: 'file-loader',
 				},
 			],
-		});
-		return config;
+		})
+		return config
 	},
-};
+}

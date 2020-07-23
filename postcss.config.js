@@ -5,7 +5,7 @@ const purgecss = [
 		whitelist: ['fill-current', 'stroke-current', 'inline-block', 'w-full', 'h-full'],
 		defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 	},
-];
+]
 module.exports = {
 	plugins: [
 		'postcss-import',
@@ -13,4 +13,4 @@ module.exports = {
 		'autoprefixer',
 		...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
 	],
-};
+}

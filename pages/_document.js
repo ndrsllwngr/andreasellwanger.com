@@ -1,5 +1,5 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import React from 'react'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 // import { useAmp } from 'next/amp';
 
 // import { GA_TRACKING_ID } from '../lib/analytics';
@@ -96,8 +96,8 @@ class NextSite extends Document {
 					/> */}
 				</body>
 			</Html>
-		);
+		)
 	}
 }
 
-export default NextSite;
+export default NextSite

@@ -1,6 +1,6 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import Link from 'next/link';
+import React from 'react'
+import { PropTypes } from 'prop-types'
+import Link from 'next/link'
 
 export const Wip = ({ page }) => {
 	return (
@@ -12,9 +12,9 @@ export const Wip = ({ page }) => {
 				<a className="font-normal font-sans uppercase tracking-wide mt-6">↩ Go back</a>
 			</Link>
 		</section>
-	);
-};
+	)
+}
 
 Wip.propTypes = {
 	page: PropTypes.string,
-};
+}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import Link from 'next/link';
+import React from 'react'
+import { PropTypes } from 'prop-types'
+import Link from 'next/link'
 
 const BlogEntry = ({ date, title, link, external = false }) => {
 	if (external) {
@@ -9,7 +9,7 @@ const BlogEntry = ({ date, title, link, external = false }) => {
 				<span className="font-mono mr-10">{date}</span>
 				<span className="font-sans">{title} ↖</span>
 			</a>
-		);
+		)
 	}
 	return (
 		<Link href={link}>
@@ -18,15 +18,15 @@ const BlogEntry = ({ date, title, link, external = false }) => {
 				<p className="font-sans">{title} ➝</p>
 			</a>
 		</Link>
-	);
-};
+	)
+}
 
 BlogEntry.propTypes = {
 	date: PropTypes.string,
 	title: PropTypes.string,
 	link: PropTypes.string,
 	external: PropTypes.bool,
-};
+}
 
 export const BlogPreview = () => {
 	return (
@@ -47,5 +47,5 @@ export const BlogPreview = () => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}

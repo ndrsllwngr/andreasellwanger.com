@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const About = () => {
 	return (
@@ -28,5 +28,5 @@ export const About = () => {
 				Together with eight other fellows, they worked on topics related to digitalisation and e-government.
 			</p>
 		</div>
-	);
-};
+	)
+}

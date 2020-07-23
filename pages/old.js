@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import { Layout } from 'components/layout';
-import { HtmlHead } from '../components/html-head';
+import React from 'react'
+import Link from 'next/link'
+import { Layout } from '@components/layout'
+import { HtmlHead } from '@components/html-head'
 
 const Old = () => {
 	return (
@@ -218,7 +218,7 @@ const Old = () => {
 				</section>
 			</main>
 		</Layout>
-	);
-};
+	)
+}
 
-export default Old;
+export default Old
