@@ -1,7 +1,22 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react'
+import { withRouter } from 'next/router'
 
-const Custom404 = () => {
-	return <h1>404 - Page Not Found</h1>
+import Error from '@components/error'
+
+// Included just to prevent Automatic Static Optimization
+export async function getStaticProps(context) {
+	return {
+		props: {},
+	}
 }
 
-export default Custom404
+// Strips potential `/term?something=else` into `term`
+const extractTerm = (path) => path.substring(path.indexOf('/') + 1, Math.max(path.indexOf('?'), path.length))
+
+function E({ router }) {
+	return <Error missingTerm={extractTerm(router.asPath)} status={404} />
+}
+
+export default withRouter(E)

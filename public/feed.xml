@@ -4,11 +4,11 @@
         <description><![CDATA[andreasellwanger.com]]></description>
         <link>https://www.andreasellwanger.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 23 Jul 2020 17:13:35 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 23 Jul 2020 17:54:30 GMT</lastBuildDate>
         <atom:link href="https://www.andreasellwanger.com/feed.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
-            <title><![CDATA[a closure]]></title>
+            <title><![CDATA[Tech4Germany 2018]]></title>
             <description><![CDATA[<p>Closures are confusing because they are an “invisible” concept.</p>
 <p>When you use an object, a variable, or a function, you do this intentionally. You think: “I’m gonna need a variable here,” and add it to your code.</p>
 <p>Closures are different. By the time most people approach closures, they have already used them unknowingly many times — and it is likely that this is true for yourself, too. So learning closures is less about understanding a <em>new</em> concept and more about recognizing something you have <em>already been doing</em> for a while.</p>
@@ -157,10 +157,10 @@ liveADay();</code></pre>
 <p>If you prefer a more visual approach to the JavaScript fundamentals, check out <a href="https://justjavascript.com/" target="_blank" rel="noopener noreferrer">Just JavaScript</a>. It is my illustrated course in collaboration with <a href="https://maggieappleton.com/" target="_blank" rel="noopener noreferrer">Maggie Appleton</a>.</p>
 </blockquote>
 ]]></description>
-            <link>https://www.andreasellwanger.com/closure</link>
-            <guid isPermaLink="false">https://www.andreasellwanger.com/closure</guid>
+            <link>https://www.andreasellwanger.com/blog/tech4germany-2018</link>
+            <guid isPermaLink="false">https://www.andreasellwanger.com/blog/tech4germany-2018</guid>
             <dc:creator><![CDATA[Andreas Ellwanger]]></dc:creator>
-            <pubDate>Fri, 10 Jul 2020 22:00:00 GMT</pubDate>
+            <pubDate>Wed, 22 Jul 2020 22:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

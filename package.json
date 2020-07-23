@@ -21,9 +21,9 @@
 		"old-build": "next build",
 		"export": "next export",
 		"export-preview": "cd out && python3 -m http.server",
-		"prettify": "prettier --write '**/*.js'",
-		"lint": "yarn prettify && eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx",
-		"lint:fix": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx --fix",
+		"prettify": "prettier --write ./components/**/*.js ./lib/**/*.js ./pages/**/*.js",
+		"lint": "yarn prettify && eslint ./components/** ./lib/** ./pages/** --ext .js,.jsx",
+		"lint:fix": "eslint ./components/** ./lib/** ./pages/**  --ext .js,.jsx --fix",
 		"rss": "node lib/rss"
 	},
 	"husky": {

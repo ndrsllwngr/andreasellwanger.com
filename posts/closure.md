@@ -1,7 +1,7 @@
 ---
-title: a closure
-slug: closure
-date: July 11, 2020
+title: Tech4Germany 2018
+slug: tech4germany-2018
+date: July 23, 2020
 category: language
 ---
 
