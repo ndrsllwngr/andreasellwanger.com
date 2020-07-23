@@ -1,6 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Link from 'next/link';
+// import Link from 'next/link';
 // import { LinkWithSound } from 'components/link-with-sound';
 import EmailIcon from 'assets/svg/email.svg';
 import GitHubIcon from 'assets/svg/github.svg';
@@ -13,12 +13,10 @@ export const Footer = () => {
 		<div className="flex flex-col-reverse sm:flex-row container items-center justify-between mx-auto my-12 px-4">
 			<p className="mt-8 sm:mt-0">© 2020-present Andreas Ellwanger. All Rights Reserved.</p>
 			<div className="flex flex-row items-center justify-center">
-				<Link href="/cv.pdf">
-					<a className="text-gray-800 hover:text-black w-6 h-6">
-						<DocumentDownload />
-						<span className="sr-only">CV</span>
-					</a>
-				</Link>
+				<a className="text-gray-800 hover:text-black w-6 h-6" href="/cv.pdf">
+					<DocumentDownload />
+					<span className="sr-only">CV</span>
+				</a>
 				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5" href="mailto:contact@andreasellwanger.com">
 					<EmailIcon />
 					<span className="sr-only">Email</span>
