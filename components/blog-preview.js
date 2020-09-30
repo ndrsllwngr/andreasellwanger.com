@@ -37,6 +37,14 @@ export const BlogPreview = () => {
 					<ul className="text-white">
 						<li>
 							<BlogEntry
+								link="https://github.com/ndrsllwngr/"
+								title="Published more projects on GitHub"
+								date="2020-09-30"
+								external
+							/>
+						</li>
+						<li>
+							<BlogEntry
 								link="https://dl.acm.org/doi/10.1145/3213526.3213529"
 								title="Axis- plus Content-based Control for Camera Drones: Design and Evaluation of User Interface Concepts"
 								date="2018-06-10"
