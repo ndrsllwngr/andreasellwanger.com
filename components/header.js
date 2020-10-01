@@ -21,7 +21,7 @@ export const Header = () => {
 
 				<nav className="flex flex-col sm:flex-row flex-wrap justify-end">
 					<Link href="/recognition">
-						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 line-through">
+						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 hidden">
 							Recognition
 						</a>
 					</Link>
@@ -35,12 +35,12 @@ export const Header = () => {
 						</a>
 					</Link>
 					<Link href="/blog">
-						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 line-through">
+						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 hidden">
 							Blog
 						</a>
 					</Link>
 					<Link href="/about">
-						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 line-through">
+						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 hidden">
 							About
 						</a>
 					</Link>
