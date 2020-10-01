@@ -18,10 +18,12 @@ module.exports = {
 				'system-mono': defaultTheme.fontFamily.sans,
 			},
 			lineHeight: {
-				'16': '4rem',
+				16: '4rem',
 			},
 		},
 	},
-	variants: {},
+	variants: {
+		display: ['responsive', 'hover', 'focus', 'group-hover'],
+	},
 	plugins: [],
 };

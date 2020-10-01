@@ -15,7 +15,7 @@ const BlogEntry = ({ date, title, link, external = false }) => {
 		<Link href={link}>
 			<a>
 				<span className="font-mono mr-10">{date}</span>
-				<p className="font-sans">{title} ➝</p>
+				<span className="font-sans">{title}</span>
 			</a>
 		</Link>
 	);
@@ -35,6 +35,9 @@ export const BlogPreview = () => {
 				<div className="flex flex-col justify-center">
 					<h2 className="uppercase text-white font-medium tracking-wide mb-4">Recently published</h2>
 					<ul className="text-white">
+						<li>
+							<BlogEntry link="/projects" title="Released first version of /projects page" date="2020-10-01" />
+						</li>
 						<li>
 							<BlogEntry
 								link="https://github.com/ndrsllwngr/"

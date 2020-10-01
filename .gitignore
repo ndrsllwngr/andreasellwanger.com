@@ -252,3 +252,5 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/node,react,macos,webstorm,visualstudiocode
+
+.vscode/settings.json
