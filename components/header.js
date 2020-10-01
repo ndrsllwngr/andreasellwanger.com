@@ -21,22 +21,26 @@ export const Header = () => {
 
 				<nav className="flex flex-col sm:flex-row flex-wrap justify-end">
 					<Link href="/recognition">
-						<a className="text-gray-800 text-lg tracking-tight font-medium hover:text-black ml-5 py-1 sm:py-0 line-through">
+						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 line-through">
 							Recognition
 						</a>
 					</Link>
 					<Link href="/projects">
-						<a className="text-gray-800 text-lg tracking-tight font-medium hover:text-black ml-5 py-1 sm:py-0">
+						<a
+							className={`text-gray-800 text-lg tracking-tight font-medium hover:text-black ml-5 py-1 sm:py-0 ${
+								router.pathname === '/projects' ? 'underline' : ''
+							}`}
+						>
 							Projects
 						</a>
 					</Link>
 					<Link href="/blog">
-						<a className="text-gray-800 text-lg tracking-tight font-medium hover:text-black ml-5 py-1 sm:py-0 line-through">
+						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 line-through">
 							Blog
 						</a>
 					</Link>
 					<Link href="/about">
-						<a className="text-gray-800 text-lg tracking-tight font-medium hover:text-black ml-5 py-1 sm:py-0 line-through">
+						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 line-through">
 							About
 						</a>
 					</Link>
