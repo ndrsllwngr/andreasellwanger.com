@@ -5,6 +5,7 @@ import { HtmlHead } from 'components/html-head';
 import { Header } from 'components/header';
 import { Layout } from 'components/layout';
 import { Project } from 'components/project';
+import { Footer } from 'components/footer';
 
 const myProjects = [
 	{
@@ -92,6 +93,7 @@ const ProjectsPage = () => {
 					<Project {...project} css="pb-10" key={i} />
 				))}
 			</section>
+			<Footer />
 		</Layout>
 	);
 };
