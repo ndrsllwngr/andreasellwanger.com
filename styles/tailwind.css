@@ -1,11 +1,11 @@
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @import 'tailwindcss/base';
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @import url('https://rsms.me/inter/inter.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
@@ -44,4 +44,5 @@
 	@apply absolute inline-block -ml-8;
 	content: '#';
 }
-/* purgecss end ignore */
+
+/*! purgecss end ignore */

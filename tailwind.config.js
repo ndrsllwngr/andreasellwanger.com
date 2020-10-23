@@ -2,7 +2,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-	purge: false, // using custom postcss with purge, see ./postcss.config.js
+	purge: {
+		content: ['./components/**/*.{js,mdx}', './pages/**/*.{js,mdx}'],
+		options: {
+			whitelist: ['fill-current', 'stroke-current', 'inline-block', 'w-full', 'h-full'],
+		},
+	},
 	theme: {
 		extend: {
 			colors: {
