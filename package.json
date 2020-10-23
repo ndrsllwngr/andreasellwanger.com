@@ -22,9 +22,18 @@
 		"lint": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx",
 		"lint:fix": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx --fix"
 	},
-	"browserslist": [
-		"> 1%"
-	],
+	"browserslist": {
+		"production": [
+			">1%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "pretty-quick --staged"
