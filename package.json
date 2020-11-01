@@ -41,7 +41,7 @@
 	},
 	"dependencies": {
 		"babel-plugin-preval": "5.0.0",
-		"file-loader": "6.1.1",
+		"file-loader": "6.2.0",
 		"framer-motion": "2.9.4",
 		"next": "10.0.0",
 		"prop-types": "15.7.2",
@@ -51,7 +51,7 @@
 	},
 	"devDependencies": {
 		"@svgr/webpack": "5.4.0",
-		"autoprefixer": "9.8.6",
+		"autoprefixer": "~9.8.6",
 		"babel-eslint": "10.1.0",
 		"eslint": "7.12.1",
 		"eslint-config-prettier": "6.15.0",
@@ -61,8 +61,8 @@
 		"eslint-plugin-react": "7.21.5",
 		"eslint-plugin-react-hooks": "4.2.0",
 		"husky": "4.3.0",
-		"postcss-import": "12.0.1",
-		"postcss-nested": "4.2.3",
+		"postcss-import": "~12.0.1",
+		"postcss-nested": "~4.2.3",
 		"prettier": "2.1.2",
 		"pretty-quick": "3.1.0"
 	}
