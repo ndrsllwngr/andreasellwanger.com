@@ -15,28 +15,28 @@ export const Footer = () => {
       </p>
       <div className="flex flex-row items-center justify-center">
         <a
-          className="text-gray-800 hover:text-black dark:text-gray-300 dark:hover:text-white w-6 h-6 ml-5"
+          className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5"
           href="mailto:contact@andreasellwanger.com"
         >
           <EmailIcon />
           <span className="sr-only">Email</span>
         </a>
         <a
-          className="text-gray-800 hover:text-black dark:text-gray-300 dark:hover:text-white w-6 h-6 ml-5"
+          className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5"
           href="https://de.linkedin.com/in/ellwanger/en/"
         >
           <LinkedInIcon />
           <span className="sr-only">LinkedIn</span>
         </a>
         <a
-          className="text-gray-800 hover:text-black dark:text-gray-300 dark:hover:text-white w-6 h-6 ml-5"
+          className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5"
           href="https://twitter.com/ndrsllwngr/"
         >
           <TwitterIcon />
           <span className="sr-only">Twitter</span>
         </a>
         <a
-          className="text-gray-800 hover:text-black dark:text-gray-300 dark:hover:text-white w-6 h-6 ml-5"
+          className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5"
           href="https://github.com/ndrsllwngr"
         >
           <GitHubIcon />

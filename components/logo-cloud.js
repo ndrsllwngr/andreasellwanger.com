@@ -10,7 +10,7 @@ const Logo = ({ children, link, alt }) => {
   return (
     <div className="flex py-6 justify-center px-10 m-4">
       <a
-        className="text-gray-800 hover:text-black dark:text-gray-300 dark:hover:text-white w-32 h-32"
+        className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis  w-32 h-32"
         href={link}
       >
         {children}
