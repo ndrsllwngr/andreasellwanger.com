@@ -34,36 +34,32 @@
 			"last 1 safari version"
 		]
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged"
-		}
-	},
 	"dependencies": {
+		"@tailwindcss/typography": "0.3.1",
 		"framer-motion": "2.9.4",
-		"next": "10.0.1",
+		"next": "10.0.2",
+		"next-themes": "0.0.10",
 		"prop-types": "15.7.2",
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
-		"tailwindcss": "1.9.6"
+		"tailwindcss": "2.0.1"
 	},
 	"devDependencies": {
-		"@svgr/webpack": "5.4.0",
-		"autoprefixer": "~10.0.1",
+		"@svgr/webpack": "5.5.0",
+		"@typescript-eslint/eslint-plugin": "4.8.1",
+		"@typescript-eslint/parser": "4.8.1",
+		"autoprefixer": "10.0.2",
 		"babel-eslint": "10.1.0",
 		"babel-plugin-preval": "5.0.0",
-		"eslint": "7.12.1",
-		"eslint-config-prettier": "6.15.0",
+		"eslint": "7.13.0",
+		"eslint-config-react-app": "6.0.0",
+		"eslint-plugin-flowtype": "5.2.0",
 		"eslint-plugin-import": "2.22.1",
 		"eslint-plugin-jsx-a11y": "6.4.1",
-		"eslint-plugin-prettier": "3.1.4",
 		"eslint-plugin-react": "7.21.5",
 		"eslint-plugin-react-hooks": "4.2.0",
 		"file-loader": "6.2.0",
-		"husky": "4.3.0",
-		"postcss-import": "~13.0.0",
-		"postcss-nested": "~5.0.1",
-		"prettier": "2.1.2",
-		"pretty-quick": "3.1.0"
+		"postcss": "^8.1.8",
+		"postcss-nested": "^5.0.1"
 	}
 }

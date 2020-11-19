@@ -1,55 +1,57 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { ThemeChanger } from '@/components/theme-changer'
+
+const Page = ({ title, href }) => {
+  const router = useRouter()
+  return (
+    <Link href={href}>
+      <a
+        className={`text-lg hover:text-my-blue dark:hover:text-celonis ml-5 py-1 sm:py-0 ${
+          router.pathname === href
+            ? 'text-my-blue dark:text-celonis'
+            : 'text-gray-800 dark:text-gray-300'
+        }`}
+      >
+        {title}
+      </a>
+    </Link>
+  )
+}
 
 export const Header = () => {
-	const router = useRouter();
-	return (
-		<header className="">
-			<div className="flex flex-row flex-wrap container items-center justify-between mx-auto my-12 px-4">
-				{router.pathname !== '/' ? (
-					<div className="group">
-						<div className="text-base leading-none text-white bg-gray-800 font-medium print:bg-black px-6 py-1 block group-hover:hidden"></div>
-						<Link href="/">
-							<a className="font-normal font-sans uppercase tracking-wide hidden group-hover:block">↩ Go back</a>
-						</Link>
-					</div>
-				) : (
-					<div></div>
-				)}
-
-				<nav className="flex flex-col sm:flex-row flex-wrap justify-end">
-					<Link href="/recognition">
-						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 hidden">
-							Recognition
-						</a>
-					</Link>
-					<Link href="/projects">
-						<a
-							className={`text-gray-800 text-lg tracking-tight font-medium hover:text-black ml-5 py-1 sm:py-0 ${
-								router.pathname === '/projects' ? 'underline' : ''
-							}`}
-						>
-							Projects
-						</a>
-					</Link>
-					<Link href="/blog">
-						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 hidden">
-							Blog
-						</a>
-					</Link>
-					<Link href="/about">
-						<a className="text-gray-400 text-lg tracking-tight font-medium hover:text-gray-500 ml-5 py-1 sm:py-0 hidden">
-							About
-						</a>
-					</Link>
-				</nav>
-			</div>
-		</header>
-	);
-};
+  // const router = useRouter()
+  return (
+    <header className="">
+      <div className="flex flex-row flex-wrap container items-center justify-between mx-auto my-12 px-4">
+        <div>
+          <Link href="/">
+            {/* <a className="text-black dark:text-white">●</a> */}
+            <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis font-sans text-lg py-1 sm:py-0">
+              ⌘
+            </a>
+          </Link>
+          <a
+            class="w-full ml-4 sm:w-auto flex-none bg-gray-900 dark:bg-white hover:bg-my-blue dark:hover:bg-celonis text-white dark:text-black text-lg leading-6 font-semibold py-2 px-3 rounded-xl"
+            href="/cv.pdf"
+          >
+            Curriculum vitae
+          </a>
+        </div>
+        <nav className="flex flex-col sm:flex-row flex-wrap justify-end items-center">
+          {/* <Page href="/recognition" title="Recognition" /> */}
+          <Page href="/projects" title="Projects" />
+          <Page href="/blog" title="Blog" />
+          <Page href="/about" title="About" />
+          <ThemeChanger />
+        </nav>
+      </div>
+    </header>
+  )
+}
 
 Header.propTypes = {
-	children: PropTypes.node,
-};
+  children: PropTypes.node,
+}
