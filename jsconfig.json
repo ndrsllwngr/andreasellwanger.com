@@ -2,10 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/assets/*": ["public/assets/*"],
-      "@/pages/*": ["pages/*"],
-      "@/lib/*": ["lib/*"]
+      "@/components/*": ["./components/*"],
+      "@/assets/*": ["./public/assets/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/lib/*": ["./lib/*"]
     }
-  }
+  },
+  "exclude": ["node_modules", "out", ".next"]
 }

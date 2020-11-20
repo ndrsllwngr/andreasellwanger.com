@@ -34,7 +34,7 @@ export const Header = () => {
             </a>
           </Link>
           <a
-            class="w-full ml-4 sm:w-auto flex-none bg-gray-900 dark:bg-white hover:bg-my-blue dark:hover:bg-celonis text-white dark:text-black text-lg leading-6 font-semibold py-2 px-3 rounded-xl"
+            className="w-full ml-4 sm:w-auto flex-none bg-gray-900 dark:bg-white hover:bg-my-blue dark:hover:bg-celonis text-white dark:text-black text-lg leading-6 font-semibold py-2 px-3 rounded-xl"
             href="/cv.pdf"
           >
             Curriculum vitae
