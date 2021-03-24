@@ -1,7 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import { ThemeProvider } from 'next-themes'
-import 'styles/tailwind.css'
+import '@/styles/tailwind.css'
 
 class MyApp extends App {
   render() {

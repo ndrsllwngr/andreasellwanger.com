@@ -5,7 +5,8 @@
       "@/components/*": ["./components/*"],
       "@/assets/*": ["./public/assets/*"],
       "@/pages/*": ["./pages/*"],
-      "@/lib/*": ["./lib/*"]
+      "@/lib/*": ["./lib/*"],
+      "@/styles/*": ["./styles/*"]
     }
   },
   "exclude": ["node_modules", "out", ".next"]
