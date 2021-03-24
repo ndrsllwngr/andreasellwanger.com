@@ -38,6 +38,13 @@ export const BlogPreview = () => {
             Recently published
           </h2>
           <ul className="text-white dark:text-black">
+          <li>
+              <BlogEntry
+                link="/"
+                title="Added link to StackOverflow"
+                date="2021-03-24"
+              />
+            </li>
             <li>
               <BlogEntry
                 link="/projects"
