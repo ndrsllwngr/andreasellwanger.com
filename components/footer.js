@@ -2,7 +2,7 @@ import React from 'react'
 // import PropTypes from 'prop-types';
 // import Link from 'next/link';
 // import { LinkWithSound } from 'components/link-with-sound';
-import { FaStackOverflow, FaLinkedinIn, FaTwitter, FaGithub, FaFileDownload, FaEnvelope } from 'react-icons/fa';
+import { FaStackOverflow, FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export const Footer = () => {
 	return (

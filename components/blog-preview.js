@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { PropTypes } from 'prop-types'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
 
 const BlogEntry = ({ date, title, link, external = false }) => {
   if (external) {
