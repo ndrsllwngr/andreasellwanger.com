@@ -43,8 +43,8 @@ export const Header = () => {
         <nav className="flex flex-col sm:flex-row flex-wrap justify-end items-center">
           {/* <Page href="/recognition" title="Recognition" /> */}
           <Page href="/projects" title="Projects" />
-          <Page href="/blog" title="Blog" />
-          <Page href="/about" title="About" />
+          {/* <Page href="/blog" title="Blog" />
+          <Page href="/about" title="About" /> */}
           <ThemeChanger />
         </nav>
       </div>

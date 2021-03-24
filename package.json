@@ -35,31 +35,36 @@
 		]
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "0.3.1",
-		"framer-motion": "2.9.4",
-		"next": "10.0.2",
-		"next-themes": "0.0.10",
+		"@tailwindcss/typography": "0.4.0",
+		"framer-motion": "4.0.3",
+		"next": "10.0.9",
+		"next-themes": "0.0.14",
 		"prop-types": "15.7.2",
-		"react": "17.0.1",
-		"react-dom": "17.0.1",
-		"tailwindcss": "2.0.1"
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-icons": "4.2.0",
+		"tailwindcss": "2.0.4"
 	},
 	"devDependencies": {
 		"@svgr/webpack": "5.5.0",
-		"@typescript-eslint/eslint-plugin": "4.8.1",
-		"@typescript-eslint/parser": "4.8.1",
-		"autoprefixer": "10.0.2",
+		"@typescript-eslint/eslint-plugin": "4.19.0",
+		"@typescript-eslint/parser": "4.19.0",
+		"autoprefixer": "~10.2.5",
 		"babel-eslint": "10.1.0",
 		"babel-plugin-preval": "5.0.0",
-		"eslint": "7.13.0",
+		"eslint": "7.22.0",
+		"eslint-config-prettier": "8.1.0",
 		"eslint-config-react-app": "6.0.0",
-		"eslint-plugin-flowtype": "5.2.0",
 		"eslint-plugin-import": "2.22.1",
 		"eslint-plugin-jsx-a11y": "6.4.1",
-		"eslint-plugin-react": "7.21.5",
+		"eslint-plugin-prettier": "3.3.1",
+		"eslint-plugin-react": "7.23.1",
 		"eslint-plugin-react-hooks": "4.2.0",
 		"file-loader": "6.2.0",
-		"postcss": "^8.1.8",
-		"postcss-nested": "^5.0.1"
+		"postcss": "8.2.8",
+		"postcss-import": "~14.0.0",
+		"postcss-nested": "~5.0.5",
+		"prettier": "2.2.1",
+		"pretty-quick": "3.1.0"
 	}
 }

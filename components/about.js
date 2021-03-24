@@ -5,7 +5,7 @@ export const About = () => {
     <div className="container max-w-5xl mx-auto pb-16 px-4 flex flex-col justify-center">
       <p className="font-sans text-black dark:text-white">
         Andreas Ellwanger is a postgraduate student, currently pursuing a Masters&apos; degree of
-        Computer Sciences at LMU Munich, Germany. Last year he studied abroad at Leiden University,
+        Computer Sciences at LMU Munich, Germany. In 2018 he studied abroad at Leiden University,
         The Netherlands. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in
         Media Informatics and Human-Computer Interaction. In 2020 Andreas joined{' '}
         <a
