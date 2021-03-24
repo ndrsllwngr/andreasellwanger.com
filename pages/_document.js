@@ -1,5 +1,5 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import React from 'react'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 // import { useAmp } from 'next/amp';
 
 // import { GA_TRACKING_ID } from '../lib/analytics';
@@ -11,30 +11,44 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 // }
 
 class NextSite extends Document {
-	render() {
-		return (
-			<Html lang="en">
-				<Head>
-					{/* <link
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          {/* <link
 						rel="preload"
 						href="https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2"
 						as="font"
 						type="font/woff2"
 						crossOrigin="anonymous"
 					/> */}
-					<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" />
-					<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png" />
-					<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" />
-					<link rel="manifest" href="/static/favicon/site.webmanifest" />
-					<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#000000" />
-					<link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg" />
-					<link rel="shortcut icon" href="/static/favicon/favicon.ico" />
-					<meta name="msapplication-TileColor" content="#000000" />
-					<meta name="msapplication-config" content="/static/favicon/browserconfig.xml" />
-					<meta name="theme-color" content="#000" />
-					{/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/favicon/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/favicon/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/favicon/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/static/favicon/site.webmanifest" />
+          <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#000000" />
+          <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg" />
+          <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
+          <meta name="msapplication-TileColor" content="#000000" />
+          <meta name="msapplication-config" content="/static/favicon/browserconfig.xml" />
+          <meta name="theme-color" content="#000" />
+          {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
 
-					{/* <AmpWrap
+          {/* <AmpWrap
 						ampOnly={
 							<script
 								async
@@ -47,11 +61,11 @@ class NextSite extends Document {
 					<AmpWrap
 						ampOnly={<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" />}
 					/> */}
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-					{/* <AmpWrap
+        </Head>
+        <body className="dark:bg-black bg-white">
+          <Main />
+          <NextScript />
+          {/* <AmpWrap
 						ampOnly={
 							<amp-analytics type="googleanalytics" id="analytics1" data-credentials="include">
 								<script
@@ -94,10 +108,10 @@ class NextSite extends Document {
 							</>
 						}
 					/> */}
-				</body>
-			</Html>
-		);
-	}
+        </body>
+      </Html>
+    )
+  }
 }
 
-export default NextSite;
+export default NextSite

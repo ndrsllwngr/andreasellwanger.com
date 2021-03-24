@@ -1,11 +1,13 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"components/*": ["./components/*"],
-			"assets/*": ["./public/assets/*"],
-			"pages/*": ["./pages/*"],
-			"lib/*": ["./lib/*"]
-		}
-	}
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["./components/*"],
+      "@/assets/*": ["./public/assets/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/styles/*": ["./styles/*"]
+    }
+  },
+  "exclude": ["node_modules", "out", ".next"]
 }
