@@ -22,6 +22,9 @@ module.exports = {
 				system: defaultTheme.fontFamily.sans,
 				'system-mono': defaultTheme.fontFamily.sans,
 			},
+			fontSize: {
+				hero: '4rem',
+			} ,
 			lineHeight: {
 				16: '4rem',
 			},

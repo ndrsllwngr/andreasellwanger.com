@@ -3,10 +3,8 @@ import React from 'react';
 // import Link from 'next/link';
 // import { LinkWithSound } from 'components/link-with-sound';
 import EmailIcon from 'assets/svg/email.svg';
-import GitHubIcon from 'assets/svg/github.svg';
-import TwitterIcon from 'assets/svg/twitter.svg';
-import LinkedInIcon from 'assets/svg/linkedin.svg';
 import DocumentDownload from 'assets/svg/document-download.svg';
+import { FaStackOverflow, FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
 
 export const Footer = () => {
 	return (
@@ -22,16 +20,20 @@ export const Footer = () => {
 					<span className="sr-only">Email</span>
 				</a>
 				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://de.linkedin.com/in/ellwanger/en/">
-					<LinkedInIcon />
+					<FaLinkedinIn className="fill-current inline-flex self-center w-6 h-6" />
 					<span className="sr-only">LinkedIn</span>
 				</a>
 				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://twitter.com/ndrsllwngr/">
-					<TwitterIcon />
+					<FaTwitter className="fill-current inline-flex self-center w-6 h-6" />
 					<span className="sr-only">Twitter</span>
 				</a>
 				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://github.com/ndrsllwngr">
-					<GitHubIcon />
+					<FaGithub className="fill-current inline-flex self-center w-6 h-6" />
 					<span className="sr-only">GitHub</span>
+				</a>
+				<a className="text-gray-800 hover:text-black w-6 h-6 ml-5" href="https://stackoverflow.com/users/story/7640933">
+					<FaStackOverflow className="fill-current inline-flex self-center w-6 h-6" />
+					<span className="sr-only">StackOverflow</span>
 				</a>
 			</div>
 		</div>
