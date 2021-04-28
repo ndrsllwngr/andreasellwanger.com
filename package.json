@@ -35,6 +35,8 @@
 		]
 	},
 	"dependencies": {
+		"@headlessui/react": "1.1.1",
+		"@heroicons/react": "1.0.1",
 		"@tailwindcss/typography": "0.4.0",
 		"framer-motion": "4.1.11",
 		"next": "10.1.3",
