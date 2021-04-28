@@ -2,8 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   purge: {
-    content: ['./components/**/*.{js,mdx}', './pages/**/*.{js,mdx}'],
+    content: ['./components/**/*.{js,jsx,ts,tsx,mdx}', './pages/**/*.{js,jsx,ts,tsx,mdx}', './public/**/*.html'],
     options: {
       whitelist: ['fill-current', 'stroke-current', 'inline-block', 'w-full', 'h-full'],
     },
@@ -67,28 +68,6 @@ module.exports = {
         source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
         system: defaultTheme.fontFamily.sans,
       },
-      fontSize: {
-        hero: '4rem',
-      },
-      lineHeight: {
-        16: '4rem',
-      },
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: ['odd', 'even', 'active'],
-      borderWidth: ['first', 'last', 'hover', 'focus'],
-      cursor: ['active'],
-      display: ['responsive', 'group-hover'],
-      opacity: ['disabled'],
-      textColor: ['group-focus'],
-      ringWidth: ['focus-visible'],
-      ringOffsetWidth: ['focus-visible'],
-      ringOffsetColor: ['focus-visible'],
-      ringColor: ['focus-visible'],
-      ringOpacity: ['focus-visible'],
-      rotate: ['first', 'last', 'odd', 'even'],
     },
   },
   plugins: [
