@@ -12,6 +12,14 @@
 
 - https://this-week-in-rust.org/
 
+## Tutorials
+
+- https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/
+- https://www.rust-lang.org/learn
+- https://doc.rust-lang.org/book/
+- https://doc.rust-lang.org/stable/rust-by-example/
+- https://github.com/rust-lang/rustlings/
+
 ## People to follow
 
 - tbd
