@@ -6,3 +6,12 @@
 - https://blog.logrocket.com/what-you-cant-do-in-rust-and-what-to-do-instead/
 - https://blog.cloudflare.com/building-fast-interpreters-in-rust/
 - https://www.brandons.me/blog/why-rust-strings-seem-hard 
+- http://www.sheshbabu.com/posts/rust-module-system/
+
+## Newsletter
+
+- https://this-week-in-rust.org/
+
+## People to follow
+
+- tbd
