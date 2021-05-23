@@ -19,6 +19,7 @@
 - https://doc.rust-lang.org/book/
 - https://doc.rust-lang.org/stable/rust-by-example/
 - https://github.com/rust-lang/rustlings/
+- https://github.com/yoshuawuyts/rust-for-js-peeps
 
 ## People to follow
 
