@@ -3,6 +3,7 @@
 ## Articles
 
 - https://jo-so.de/2021-01/Speicher-Rust.html
+- https://www.possiblerust.com/guide/enum-or-trait-object
 - https://tokio.rs/blog/2021-05-14-inventing-the-service-trait
 - https://blog.logrocket.com/what-you-cant-do-in-rust-and-what-to-do-instead/
 - https://blog.cloudflare.com/building-fast-interpreters-in-rust/
