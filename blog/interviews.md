@@ -11,19 +11,23 @@ Past work
 - What could you have done better?
 - Where would you take it next?
 - When was a time you failed or pivoted? 
+
 Collaboration
 - How do you handle conflict?
 - How do you divide up work?
 - When do you loop in your cross-functional partners?
 - How did you lead or coach others? 
+
 Process
 - How would you approach a tight deadline?
 - How do you work within constraints?
 - How do you evaluate the success of your work?
 - How do you prioritize between different ideas? 
+
 Career values
 - What are your short- and long-term goals?
 - What are your biggest strengths and weaknesses?
 - What type of environment do you thrive under?
 - Why are you leaving your current company? 
+
 Being prepared to answer any of these and having some practice under my belt means I rarely get flustered in a behavioral interview anymore and come across as far more confident than I might actually feel. 
