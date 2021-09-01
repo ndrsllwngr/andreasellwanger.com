@@ -10,7 +10,7 @@ const Old = () => {
       <main>
         <section id="top" className="p-12">
           <div className="max-w-4xl mx-auto">
-            <h1 className="mb-32 text-6xl font-normal tracking-tight leading-16">
+            <h1 className="mb-32 text-6xl font-normal tracking-tight leading-[4rem]">
               <span className="font-black tracking-tighter">Andreas Ellwanger</span>, B.Sc.
             </h1>
             Table of contents

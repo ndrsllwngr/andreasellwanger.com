@@ -3,7 +3,7 @@ import React from 'react'
 export const Hero = () => {
   return (
     <section className="container max-w-5xl mx-auto my-12 py-16 px-4 flex flex-col justify-center">
-      <h1 className="font-bold text-4xl md:text-hero tracking-wide font-mono uppercase leading-tight md:leading-tight dark:text-white">
+      <h1 className="font-bold text-4xl md:text-[4rem] tracking-wide font-mono uppercase leading-tight md:leading-tight dark:text-white">
         Andreas is a Software Engineer at{' '}
         <a
           // className="bg-clip-text text-transparent bg-gradient-to-r from-celonis to-gray-100 dark:to-black hover:to-celonis dark:hover:to-celonis"
