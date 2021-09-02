@@ -17,9 +17,6 @@ const LandingPage = () => {
       <Header />
       <Hero />
       <BlogPreview />
-      <LogoCloud />
-      <About />
-      <Footer />
     </Layout>
   )
 }

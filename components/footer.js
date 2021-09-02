@@ -3,6 +3,7 @@ import React from 'react'
 // import Link from 'next/link';
 // import { LinkWithSound } from 'components/link-with-sound';
 import { FaStackOverflow, FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa';
+import {ThemeChanger} from "@/components/theme-changer";
 
 export const Footer = () => {
 	return (
@@ -33,6 +34,7 @@ export const Footer = () => {
 					<FaStackOverflow className="fill-current inline-flex self-center w-6 h-6" />
 					<span className="sr-only">StackOverflow</span>
 				</a>
+        <ThemeChanger />
 			</div>
 		</div>
 	);

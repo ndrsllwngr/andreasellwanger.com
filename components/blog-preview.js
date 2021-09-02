@@ -30,8 +30,8 @@ BlogEntry.propTypes = {
 
 export const BlogPreview = () => {
   return (
-    <div className="container mx-auto px-4 flex-col justify-center">
-      <div className="bg-black dark:bg-white rounded-md p-6">
+    <div className="container mx-auto flex-col justify-center">
+      <div className="rounded-md p-6">
         <div className="flex flex-col justify-center">
           <h2 className="uppercase text-white dark:text-black font-medium tracking-wide mb-4">
             Recently published
