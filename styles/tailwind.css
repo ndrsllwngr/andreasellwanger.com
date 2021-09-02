@@ -3,9 +3,6 @@
 @import 'tailwindcss/utilities';
 
 /*! purgecss start ignore */
-@import url('https://rsms.me/inter/inter.css');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
 
 /* ::selection {
   @apply bg-my-yellow text-my-black;
