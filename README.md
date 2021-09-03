@@ -10,7 +10,7 @@
 ## Getting started
 
 ### System Requirements
-- [Node.js 12.16](https://nodejs.org/en/) or later
+- [Node.js 14.x](https://nodejs.org/en/)
 - MacOS, Windows (including WSL), and Linux are supported
 
 ### Setup

@@ -28,48 +28,54 @@ BlogEntry.propTypes = {
   external: PropTypes.bool,
 }
 
+const blogEntries = [
+  {
+    id: 1,
+    title:'Added link to StackOverflow',
+    link:'/',
+    date:'2021-03-24',
+    external: false,
+  },
+  {
+    id: 2,
+    title:'Released first version of /projects page',
+    link:'/projects',
+    date:'2020-10-01',
+    external: false,
+  },
+  {
+    id: 3,
+    title:'Published more projects on GitHub',
+    link:'https://github.com/ndrsllwngr/',
+    date:'2020-09-30',
+    external: true,
+  },
+  {
+    id: 4,
+    title:'Axis- plus Content-based Control for Camera Drones: Design and Evaluation of User Interface Concepts',
+    link:'https://dl.acm.org/doi/10.1145/3213526.3213529',
+    date:'2018-06-10',
+    external: true,
+  },
+]
+
 export const BlogPreview = () => {
   return (
-    <div className="container mx-auto flex-col justify-center">
-      <div className="rounded-md p-6">
-        <div className="flex flex-col justify-center">
-          <h2 className="uppercase text-white dark:text-black font-medium tracking-wide mb-4">
-            Recently published
-          </h2>
-          <ul className="text-white dark:text-black">
-          <li>
-              <BlogEntry
-                link="/"
-                title="Added link to StackOverflow"
-                date="2021-03-24"
-              />
-            </li>
-            <li>
-              <BlogEntry
-                link="/projects"
-                title="Released first version of /projects page"
-                date="2020-10-01"
-              />
-            </li>
-            <li>
-              <BlogEntry
-                link="https://github.com/ndrsllwngr/"
-                title="Published more projects on GitHub"
-                date="2020-09-30"
-                external
-              />
-            </li>
-            <li>
-              <BlogEntry
-                link="https://dl.acm.org/doi/10.1145/3213526.3213529"
-                title="Axis- plus Content-based Control for Camera Drones: Design and Evaluation of User Interface Concepts"
-                date="2018-06-10"
-                external
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div className="flex flex-row flex-wrap container items-center justify-center mx-auto mt-4">
+      <ListWithDividers items={blogEntries} />
     </div>
   )
 }
+
+const ListWithDividers = ({items = []}) => {
+  return (
+    <ul role="list" className="divide-y divide-black w-full">
+      {items.map((item) => (
+        <li key={item.id} className="px-4 py-4 sm:px-0">
+          <BlogEntry link={item.link} title={item.title} date={item.date} external={item.external} />
+        </li>
+      ))}
+    </ul>
+  )
+}
+

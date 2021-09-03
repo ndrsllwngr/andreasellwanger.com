@@ -4,7 +4,7 @@ const AboutLink = ({children, href}) => {
   return (
     <a
       href={href}
-      className="hover:bg-black rounded-md p-1 -m-1 font-bold"
+      className="hover:bg-black hover:text-white rounded-md p-1 -m-1 font-bold"
     >
       {children}
     </a>
@@ -14,13 +14,13 @@ const AboutLink = ({children, href}) => {
 export const About = () => {
   return (
     <div>
-      <div className="container max-w-2xl mx-auto pb-16 px-4 flex flex-col justify-center">
-        <p className="font-sans text-white text-lg">
+      <div className="flex flex-row flex-wrap container items-center justify-between mx-auto px-4 sm:px-0">
+        <p className="font-sans text-black text-lg">
           My name is Andreas Ellwanger. I am a postgraduate student, currently pursuing a Masters&apos; degree of
           Computer Sciences at LMU Munich, Germany. In 2018 I studied abroad at Leiden University,
           The Netherlands. I graduated in April 2018 at the LMU Munich with a Bachelor of Science in
           Media Informatics and Human-Computer Interaction. In 2020 I joined{' '}
-          <AboutLink href="https://www.celonis.com/">Celonis 🦄</AboutLink>, the market leader in Process Mining, as Junior
+          <AboutLink href="https://www.celonis.com/">Celonis</AboutLink>, the market leader in Process Mining, as Junior
           Software Engineer in the Core - Event
           Collection department. Before that, I worked remotely for a Berlin-based startup called{' '}
           <AboutLink href="https://aiderly.de/">Aiderly</AboutLink>{' '}

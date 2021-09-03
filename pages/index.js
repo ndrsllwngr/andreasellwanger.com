@@ -15,7 +15,7 @@ const LandingPage = () => {
     <Layout>
       <HtmlHead />
       <Header />
-      <Hero />
+      {/*<Hero />*/}
       <BlogPreview />
     </Layout>
   )
