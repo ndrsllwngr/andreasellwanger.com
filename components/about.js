@@ -33,19 +33,19 @@ export const About = () => {
         </p>
       </div>
       <div className="container max-w-2xl mx-auto pb-16 px-4 flex flex-col items-start">
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="mailto:contact@andreasellwanger.com">
+        <a className="text-black hover:text-my-blue w-6 h-6" href="mailto:contact@andreasellwanger.com">
           Email
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://de.linkedin.com/in/ellwanger/en/">
+        <a className="text-black hover:text-my-blue w-6 h-6" href="https://de.linkedin.com/in/ellwanger/en/">
           LinkedIn
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://twitter.com/ndrsllwngr/">
+        <a className="text-black hover:text-my-blue w-6 h-6" href="https://twitter.com/ndrsllwngr/">
           Twitter
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://github.com/ndrsllwngr">
+        <a className="text-black hover:text-my-blue w-6 h-6" href="https://github.com/ndrsllwngr">
           GitHub
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://stackoverflow.com/users/story/7640933">
+        <a className="text-black hover:text-my-blue w-6 h-6" href="https://stackoverflow.com/users/story/7640933">
           StackOverflow
         </a>
       </div>
