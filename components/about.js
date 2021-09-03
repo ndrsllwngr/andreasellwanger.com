@@ -14,7 +14,7 @@ const AboutLink = ({children, href}) => {
 export const About = () => {
   return (
     <div>
-      <div className="flex flex-row flex-wrap container items-center justify-between mx-auto px-4 sm:px-0">
+      <div className="max-w-7xl flex flex-row flex-wrap container items-center justify-between mx-auto px-4 sm:px-0">
         <p className="font-sans text-black text-lg">
           My name is Andreas Ellwanger. I am a postgraduate student, currently pursuing a Masters&apos; degree of
           Computer Sciences at LMU Munich, Germany. In 2018 I studied abroad at Leiden University,

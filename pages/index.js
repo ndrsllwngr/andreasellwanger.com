@@ -9,12 +9,14 @@ import { LogoCloud } from '@/components/logo-cloud'
 import { BlogPreview } from '@/components/blog-preview'
 import { About } from '@/components/about'
 import { Footer } from '@/components/footer'
+import {PanelHome} from "@/components/panel-home";
 
 const LandingPage = () => {
   return (
     <Layout>
       <HtmlHead />
       <Header />
+      <PanelHome />
       {/*<Hero />*/}
       <BlogPreview />
     </Layout>

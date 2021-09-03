@@ -67,7 +67,7 @@ class NextSite extends Document {
 						ampOnly={<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" />}
 					/> */}
         </Head>
-        <body className="bg-white">
+        <body className="bg-white sm:min-h-screen sm:overflow-y-scroll antialiased font-sans">
           <Main />
           <NextScript />
           {/* <AmpWrap

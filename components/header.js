@@ -8,10 +8,10 @@ const Page = ({ title, href }) => {
   return (
     <Link href={href}>
       <a
-        className={`font-medium text-lg text-black opacity-90 hover:opacity-100 ml-5 py-1 ${
+        className={`text-lg text-black hover:text-blue-700 opacity-70 hover:opacity-100 ml-5 py-1 ${
           router.pathname === href
             ? 'underline'
-            : 'no-underline'
+            : ''
         }`}
       >
         {title}
@@ -24,12 +24,12 @@ export const Header = () => {
   // const router = useRouter()
   return (
     <header className="">
-      <div className="flex flex-row flex-wrap container items-center justify-between mx-auto px-4 sm:px-0 py-4">
+      <div className="flex flex-row flex-wrap container items-center justify-between mx-auto max-w-7xl px-4 sm:px-0 py-4">
         <div>
           <Link href="/">
             {/* <a className="text-black dark:text-white">●</a> */}
-            <a className="group font-medium text-black font-sans text-lg py-1 sm:py-0">
-              Andreas Ellwanger <span className="font-normal opacity-90 group-hover:opacity-100 inline-block md:inline">— (Junior) Software Engineer</span>
+            <a className="group font-medium text-black font-sans text-lg py-1 sm:py-0 hover:text-blue-700">
+              Andreas Ellwanger <span className="font-normal opacity-70 group-hover:opacity-100 inline-block md:inline">— (Junior) Software Engineer</span>
             </a>
           </Link>
         </div>

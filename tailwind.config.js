@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
@@ -15,10 +16,6 @@ module.exports = {
         'my-grey-2': '#333',
         celonis: '#5cfe50',
         lmu: '#009440',
-        transparent: 'transparent',
-        current: 'currentColor',
-        black: '#000',
-        white: '#fff',
         code: {
           punctuation: '#A1E8FF',
           tag: '#D58FFF',
@@ -27,6 +24,9 @@ module.exports = {
           string: '#A2F679',
           highlight: 'rgba(134, 239, 172, 0.25)',
         },
+        sky: colors.sky,
+        orange: colors.orange,
+        indigo: colors.indigo,
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -41,5 +41,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'), // https://tailwindcss.com/docs/typography-plugin
+    require('@tailwindcss/aspect-ratio')
   ],
 }
