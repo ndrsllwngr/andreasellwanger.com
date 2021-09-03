@@ -10,12 +10,13 @@ import { BlogPreview } from '@/components/blog-preview'
 import { About } from '@/components/about'
 import { Footer } from '@/components/footer'
 import {PanelHome} from "@/components/panel-home";
+import {NavBar} from "@/components/navbar";
 
 const LandingPage = () => {
   return (
     <Layout>
       <HtmlHead />
-      <Header />
+      <NavBar />
       <PanelHome />
       {/*<Hero />*/}
       <BlogPreview />

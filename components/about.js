@@ -14,7 +14,7 @@ const AboutLink = ({children, href}) => {
 export const About = () => {
   return (
     <div>
-      <div className="max-w-7xl flex flex-row flex-wrap container items-center justify-between mx-auto px-4 sm:px-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row flex-wrap container items-center justify-between py-16">
         <p className="font-sans text-black text-lg">
           My name is Andreas Ellwanger. I am a postgraduate student, currently pursuing a Masters&apos; degree of
           Computer Sciences at LMU Munich, Germany. In 2018 I studied abroad at Leiden University,
@@ -32,20 +32,20 @@ export const About = () => {
           worked on topics related to digitalisation and e-government.
         </p>
       </div>
-      <div className="container max-w-2xl mx-auto pb-16 px-4 flex flex-col justify-center">
+      <div className="container max-w-2xl mx-auto pb-16 px-4 flex flex-col items-start">
         <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="mailto:contact@andreasellwanger.com">
           Email
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5" href="https://de.linkedin.com/in/ellwanger/en/">
+        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://de.linkedin.com/in/ellwanger/en/">
           LinkedIn
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5" href="https://twitter.com/ndrsllwngr/">
+        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://twitter.com/ndrsllwngr/">
           Twitter
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5" href="https://github.com/ndrsllwngr">
+        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://github.com/ndrsllwngr">
           GitHub
         </a>
-        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6 ml-5" href="https://stackoverflow.com/users/story/7640933">
+        <a className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-6 h-6" href="https://stackoverflow.com/users/story/7640933">
           StackOverflow
         </a>
       </div>

@@ -6,6 +6,7 @@ import { Header } from '@/components/header'
 import { Layout } from '@/components/layout'
 import { Project } from '@/components/project'
 import { Footer } from '@/components/footer'
+import {NavBar} from "@/components/navbar";
 
 const myProjects = [
   {
@@ -87,8 +88,8 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <HtmlHead title="Projects | Andreas Ellwanger — Software Engineer." />
-      <Header />
-      <section className="container max-w-5xl mx-auto pb-16 px-4 flex flex-col justify-center">
+      <NavBar />
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 px-4 flex flex-col justify-center py-16">
         <h1 className="font-bold text-4xl md:text-4xl tracking-wide leading-tight font-sans mb-12">
           <span className="text-black opacity-90">Passion projects and fun little experiments</span>
         </h1>

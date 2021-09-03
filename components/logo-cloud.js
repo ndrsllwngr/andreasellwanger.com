@@ -56,7 +56,7 @@ const MyLogos = [
 
 export const LogoCloud = () => {
   return (
-    <section className="container mx-auto py-16 px-4 sm:px-0 flex flex-col justify-center">
+    <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col justify-center">
       <div className="flex flex-wrap justify-center">
         {MyLogos.map((logo, index) => (
           <Logo key={index} link={logo.link} alt={logo.alt}>

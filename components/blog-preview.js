@@ -65,7 +65,7 @@ const blogEntries = [
 
 export const BlogPreview = () => {
   return (
-    <div className="flex flex-row flex-wrap container items-center justify-center mx-auto mt-4 max-w-7xl">
+    <div className="flex flex-row flex-wrap container items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-7">
       <ListWithDividers items={blogEntries}/>
     </div>
   )
