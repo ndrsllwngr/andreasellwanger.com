@@ -65,7 +65,7 @@ const blogEntries = [
 
 export const BlogPreview = () => {
   return (
-    <div className="flex flex-row flex-wrap container items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-7">
+    <div className="flex flex-row flex-wrap container items-center justify-center max-w-7xl mx-auto mt-7">
       <ListWithDividers items={blogEntries}/>
     </div>
   )
@@ -73,7 +73,7 @@ export const BlogPreview = () => {
 
 const ListWithDividers = ({items = []}) => {
   return (
-    <ul role="list" className="divide-y divide-black w-full">
+    <ul role="list" className="divide-y divide-black w-full sm:px-6 lg:px-8 ">
       {items.map((item) => (
         <li key={item.id} className="px-4 py-4 sm:px-0">
           <BlogEntry link={item.link} title={item.title} date={item.date} isExternal={item.isExternal}

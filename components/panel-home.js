@@ -4,8 +4,8 @@ export const PanelHome = () => {
   const constraintsRef = useRef(null);
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-hero relative lg:grid lg:grid-cols-3 lg:gap-4 sm:px-16">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-16">
+        <div className="bg-hero relative lg:grid lg:grid-cols-3 lg:gap-4 px-4 sm:px-16">
           {/*<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200"/>*/}
           <div className="relative pt-10 pb-12 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 px-4 sm:px-0 col-span-2">
             <div className="lg:self-center">
