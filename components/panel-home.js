@@ -4,8 +4,9 @@ export const PanelHome = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16">
-        <div className="bg-black text-white shadow-lg overflow-hidden lg:grid lg:grid-cols-3 lg:gap-4">
-          <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20 col-span-2">
+        <div className="relative lg:grid lg:grid-cols-3 lg:gap-4 sm:px-16">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200"/>
+          <div className="relative pt-10 pb-12 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 px-4 sm:px-0 col-span-2">
             <div className="lg:self-center">
               <h2 className="text-3xl sm:text-4xl tracking-wide font-sans leading-tight md:leading-tight">
                I am a (Junior) Software Engineer at <HeroLink
@@ -16,7 +17,7 @@ export const PanelHome = () => {
               </h2>
               <p className='mt-4 text-lg leading-6'>Furthermore, I am currently writing my Master's thesis at the <a
                 href="https://www.uni-muenchen.de/"
-                className="hover:bg-celonis hover:text-black rounded-md px-1 -mx-1 font-bold text-white"
+                className="hover:underline font-bold"
               >
                 LMU Munich
               </a>.</p>
@@ -39,7 +40,7 @@ const HeroLink = ({children, href}) => {
   return (
     <a
       href={href}
-      className="hover:bg-celonis hover:text-black rounded-md px-2 -mx-2 font-bold text-celonis"
+      className="hover:underline font-bold"
     >
       {children}
     </a>
