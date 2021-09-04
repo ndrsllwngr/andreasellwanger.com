@@ -32,7 +32,7 @@ const AboutLink = ({children, href}) => {
   return (
     <a
       href={href}
-      className="hover:bg-black hover:text-white rounded-md p-1 -m-1 font-bold"
+      className="hover:text-blue-700 font-bold"
     >
       {children}
     </a>

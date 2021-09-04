@@ -14,7 +14,7 @@ export const ThemeChanger = () => {
   return (
     <>
       <button
-        className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis text-lg ml-4 w-4"
+        className="text-black hover:text-my-blue text-lg ml-4 w-4"
         onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
       >
         {resolvedTheme === 'dark' ? (
