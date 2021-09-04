@@ -18,7 +18,6 @@ class NextSite extends Document {
           <meta charSet="UTF-8" />
           <link rel="preconnect"
                 href="https://fonts.gstatic.com"
-                crossOrigin
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=optional"
@@ -68,7 +67,7 @@ class NextSite extends Document {
 						ampOnly={<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" />}
 					/> */}
         </Head>
-        <body className="dark:bg-black bg-white">
+        <body className="bg-white text-black sm:min-h-screen sm:overflow-y-scroll antialiased font-sans">
           <Main />
           <NextScript />
           {/* <AmpWrap

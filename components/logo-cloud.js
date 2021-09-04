@@ -10,7 +10,7 @@ const Logo = ({ children, link, alt }) => {
   return (
     <div className="flex py-6 justify-center px-10 m-4">
       <a
-        className="text-black dark:text-white hover:text-my-blue dark:hover:text-celonis w-32 h-32"
+        className="text-black hover:text-my-blue w-32 h-32"
         href={link}
       >
         {children}
@@ -56,7 +56,7 @@ const MyLogos = [
 
 export const LogoCloud = () => {
   return (
-    <section className="container mx-auto py-16 px-4 sm:px-0 flex flex-col justify-center">
+    <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col justify-center">
       <div className="flex flex-wrap justify-center">
         {MyLogos.map((logo, index) => (
           <Logo key={index} link={logo.link} alt={logo.alt}>

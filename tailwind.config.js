@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
@@ -12,12 +13,10 @@ module.exports = {
         'my-red': '#f02e09',
         'my-yellow': '#ffe312',
         'my-blue': '#0029ff',
+        'my-grey-2': '#333',
+        'my-blue-2': '#3098f3',
         celonis: '#5cfe50',
         lmu: '#009440',
-        transparent: 'transparent',
-        current: 'currentColor',
-        black: '#000',
-        white: '#fff',
         code: {
           punctuation: '#A1E8FF',
           tag: '#D58FFF',
@@ -26,6 +25,13 @@ module.exports = {
           string: '#A2F679',
           highlight: 'rgba(134, 239, 172, 0.25)',
         },
+        sky: colors.sky,
+        orange: colors.orange,
+        indigo: colors.indigo,
+        rose: colors.rose,
+        teal: colors.teal,
+        yellow: colors.yellow,
+        hero: '#F4F6F8',
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -33,6 +39,13 @@ module.exports = {
         source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
         system: defaultTheme.fontFamily.sans,
       },
+      backgroundImage: theme => ({
+        'hero-pattern': "url('https://uploads-ssl.webflow.com/5e2f4dbfcb2e5e3f5edfe932/5e5c973863723ed613adba35_4color.png')",
+        'new-pattern': 'linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%)',
+      }),
+      animation: {
+        'bounce-once': 'bounce 1s linear 0s 2 normal both running',
+      }
     },
   },
   variants: {
@@ -40,5 +53,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'), // https://tailwindcss.com/docs/typography-plugin
+    require('@tailwindcss/aspect-ratio')
   ],
 }

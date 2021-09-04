@@ -6,18 +6,18 @@ export const Project = ({ css, title, date, stack, url, list }) => {
   return (
     <section className={css}>
       <header>
-        <h3 className="text-gray-800 dark:text-gray-100 hover:text-black dark:hover:text-white font-sans font-bold">
+        <h3 className="font-sans font-bold">
           <a className="inline-flex" href={url}>
             <span>{title} ↖</span>
           </a>
         </h3>
-        <p className="font-sans text-black dark:text-white">
+        <p className="font-sans opacity-90">
           {date} | {stack}
         </p>
       </header>
       <ul>
         {list.map((text, i) => (
-          <li key={i} className="mt-1 font-sans text-gray-800 dark:text-gray-200 leading-normal">
+          <li key={i} className="mt-1 font-sans text-black leading-normal">
             <span className="absolute -ml-3 sm:-ml-3 select-none font-bold transform -translate-y-px">
               ›
             </span>
