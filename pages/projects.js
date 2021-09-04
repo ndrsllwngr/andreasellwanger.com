@@ -1,8 +1,5 @@
 import React from 'react'
-// import { PropTypes } from 'prop-types';
-// import Link from 'next/link';
 import { HtmlHead } from '@/components/html-head'
-import { Header } from '@/components/header'
 import { Layout } from '@/components/layout'
 import { Project } from '@/components/project'
 import { Footer } from '@/components/footer'

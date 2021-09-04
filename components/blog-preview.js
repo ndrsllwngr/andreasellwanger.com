@@ -73,7 +73,7 @@ export const BlogPreview = () => {
 
 const ListWithDividers = ({items = []}) => {
   return (
-    <ul role="list" className="divide-y divide-black w-full sm:px-6 lg:px-8 ">
+    <ul className="divide-y divide-black w-full sm:px-6 lg:px-8 ">
       {items.map((item) => (
         <li key={item.id} className="px-4 py-4 sm:px-0">
           <BlogEntry link={item.link} title={item.title} date={item.date} isExternal={item.isExternal}
