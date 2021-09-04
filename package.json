@@ -19,8 +19,7 @@
 		"build": "next build",
 		"export": "next export",
 		"preview-export": "cd out && python3 -m http.server",
-		"lint": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx",
-		"lint:fix": "eslint ./components/** ./pages/** ./lib/** --ext .js,.jsx --fix"
+		"lint": "next lint"
 	},
 	"browserslist": {
 		"production": [
@@ -56,6 +55,7 @@
 		"babel-plugin-inline-react-svg": "2.0.1",
 		"babel-plugin-preval": "5.0.0",
 		"eslint": "7.32.0",
+		"eslint-config-next": "11.1.2",
 		"eslint-config-prettier": "8.3.0",
 		"eslint-config-react-app": "6.0.0",
 		"eslint-plugin-flowtype": "5.9.2",
