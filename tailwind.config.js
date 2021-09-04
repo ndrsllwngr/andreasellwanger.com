@@ -14,6 +14,7 @@ module.exports = {
         'my-yellow': '#ffe312',
         'my-blue': '#0029ff',
         'my-grey-2': '#333',
+        'my-blue-2': '#3098f3',
         celonis: '#5cfe50',
         lmu: '#009440',
         code: {

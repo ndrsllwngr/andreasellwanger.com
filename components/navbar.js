@@ -11,7 +11,7 @@ function classNames(...classes) {
 
 export const NavBar = () => {
   return (
-    <Disclosure as="nav" className="bg-white">
+    <Disclosure as="nav" className="">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,8 +19,7 @@ export const NavBar = () => {
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
                   <Link href="/">
-                    {/* <a className="text-black dark:text-white">●</a> */}
-                    <a className="group font-medium text-black font-sans text-lg py-1 sm:py-0 hover:text-blue-700">
+                    <a className="group font-medium font-sans text-lg py-1 sm:py-0 hover:text-blue-700">
                       Andreas Ellwanger <span className="hidden sm:visible font-normal opacity-70 group-hover:opacity-100 inline-block md:inline">— (Junior) Software Engineer</span>
                     </a>
                   </Link>
@@ -29,7 +28,13 @@ export const NavBar = () => {
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <div className="sm:space-x-8 items-center">
                   <Page href="/projects" title="Projects" />
-                  <Page href="/about" title="About" />
+                  {/*<Page href="/about" title="About" />*/}
+                  <a
+                    href="/cv.pdf"
+                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm bg-blue-700 text-white hover:opacity-70"
+                  >
+                    Curriculum Vitae
+                  </a>
                 </div>
               </div>
               <div className="-mr-2 flex items-center sm:hidden">
@@ -49,7 +54,13 @@ export const NavBar = () => {
           <Disclosure.Panel className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
               <Page className="block" href="/projects" title="Projects" />
-              <Page className="block" href="/about" title="About" />
+              {/*<Page className="block" href="/about" title="About" />*/}
+              <a
+                href="/cv.pdf"
+                className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm bg-blue-700 text-white hover:opacity-70"
+              >
+                Curriculum Vitae
+              </a>
             </div>
           </Disclosure.Panel>
         </>
@@ -63,9 +74,9 @@ const Page = ({ className = '', title, href }) => {
   return (
     <Link href={href}>
       <a
-        className={`text-lg text-black hover:text-blue-700 opacity-70 hover:opacity-100 ml-5 py-1 ${className} ${
+        className={`text-lg text-blue-700 hover:opacity-70 ml-5 py-1 ${className} ${
           router.pathname === href
-            ? 'text-blue-700 opacity-100'
+            ? 'underline'
             : ''
         }`}
       >

@@ -4,7 +4,7 @@ const HeroLink = ({children, href}) => {
   return (
     <a
       href={href}
-      className="hover:bg-black hover:text-white rounded-md px-2 -mx-2 font-bold text-black"
+      className="hover:bg-black hover:text-white rounded-md px-2 -mx-2 font-bold"
     >
       {children}
     </a>
@@ -14,7 +14,7 @@ const HeroLink = ({children, href}) => {
 export const Hero = () => {
   return (
     <section className="container max-w-5xl mx-auto my-12 py-16 px-4 flex flex-col justify-center">
-      <h1 className="text-black font-bold text-4xl md:text-[4rem] tracking-wide font-sans uppercase leading-tight md:leading-tight">
+      <h1 className="font-bold text-4xl md:text-[4rem] tracking-wide font-sans uppercase leading-tight md:leading-tight">
         Andreas is a Software Engineer at{' '}
         <HeroLink
           href="https://www.celonis.com"

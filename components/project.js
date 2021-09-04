@@ -6,12 +6,12 @@ export const Project = ({ css, title, date, stack, url, list }) => {
   return (
     <section className={css}>
       <header>
-        <h3 className="font-sans font-bold text-black">
+        <h3 className="font-sans font-bold">
           <a className="inline-flex" href={url}>
             <span>{title} ↖</span>
           </a>
         </h3>
-        <p className="font-sans text-black opacity-90">
+        <p className="font-sans opacity-90">
           {date} | {stack}
         </p>
       </header>
