@@ -2,19 +2,15 @@
 
 ![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/workflows/Node.js%20CI/badge.svg?branch=develop)
 
-## Stack
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+---
 
 ## Getting started
 
 ### System Requirements
 - [Node.js 14.x](https://nodejs.org/en/)
-- MacOS, Windows (including WSL), and Linux are supported
 
 ### Setup
-- `node --version && npm --version && yarn --version` - Ensures that required packages are installed.
+- `node --version && npm --version && yarn --version` - Ensure that required versions are installed.
 - `yarn install` - Installs the project using [Yarn](https://yarnpkg.com/getting-started/install).
 
 ### Commands
@@ -25,6 +21,8 @@
 
 ##### CUSTOM
 - `yarn preview-export` - Runs a HTTP server (`python3 -m http.server`) in `out/` to preview the static HTML output from `yarn export`.
+
+---
 
 ### Dependency management
 - `yarn add <package...>` - Installs the “latest” version of the package.
