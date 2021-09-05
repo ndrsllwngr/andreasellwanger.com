@@ -64,7 +64,7 @@ const LandingPage = () => {
       </div>
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col flex-wrap container items-start justify-between py-16">
-        <ul>
+        <ul className="list-disc text-lg">
           {socialProfileList.map((socialProfile, i) => (
             <li key={i}>
               <a className="text-black hover:text-my-blue" href={socialProfile.href}>
