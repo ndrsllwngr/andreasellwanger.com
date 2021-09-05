@@ -64,10 +64,11 @@ const LandingPage = () => {
       </div>
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col flex-wrap container items-start justify-between py-16">
-        <ul className="list-disc text-lg">
+        <p className="text-lg font-bold mb-2">Follow me</p>
+        <ul className="list-disc text-lg space-y-1 ml-4">
           {socialProfileList.map((socialProfile, i) => (
             <li key={i}>
-              <a className="text-black hover:text-my-blue" href={socialProfile.href}>
+              <a className="text-black hover:text-blue-700" href={socialProfile.href}>
                 {socialProfile.name}
               </a>
             </li>
