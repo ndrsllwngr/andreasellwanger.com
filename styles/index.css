@@ -1,15 +1,42 @@
-@tailwind base;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Write your own custom base styles here */
+/*! purgecss start ignore */
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
+/* ::selection {
+  @apply bg-my-yellow text-my-black;
+} */
+.pdf:before {
+  content: '';
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.5 22H17.5C16.948 22 16.5 22.447 16.5 23C16.5 23.553 16.948 24 17.5 24H42.5C43.052 24 43.5 23.553 43.5 23C43.5 22.447 43.052 22 42.5 22Z' fill='black'/%3E%3Cpath d='M17.5 16H27.5C28.052 16 28.5 15.553 28.5 15C28.5 14.447 28.052 14 27.5 14H17.5C16.948 14 16.5 14.447 16.5 15C16.5 15.553 16.948 16 17.5 16Z' fill='black'/%3E%3Cpath d='M42.5 30H17.5C16.948 30 16.5 30.447 16.5 31C16.5 31.553 16.948 32 17.5 32H42.5C43.052 32 43.5 31.553 43.5 31C43.5 30.447 43.052 30 42.5 30Z' fill='black'/%3E%3Cpath d='M42.5 38H17.5C16.948 38 16.5 38.447 16.5 39C16.5 39.553 16.948 40 17.5 40H42.5C43.052 40 43.5 39.553 43.5 39C43.5 38.447 43.052 38 42.5 38Z' fill='black'/%3E%3Cpath d='M42.5 46H17.5C16.948 46 16.5 46.447 16.5 47C16.5 47.553 16.948 48 17.5 48H42.5C43.052 48 43.5 47.553 43.5 47C43.5 46.447 43.052 46 42.5 46Z' fill='black'/%3E%3Cpath d='M38.914 0H6.5V60H53.5V14.586L38.914 0ZM39.5 3.414L50.086 14H39.5V3.414ZM8.5 58V2H37.5V16H51.5V58H8.5Z' fill='black'/%3E%3C/svg%3E%0A");
+  @apply inline-block align-middle h-4 w-4 mr-2 bg-center bg-cover bg-no-repeat;
+}
 
-/* Write you own custom component styles here */
+.acm:before {
+  content: '';
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='96' height='96' viewBox='0 0 96 96' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M35.7 8.19999L22.8 4.79999L19.5 17.6L28.7 15.1L35.7 8.19999Z' fill='black'/%3E%3Cpath d='M24.9 19.1L6.40002 24.1L9.30003 34.6L24.9 19.1Z' fill='black'/%3E%3Cpath d='M87.6 35.8L91 22.7L78.2 19.4L80.8 29.1L87.6 35.8Z' fill='black'/%3E%3Cpath d='M8.30003 60.2L4.90002 73.1L17.7 76.4L15.2 67.1L8.30003 60.2Z' fill='black'/%3E%3Cpath d='M71.8 6.29999L61.1 9.29999L76.9 25.1L71.8 6.29999Z' fill='black'/%3E%3Cpath d='M70.8 76.8L89.5 71.7L86.6 61L70.8 76.8Z' fill='black'/%3E%3Cpath d='M60.1 87.5L73.2 90.9L76.5 78.1L66.8 80.7L60.1 87.5Z' fill='black'/%3E%3Cpath d='M24.2 89.4L34.7 86.6L19.2 71.1L24.2 89.4Z' fill='black'/%3E%3Cpath d='M86.9 56.7L95.7 47.9L67.7 19.9L56.8 9L47.8 0L32.2 15.6L9 38.8L0 47.8L15.8 63.6L39 86.8L47.9 95.7L63.4 80.2L86.9 56.7ZM47.5 55.1C47.5 55.9 47.2 56.7 46.6 57.3L43 60.9C42.4 61.5 41.6 61.8 40.8 61.8H25.3V32.6H40.8C41.6 32.6 42.4 32.9 43 33.5L46.6 37.1C47.2 37.7 47.5 38.5 47.5 39.3V55.1ZM56.1 32.6H61.4V56.8H75.7V61.8H56.1V32.6V32.6Z' fill='black'/%3E%3Cpath d='M40.3 37.9C40.1 37.7 39.9 37.6 39.7 37.6H30.6V56.8H39.7C40 56.8 40.1 56.7 40.3 56.5L42 54.8C42.2 54.6 42.3 54.4 42.3 54.2V40.2C42.3 40 42.2 39.8 42 39.6L40.3 37.9Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='95.7' height='95.7' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  @apply inline-block align-middle h-4 w-4 mr-2 bg-center bg-cover bg-no-repeat;
+}
 
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
+.merit:before,
+.merit:after {
+  content: '"';
+}
 
-/* Your own custom utilities */
+.cite:after {
+  @apply text-my-black text-right;
+  content: ' [1]';
+}
+
+.ref:before {
+  @apply text-my-black text-left font-bold;
+  content: '1. ';
+}
+
+.before-symbol:hover:before {
+  @apply absolute inline-block -ml-8;
+  content: '#';
+}
+
+/*! purgecss end ignore */

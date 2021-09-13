@@ -1,10 +1,10 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import LogoAiderly from '@/assets/svg/logo-aiderly.svg'
-import LogoCelonis from '@/assets/svg/logo-celonis.svg'
-import LogoLmu from '@/assets/svg/logo-lmu.svg'
-import LogoTech4Germany from '@/assets/svg/logo-tech4germany.svg'
-import LogoLeiden from '@/assets/svg/logo-leiden.svg'
+import LogoAiderly from '@/assets/../../public/assets/svg/logo-aiderly.svg'
+import LogoCelonis from '@/assets/../../public/assets/svg/logo-celonis.svg'
+import LogoLmu from '@/assets/../../public/assets/svg/logo-lmu.svg'
+import LogoTech4Germany from '@/assets/../../public/assets/svg/logo-tech4germany.svg'
+import LogoLeiden from '@/assets/../../public/assets/svg/logo-leiden.svg'
 
 const Logo = ({ children, link, alt }) => {
   return (

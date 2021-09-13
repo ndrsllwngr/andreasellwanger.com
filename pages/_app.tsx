@@ -1,6 +1,12 @@
 import { AppProps } from 'next/app'
-import '../styles/index.css'
+import { ThemeProvider } from 'next-themes'
+import '@/styles/index.css'
+import React from 'react'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider attribute="class" defaultTheme="system">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
