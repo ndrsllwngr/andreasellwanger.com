@@ -24,7 +24,7 @@ const NavBar = () => {
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <div className="sm:space-x-8 items-center">
-                  {/*<Page href="/blog" title="blog" />*/}
+                  <Page href="/blog" title="blog" />
                   <Page href="/projects" title="projects" />
                   {/*<Page href="/about" title="About" />*/}
                   <a
