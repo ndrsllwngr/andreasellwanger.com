@@ -1,6 +1,6 @@
 # Personal Website
 
-![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/workflows/Node.js%20CI/badge.svg?branch=develop)
+![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/workflows/Node.js%20CI/badge.svg?branch=develop) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndrsllwngr_andreasellwanger.com&metric=alert_status)](https://sonarcloud.io/dashboard?id=ndrsllwngr_andreasellwanger.com) 
 
 ---
 
