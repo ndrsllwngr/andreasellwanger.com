@@ -1,12 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
-import { Layout } from '@/components/layout'
-import { HtmlHead } from '@/components/html-head'
+import Head from 'next/head'
 
 const Old = () => {
   return (
-    <Layout>
-      <HtmlHead title="Andreas Ellwanger — Software Engineer." />
+    <div>
+      <Head>
+        <title>Andreas Ellwanger — Software Engineer.</title>
+        <meta name="author" content="Andreas Ellwanger" />
+        <meta
+          name="description"
+          content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
+        />
+      </Head>
       <main>
         <section id="top" className="p-12">
           <div className="max-w-4xl mx-auto">
@@ -240,7 +246,7 @@ const Old = () => {
           </div>
         </section>
       </main>
-    </Layout>
+    </div>
   )
 }
 

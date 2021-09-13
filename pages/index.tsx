@@ -41,6 +41,7 @@ const Index = () => {
               fellows, they worked on topics related to digitalisation and e-government.
             </p>
           </div>
+          {/*<LogoCloud />*/}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col flex-wrap container items-start justify-between py-16">
             <p className="text-lg font-bold mb-2">Follow me</p>
             <ul className="list-disc text-lg space-y-1 ml-4">
