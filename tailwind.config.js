@@ -1,58 +1,33 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './public/**/*.html'],
-  darkMode: 'class', // or 'media' or 'false'
+  purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {
       colors: {
-        'my-black': '#010101',
-        'my-grey': '#f4f4f4',
-        'my-red': '#f02e09',
-        'my-yellow': '#ffe312',
-        'my-blue': '#0029ff',
-        'my-grey-2': '#333',
-        'my-blue-2': '#3098f3',
-        celonis: '#5cfe50',
-        lmu: '#009440',
-        code: {
-          punctuation: '#A1E8FF',
-          tag: '#D58FFF',
-          'attr-name': '#4BD0FB',
-          'attr-value': '#A2F679',
-          string: '#A2F679',
-          highlight: 'rgba(134, 239, 172, 0.25)',
-        },
-        sky: colors.sky,
-        orange: colors.orange,
-        indigo: colors.indigo,
-        rose: colors.rose,
-        teal: colors.teal,
-        yellow: colors.yellow,
-        hero: '#F4F6F8',
+        'accent-1': '#FAFAFA',
+        'accent-2': '#EAEAEA',
+        'accent-7': '#333',
+        success: '#0070f3',
+        cyan: '#79FFE1',
       },
-      fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
-        source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
-        system: defaultTheme.fontFamily.sans,
+      spacing: {
+        28: '7rem',
       },
-      backgroundImage: theme => ({
-        'hero-pattern': "url('https://uploads-ssl.webflow.com/5e2f4dbfcb2e5e3f5edfe932/5e5c973863723ed613adba35_4color.png')",
-        'new-pattern': 'linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%)',
-      }),
-      animation: {
-        'bounce-once': 'bounce 1s linear 0s 2 normal both running',
-      }
+      letterSpacing: {
+        tighter: '-.04em',
+      },
+      lineHeight: {
+        tight: 1.2,
+      },
+      fontSize: {
+        '5xl': '2.5rem',
+        '6xl': '2.75rem',
+        '7xl': '4.5rem',
+        '8xl': '6.25rem',
+      },
+      boxShadow: {
+        small: '0 5px 10px rgba(0, 0, 0, 0.12)',
+        medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
+      },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/typography'), // https://tailwindcss.com/docs/typography-plugin
-    require('@tailwindcss/aspect-ratio')
-  ],
 }

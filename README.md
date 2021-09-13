@@ -1,36 +1,41 @@
-# Personal Website
+# A statically generated blog example using Next.js, Markdown, and TypeScript
 
-![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/workflows/Node.js%20CI/badge.svg?branch=develop)
+This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
 
----
+This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
 
-## Getting started
+The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
 
-### System Requirements
-- [Node.js 14.x](https://nodejs.org/en/)
+To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
 
-### Setup
-- `node --version && npm --version && yarn --version` - Ensure that required versions are installed.
-- `yarn install` - Installs the project using [Yarn](https://yarnpkg.com/getting-started/install).
+## Preview
 
-### Commands
-- `yarn dev` - Runs next which starts Next.js in development mode.
-- `yarn build` - Runs next build which creates an optimized production build of your application. The output displays information about each route.
-- `yarn start` - Runs next start which starts a Next.js production server.
-- `yarn export` - Runs next export which allows you to export your app to static HTML, which can be run standalone without the need of a Node.js server.
+Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-##### CUSTOM
-- `yarn preview-export` - Runs a HTTP server (`python3 -m http.server`) in `out/` to preview the static HTML output from `yarn export`.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter-typescript)
 
----
+## Deploy your own
 
-### Dependency management
-- `yarn add <package...>` - Installs the “latest” version of the package.
-- `yarn remove <package...>` - Removes the package from your direct dependencies updating your package.json and yarn.lock files in the process.
-- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) upgrades your package.json dependencies to the latest versions, ignoring specified versions.
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-### Absolute Imports and Aliases
-- https://nextjs.org/blog/next-9-4#absolute-imports-and-aliases
-- [`jsconfig`](https://code.visualstudio.com/docs/languages/jsconfig#_jsconfig-options) / [`tsconfig`](https://www.typescriptlang.org/tsconfig#baseUrl)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript&project-name=blog-starter-typescript&repository-name=blog-starter-typescript)
 
+## How to use
 
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+
+```bash
+npx create-next-app --example blog-starter-typescript blog-starter-typescript-app
+# or
+yarn create next-app --example blog-starter-typescript blog-starter-typescript-app
+```
+
+Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+# Notes
+
+This blog-starter-typescript uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v2.0 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
+
+[Tailwind CSS v2.0 no longer supports Node.js 8 or 10](https://tailwindcss.com/docs/upgrading-to-v2#upgrade-to-node-js-12-13-or-higher). To build your CSS you'll need to ensure you are running Node.js 12.13.0 or higher in both your local and CI environments.
