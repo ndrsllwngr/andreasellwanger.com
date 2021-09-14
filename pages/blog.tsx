@@ -7,6 +7,7 @@ import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Post from '../types/post'
+import MoreStoriesSlim from '@/components/more-stories-slim'
 
 type Props = {
   allPosts: Post[]
@@ -33,7 +34,7 @@ const Blog = ({ allPosts }: Props) => {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStoriesSlim posts={morePosts} />}
         </Container>
       </Layout>
     </>
