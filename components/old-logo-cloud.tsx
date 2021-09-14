@@ -1,9 +1,10 @@
 import React from 'react'
+
 import LogoAiderly from '@/assets/svg/logo-aiderly.svg'
 import LogoCelonis from '@/assets/svg/logo-celonis.svg'
+import LogoLeiden from '@/assets/svg/logo-leiden.svg'
 import LogoLmu from '@/assets/svg/logo-lmu.svg'
 import LogoTech4Germany from '@/assets/svg/logo-tech4germany.svg'
-import LogoLeiden from '@/assets/svg/logo-leiden.svg'
 
 const Logo = ({ children, link, alt }: { children: JSX.Element; link: string; alt: string }) => {
   return (

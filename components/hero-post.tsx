@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 import Avatar from '@/components/avatar'
-import DateFormatter from '@/components/date-formatter'
 import CoverImage from '@/components/cover-image'
+import DateFormatter from '@/components/date-formatter'
 import Author from '@/types/author'
 
 type Props = {

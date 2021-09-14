@@ -1,10 +1,11 @@
 import React from 'react'
+
 import Head from 'next/head'
 
-import { PROJECTS } from '@/lib/constants'
 import Layout from '@/components/layout'
-import NavBar from '@/components/old-nav-bar'
 import OldFooter from '@/components/old-footer'
+import NavBar from '@/components/old-nav-bar'
+import { PROJECTS } from '@/lib/constants'
 
 const ProjectsPage = () => {
   return (

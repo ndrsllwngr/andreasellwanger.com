@@ -1,5 +1,6 @@
-import Meta from './meta'
 import React from 'react'
+
+import Meta from '@/components/meta'
 
 type Props = {
   preview?: boolean

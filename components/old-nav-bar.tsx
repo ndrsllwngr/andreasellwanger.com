@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const NavBar = () => {
