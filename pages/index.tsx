@@ -1,8 +1,9 @@
-import Container from '../components/container'
-import Layout from '../components/layout'
-import Head from 'next/head'
 import React from 'react'
-import { SOCIAL_PROFILES } from '../lib/constants'
+import Head from 'next/head'
+
+import Container from '@/components/container'
+import Layout from '@/components/layout'
+import { SOCIAL_PROFILES } from '@/lib/constants'
 import NavBar from '@/components/old-nav-bar'
 import PanelHome from '@/components/old-panel.home'
 import OldFooter from '@/components/old-footer'

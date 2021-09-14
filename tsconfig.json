@@ -19,7 +19,8 @@
       "@/assets/*": ["./public/assets/*"],
       "@/pages/*": ["./pages/*"],
       "@/lib/*": ["./lib/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/styles/*": ["./styles/*"],
+      "@/types/*": ["./types/*"]
     }
   },
   "exclude": ["node_modules"],
