@@ -7,7 +7,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "noEmit": true,
     "moduleResolution": "node",
@@ -15,14 +19,33 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["./components/*"],
-      "@/assets/*": ["./public/assets/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/types/*": ["./types/*"]
-    }
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/assets/*": [
+        "./public/assets/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/lib/*": [
+        "./lib/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ]
+    },
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
