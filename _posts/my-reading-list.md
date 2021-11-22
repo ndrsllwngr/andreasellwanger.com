@@ -1,6 +1,6 @@
 ---
-title: 'Books'
-excerpt: 'tbd'
+title: 'My Reading List'
+excerpt: 'A collection of software engineering and engineering management books and further reading material.'
 date: '2021-11-22T11:35:07.322Z'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 author:
@@ -10,15 +10,17 @@ ogImage:
   url:
 ---
 
-# Engineering reading material
+# My Reading List
 
-## Engineers
+A collection of software engineering and engineering management books and further reading material.
+
+## Software Engineering
 
 - Refactoring
 - Clean Code
 - Introduction to Algorithms
 
-## Engineering managers
+## (Engineering) Management
 
 - [Software Engineering at Google: Lessons Learned from Programming Over Time](https://www.goodreads.com/book/show/48816586-software-engineering-at-google) ([read online](https://abseil.io/resources/swe_at_google.2.pdf)) by Titus Winters, Tom Manshreck and Hyrum Wright
 - [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path) by Camille Fournier
