@@ -1,9 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './public/**/*.html'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './public/**/*.html'],
   darkMode: 'class', // or 'media' or 'false'
   theme: {
     extend: {
@@ -25,12 +23,6 @@ module.exports = {
           string: '#A2F679',
           highlight: 'rgba(134, 239, 172, 0.25)',
         },
-        sky: colors.sky,
-        orange: colors.orange,
-        indigo: colors.indigo,
-        rose: colors.rose,
-        teal: colors.teal,
-        yellow: colors.yellow,
         hero: '#F4F6F8',
       },
       fontFamily: {
@@ -48,11 +40,8 @@ module.exports = {
       }
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [
-    require('@tailwindcss/typography'), // https://tailwindcss.com/docs/typography-plugin
-    require('@tailwindcss/aspect-ratio')
+    require('@tailwindcss/typography'), // https://github.com/tailwindlabs/tailwindcss-typography
+    require('@tailwindcss/aspect-ratio') // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
   ],
 }
