@@ -38,3 +38,6 @@ ogImage:
 ## People to follow
 
 - tbd
+
+## Notes
+- use `dbg!()` for quick and dirty debugging
