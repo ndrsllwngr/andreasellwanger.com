@@ -42,6 +42,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'), // https://github.com/tailwindlabs/tailwindcss-typography
-    require('@tailwindcss/aspect-ratio') // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
   ],
 }
