@@ -4,7 +4,7 @@ import Link from 'next/link'
 const RecentWork = () => {
   return (
     <>
-      <h2 className={'mb-2 lg:mb-4 mt-5 font-bold'}>Recent Work</h2>
+      <h2 className={'mb-2 mt-5 font-bold lg:mb-4'}>Recent Work</h2>
       <div className={'flex flex-col'}>
         <div className={'flex flex-col lg:flex-row'}>
           <WorkLink
@@ -60,7 +60,7 @@ const WorkLink = ({ url, image, name, dates, width, height }: WorkLinkProps) => 
   return (
     <Link href={url}>
       <div className={'flex flex-row'}>
-        <div className={'w-[3.75rem] h-[3.75rem]'}>
+        <div className={'h-[3.75rem] w-[3.75rem]'}>
           <Image
             src={image}
             alt={`${name} icon`}
@@ -70,7 +70,7 @@ const WorkLink = ({ url, image, name, dates, width, height }: WorkLinkProps) => 
           />
         </div>
         <div className={'ml-4'}>
-          <p className={'leading-none mt-1.5 lg:mt-1'}>{name}</p>
+          <p className={'mt-1.5 leading-none lg:mt-1'}>{name}</p>
           <p className={'opacity-60'}>{dates}</p>
         </div>
       </div>

@@ -16,29 +16,29 @@ const Old = () => {
       </Head>
       <main>
         <section id="top" className="p-12">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="mb-32 text-6xl font-normal tracking-tight leading-[4rem]">
+          <div className="mx-auto max-w-4xl">
+            <h1 className="mb-32 text-6xl font-normal leading-[4rem] tracking-tight">
               <span className="font-black tracking-tighter">Andreas Ellwanger</span>, B.Sc.
             </h1>
             Table of contents
             <ol className="list-decimal">
               <li>
-                <a href="#about" className="text-my-red font-bold">
+                <a href="#about" className="font-bold text-my-red">
                   About
                 </a>
               </li>
               <li>
-                <a href="#research" className="text-my-red font-bold">
+                <a href="#research" className="font-bold text-my-red">
                   Research
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-my-red font-bold">
+                <a href="#projects" className="font-bold text-my-red">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-my-red font-bold">
+                <a href="#contact" className="font-bold text-my-red">
                   Contact
                 </a>
               </li>
@@ -46,10 +46,10 @@ const Old = () => {
           </div>
         </section>
         <section id="about" className="bg-my-yellow p-12">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold pb-6">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="pb-6 text-3xl font-bold">
               <Link href="#about">
-                <a className="hover:text-my-red before-symbol">About</a>
+                <a className="before-symbol hover:text-my-red">About</a>
               </Link>
             </h2>
             <div>
@@ -81,7 +81,7 @@ const Old = () => {
                 to digitalisation and e-government.
               </p>
             </div>
-            <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
+            <div className="mt-8 rounded-sm bg-white p-8 hover:shadow-md">
               <p className="mb-0">
                 <a href="cv.pdf">
                   <span className="pdf underline hover:text-my-red">cv.pdf</span>
@@ -92,9 +92,9 @@ const Old = () => {
           </div>
         </section>
         <section id="research" className="bg-my-grey p-12">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold pb-6">
-              <a href="#research" className="hover:text-my-red before-symbol">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="pb-6 text-3xl font-bold">
+              <a href="#research" className="before-symbol hover:text-my-red">
                 Research
               </a>
             </h2>
@@ -126,8 +126,8 @@ const Old = () => {
               </a>{' '}
               to present the full paper and answer questions in the Q&A afterwards.
             </p>
-            <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-              <p className="mb-0 ref">
+            <div className="mt-8 rounded-sm bg-white p-8 hover:shadow-md">
+              <p className="ref mb-0">
                 Andreas Ellwanger, Axel Hoesl, and Andreas Butz. 2018. Axis- plus Content-based
                 Control for Camera Drones: Design and Evaluation of User Interface Concepts. In
                 Proceedings of the 4th ACM Workshop on Micro Aerial Vehicle Networks, Systems, and
@@ -146,15 +146,15 @@ const Old = () => {
           </div>
         </section>
         <section id="projects" className="bg-my-grey p-12">
-          <div className="max-w-4xl mx-auto">
+          <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold">
-              <a href="#projects" className="hover:text-my-red before-symbol">
+              <a href="#projects" className="before-symbol hover:text-my-red">
                 Projects
               </a>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 row-gap-8">
-              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4 className="font-bold mb-3">
+            <div className="row-gap-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+              <div className="mt-8 rounded-sm bg-white p-8 hover:shadow-md">
+                <h4 className="mb-3 font-bold">
                   <a href="https://github.com/ndrsllwngr/hll-rust" className="hover:text-my-red">
                     MIT Chord algorithm implementation
                   </a>
@@ -164,8 +164,8 @@ const Old = () => {
                   proof-of-concept was build with Rust.
                 </p>
               </div>
-              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4 className="font-bold mb-3">
+              <div className="mt-8 rounded-sm bg-white p-8 hover:shadow-md">
+                <h4 className="mb-3 font-bold">
                   <a href="https://github.com/ndrsllwngr/hll-scala" className="hover:text-my-red">
                     Democratic playlist as webapp
                   </a>
@@ -176,8 +176,8 @@ const Old = () => {
                   Scala Akka-http as back-end.
                 </p>
               </div>
-              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4 className="font-bold mb-3">
+              <div className="mt-8 rounded-sm bg-white p-8 hover:shadow-md">
+                <h4 className="mb-3 font-bold">
                   <a
                     href="https://github.com/ndrsllwngr/DichteFideleLurche"
                     className="hover:text-my-red"
@@ -187,8 +187,8 @@ const Old = () => {
                 </h4>
                 <p></p>
               </div>
-              <div className="p-8 rounded-sm bg-white mt-8 hover:shadow-md">
-                <h4 className="font-bold mb-3">
+              <div className="mt-8 rounded-sm bg-white p-8 hover:shadow-md">
+                <h4 className="mb-3 font-bold">
                   <a
                     href="https://github.com/ndrsllwngr/FideleForste"
                     className="hover:text-my-red"
@@ -202,9 +202,9 @@ const Old = () => {
           </div>
         </section>
         <section id="contact" className="bg-white p-12">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold pb-6">
-              <a href="#contact" className="hover:text-my-red before-symbol">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="pb-6 text-3xl font-bold">
+              <a href="#contact" className="before-symbol hover:text-my-red">
                 Contact
               </a>
             </h2>

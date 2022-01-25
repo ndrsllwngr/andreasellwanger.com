@@ -29,7 +29,7 @@ const Index = () => {
           <RecentWork />
           <LogoCloud />
           <PanelHome />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row flex-wrap container items-center justify-between py-16">
+          <div className="container mx-auto flex max-w-7xl flex-row flex-wrap items-center justify-between px-4 py-16 sm:px-6 lg:px-8">
             <p className="font-sans text-lg">
               Andreas is a postgraduate student, currently pursuing a Masters&apos; degree of
               Computer Sciences at LMU Munich, Germany. In 2018 he studied abroad at Leiden
@@ -48,9 +48,9 @@ const Index = () => {
             </p>
           </div>
           {/*<LogoCloud />*/}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col flex-wrap container items-start justify-between py-16">
-            <p className="text-lg font-bold mb-2">Follow me</p>
-            <ul className="list-disc text-lg space-y-1 ml-4">
+          <div className="container mx-auto flex max-w-7xl flex-col flex-wrap items-start justify-between px-4 py-16 sm:px-6 lg:px-8">
+            <p className="mb-2 text-lg font-bold">Follow me</p>
+            <ul className="ml-4 list-disc space-y-1 text-lg">
               {SOCIAL_PROFILES.map((socialProfile, i) => (
                 <li key={i}>
                   <a className="text-black hover:text-blue-700" href={socialProfile.href}>
@@ -71,7 +71,7 @@ export default Index
 
 const AboutLink = ({ children, href }: { children: string; href: string }) => {
   return (
-    <a href={href} className="hover:text-blue-700 font-bold">
+    <a href={href} className="font-bold hover:text-blue-700">
       {children}
     </a>
   )
