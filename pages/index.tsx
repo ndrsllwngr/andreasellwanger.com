@@ -5,10 +5,8 @@ import Head from 'next/head'
 import Container from '@/components/container'
 import Layout from '@/components/layout'
 import OldFooter from '@/components/old-footer'
-import { LogoCloud } from '@/components/old-logo-cloud'
 import NavBar from '@/components/old-nav-bar'
 import PanelHome from '@/components/old-panel.home'
-import RecentWork from '@/components/recent-work'
 import { SOCIAL_PROFILES } from '@/lib/constants'
 
 const Index = () => {
@@ -26,8 +24,8 @@ const Index = () => {
         <Container>
           {/*<Intro />*/}
           <NavBar />
-          <RecentWork />
-          <LogoCloud />
+          {/* <RecentWork /> */}
+          {/* <LogoCloud /> */}
           <PanelHome />
           <div className="container mx-auto flex max-w-7xl flex-row flex-wrap items-center justify-between px-4 py-16 sm:px-6 lg:px-8">
             <p className="font-sans text-lg">
