@@ -4,7 +4,8 @@ module.exports = {
       test: /\.svg$/,
       use: [
         {
-          loader: '@svgr/webpack', options: {
+          loader: '@svgr/webpack',
+          options: {
             svgoConfig: {
               plugins: {
                 removeViewBox: false,
@@ -12,12 +13,12 @@ module.exports = {
                   prefixIds: false,
                   prefixClassNames: false,
                 },
-              }
-            }
-          }
+              },
+            },
+          },
         },
       ],
     })
-    return config;
+    return config
   },
-};
+}

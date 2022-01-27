@@ -1,3 +1,5 @@
 *.md
 **/*.mdx
 .github/
+**/node_modules
+.next/

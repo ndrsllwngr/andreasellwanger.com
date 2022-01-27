@@ -19,8 +19,8 @@ const ProjectsPage = () => {
         />
       </Head>
       <NavBar />
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 px-4 flex flex-col justify-center py-16">
-        <h1 className="font-bold text-lg md:text-4xl tracking-wide leading-tight font-sans mb-12">
+      <section className="mx-auto flex max-w-7xl flex-col justify-center px-4 px-4 py-16 pb-16 sm:px-6 lg:px-8">
+        <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
           <span className="text-black opacity-90">Passion projects and fun little experiments</span>
         </h1>
         {PROJECTS.map((project, i) => (
@@ -63,8 +63,8 @@ const Project = ({
       </header>
       <ul>
         {list.map((text, i) => (
-          <li key={i} className="mt-1 font-sans text-black leading-normal">
-            <span className="absolute -ml-3 sm:-ml-3 select-none font-bold transform -translate-y-px">
+          <li key={i} className="mt-1 font-sans leading-normal text-black">
+            <span className="absolute -ml-3 -translate-y-px transform select-none font-bold sm:-ml-3">
               ›
             </span>
             {text}

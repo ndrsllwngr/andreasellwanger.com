@@ -1,7 +1,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './public/**/*.html'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.html',
+  ],
   darkMode: 'class', // or 'media' or 'false'
   theme: {
     extend: {
@@ -31,13 +35,14 @@ module.exports = {
         source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
         system: defaultTheme.fontFamily.sans,
       },
-      backgroundImage: theme => ({
-        'hero-pattern': "url('https://uploads-ssl.webflow.com/5e2f4dbfcb2e5e3f5edfe932/5e5c973863723ed613adba35_4color.png')",
+      backgroundImage: (theme) => ({
+        'hero-pattern':
+          "url('https://uploads-ssl.webflow.com/5e2f4dbfcb2e5e3f5edfe932/5e5c973863723ed613adba35_4color.png')",
         'new-pattern': 'linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%)',
       }),
       animation: {
         'bounce-once': 'bounce 1s linear 0s 2 normal both running',
-      }
+      },
     },
   },
   plugins: [

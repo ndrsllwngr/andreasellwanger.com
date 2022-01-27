@@ -1,16 +1,22 @@
 import React from 'react'
 
-import LogoAiderly from '@/assets/svg/logo-aiderly.svg'
-import LogoCelonis from '@/assets/svg/logo-celonis.svg'
-import LogoLeiden from '@/assets/svg/logo-leiden.svg'
-import LogoLmu from '@/assets/svg/logo-lmu.svg'
-import LogoTech4Germany from '@/assets/svg/logo-tech4germany.svg'
-
-const Logo = ({ children, link, alt }: { children: JSX.Element; link: string; alt: string }) => {
+const Logo = ({
+  children,
+  link,
+  alt,
+  path,
+  name,
+}: {
+  children: JSX.Element
+  link: string
+  alt: string
+  path: string
+  name: string
+}) => {
   return (
-    <div className="flex py-6 justify-center px-10 m-4">
-      <a className="text-black hover:text-my-blue w-32 h-32" href={link}>
-        {children}
+    <div className="m-4 flex justify-center py-6 px-10">
+      <a className="h-32 w-32 text-black hover:text-my-blue" href={link}>
+        <img src={path} alt={`${name} icon`} />
         <span className="sr-only">{alt || ''}</span>
       </a>
     </div>
@@ -19,27 +25,27 @@ const Logo = ({ children, link, alt }: { children: JSX.Element; link: string; al
 
 const MyLogos = [
   {
-    logo: <LogoCelonis />,
+    logo: '/assets/svg/logo-celonis.svg',
     alt: 'Celonis',
     link: 'https://www.celonis.com/',
   },
   {
-    logo: <LogoLmu />,
+    logo: '/assets/svg/logo-lmu.svg',
     alt: 'LMU Munich',
     link: 'https://www.uni-muenchen.de/',
   },
   {
-    logo: <LogoAiderly />,
+    logo: '/assets/svg/logo-aiderly.svg',
     alt: 'Aiderly GmbH',
     link: 'https://aiderly.de/',
   },
   {
-    logo: <LogoTech4Germany />,
+    logo: '/assets/svg/logo-tech4germany.svg',
     alt: 'Tech4Germany',
     link: 'https://tech.4germany.org/',
   },
   {
-    logo: <LogoLeiden />,
+    logo: '/assets/svg/logo-leiden.svg',
     alt: 'Leiden University',
     link: 'https://liacs.leidenuniv.nl/',
   },
@@ -47,12 +53,10 @@ const MyLogos = [
 
 export const LogoCloud = () => {
   return (
-    <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col justify-center">
+    <section className="container mx-auto flex max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
       <div className="flex flex-wrap justify-center">
         {MyLogos.map((logo, index) => (
-          <Logo key={index} link={logo.link} alt={logo.alt}>
-            {logo.logo}
-          </Logo>
+          <Logo key={index} link={logo.link} alt={logo.alt} name={logo.alt} path={logo.logo} />
         ))}
       </div>
     </section>
