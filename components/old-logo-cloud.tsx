@@ -1,13 +1,11 @@
 import React from 'react'
 
 const Logo = ({
-  children,
   link,
   alt,
   path,
   name,
 }: {
-  children: JSX.Element
   link: string
   alt: string
   path: string

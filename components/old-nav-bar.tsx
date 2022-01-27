@@ -15,7 +15,7 @@ const NavBar = () => {
                   <Link href="/">
                     <a className="group py-1 font-sans text-lg font-medium hover:text-blue-700 sm:py-0">
                       Andreas Ellwanger{' '}
-                      <span className="inline-block hidden font-normal opacity-70 group-hover:opacity-100 sm:visible md:inline">
+                      <span className="hidden font-normal opacity-70 group-hover:opacity-100 sm:visible md:inline">
                         — (Junior) Software Engineer
                       </span>
                     </a>
