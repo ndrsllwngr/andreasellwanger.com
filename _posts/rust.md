@@ -21,6 +21,7 @@ ogImage:
 - https://blog.cloudflare.com/building-fast-interpreters-in-rust/
 - https://www.brandons.me/blog/why-rust-strings-seem-hard
 - http://www.sheshbabu.com/posts/rust-module-system/
+- https://blog.nindalf.com/posts/rust-stdlib/
 
 ## Newsletter
 
@@ -34,6 +35,14 @@ ogImage:
 - https://doc.rust-lang.org/stable/rust-by-example/
 - https://github.com/rust-lang/rustlings/
 - https://github.com/yoshuawuyts/rust-for-js-peeps
+
+## Knowledge
+
+- https://doc.rust-lang.org/book/
+- https://doc.rust-lang.org/stable/rust-by-example/
+- https://rust-lang-nursery.github.io/rust-cookbook/
+- https://cheats.rs/
+- https://github.com/brson/stdx
 
 ## People to follow
 
