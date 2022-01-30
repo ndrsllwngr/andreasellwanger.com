@@ -5,10 +5,6 @@ export const HOME_OG_IMAGE_URL =
 
 export const SOCIAL_PROFILES = [
   {
-    name: 'Email',
-    href: 'mailto:contact@andreasellwanger.com',
-  },
-  {
     name: 'LinkedIn',
     href: 'https://de.linkedin.com/in/ellwanger/en/',
   },

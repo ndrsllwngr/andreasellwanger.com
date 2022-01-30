@@ -3,8 +3,8 @@ import React from 'react'
 import Head from 'next/head'
 
 import Container from '@/components/container'
+import Footer from '@/components/footer'
 import Layout from '@/components/layout'
-import OldFooter from '@/components/old-footer'
 import NavBar from '@/components/old-nav-bar'
 import PanelHome from '@/components/old-panel.home'
 import { SOCIAL_PROFILES } from '@/lib/constants'
@@ -58,7 +58,7 @@ const Index = () => {
               ))}
             </ul>
           </div>
-          <OldFooter />
+          <Footer />
         </Container>
       </Layout>
     </>

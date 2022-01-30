@@ -1,27 +1,34 @@
+import React, { useEffect, useState } from 'react'
+
 import Container from '@/components/container'
 import { EXAMPLE_PATH } from '@/lib/constants'
 
 const Footer = () => {
+  const [dateState, setDateState] = useState(new Date())
+  useEffect(() => {
+    setInterval(() => setDateState(new Date()), 1000)
+    return () => {}
+  }, [])
   return (
     <footer className="bg-accent-1 border-accent-2 border-t">
       <Container>
-        <div className="flex flex-col items-center py-28 lg:flex-row">
-          <h3 className="mb-10 text-center text-4xl font-bold leading-tight tracking-tighter lg:mb-0 lg:w-1/2 lg:pr-4 lg:text-left lg:text-5xl">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col items-center justify-center lg:w-1/2 lg:flex-row lg:pl-4">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 mb-6 border border-black bg-black py-3 px-12 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-black lg:mb-0 lg:px-8"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="my-12 flex flex-row items-start justify-between">
+            <div>Andreas Ellwanger</div>
+            <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-col">
+                <div className={'leading-{1.5625rem} mb-4 text-xl'}>Munich</div>
+                <div className={'mb-4 tabular-nums leading-6 text-slate-700'}>
+                  {dateState.toLocaleTimeString('de-DE', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true,
+                    timeZone: 'Europe/Berlin',
+                  })}
+                </div>
+                <div className={'leading-6'}>hello@andreasellwanger.com</div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

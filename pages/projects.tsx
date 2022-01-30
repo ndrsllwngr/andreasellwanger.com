@@ -2,8 +2,9 @@ import React from 'react'
 
 import Head from 'next/head'
 
+import Container from '@/components/container'
+import Footer from '@/components/footer'
 import Layout from '@/components/layout'
-import OldFooter from '@/components/old-footer'
 import NavBar from '@/components/old-nav-bar'
 import { PROJECTS } from '@/lib/constants'
 
@@ -18,16 +19,20 @@ const ProjectsPage = () => {
           content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
       </Head>
-      <NavBar />
-      <section className="mx-auto flex max-w-7xl flex-col justify-center px-4 px-4 py-16 pb-16 sm:px-6 lg:px-8">
-        <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
-          <span className="text-black opacity-90">Passion projects and fun little experiments</span>
-        </h1>
-        {PROJECTS.map((project, i) => (
-          <Project {...project} className="pb-10" key={i} />
-        ))}
-      </section>
-      <OldFooter />
+      <Container>
+        <NavBar />
+        <section className="mx-auto flex max-w-7xl flex-col justify-center px-4 px-4 py-16 pb-16 sm:px-6 lg:px-8">
+          <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
+            <span className="text-black opacity-90">
+              Passion projects and fun little experiments
+            </span>
+          </h1>
+          {PROJECTS.map((project, i) => (
+            <Project {...project} className="pb-10" key={i} />
+          ))}
+        </section>
+        <Footer />
+      </Container>
     </Layout>
   )
 }
