@@ -10,9 +10,9 @@ const Footer = () => {
     return () => {}
   }, [])
   return (
-    <footer className="bg-accent-1 border-accent-2 border-t">
-      <Container>
-        <div className="mx-auto w-full max-w-7xl flex-row px-4 sm:px-6 lg:px-8">
+    <Container>
+      <div className="mx-auto w-full max-w-7xl flex-row px-4 sm:px-6 lg:px-8">
+        <footer className="bg-accent-1 border-accent-2 border-t">
           <div className="my-12 flex flex-grow flex-row items-start justify-between">
             <div>Andreas Ellwanger</div>
             <div className="flex flex-row items-center justify-center">
@@ -30,9 +30,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </footer>
+        </footer>
+      </div>
+    </Container>
   )
 }
 

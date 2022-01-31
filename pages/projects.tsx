@@ -19,16 +19,18 @@ const ProjectsPage = () => {
           content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
       </Head>
-      <Container>
+      <Container className={'min-h-screen'}>
         <NavBar />
-        <section className="mx-auto flex max-w-7xl flex-col justify-center px-4 px-4 py-16 pb-16 sm:px-6 lg:px-8">
-          <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
-            <span className="opacity-90">Passion projects and fun little experiments</span>
-          </h1>
-          {PROJECTS.map((project, i) => (
-            <Project {...project} className="pb-10" key={i} />
-          ))}
-        </section>
+        <div className={'flex-grow'}>
+          <section className="container mx-auto flex max-w-7xl flex-col items-start px-4 py-16 sm:px-6 lg:px-8">
+            <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
+              <span className="opacity-90">Passion projects and fun little experiments</span>
+            </h1>
+            {PROJECTS.map((project, i) => (
+              <Project {...project} className="pb-10" key={i} />
+            ))}
+          </section>
+        </div>
         <Footer />
       </Container>
     </Layout>

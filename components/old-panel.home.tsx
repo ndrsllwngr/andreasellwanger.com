@@ -13,7 +13,7 @@ const PanelHome = () => {
                 working on{' '}
                 <a
                   href="https://www.celonis.com/intelligent-business-cloud/event-collection"
-                  className="font-bold hover:text-blue-700"
+                  className="font-bold opacity-80 hover:opacity-100"
                 >
                   Event Collection
                 </a>
@@ -22,13 +22,6 @@ const PanelHome = () => {
               <p className="mt-4 text-lg leading-6">Previously Aiderly and Tech4Germany.</p>
             </div>
           </div>
-          {/*<div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">*/}
-          {/*  <img*/}
-          {/*    className="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"*/}
-          {/*    src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"*/}
-          {/*    alt="App screenshot"*/}
-          {/*  />*/}
-          {/*</div>*/}
         </div>
       </div>
     </div>
@@ -39,7 +32,7 @@ export default PanelHome
 
 const HeroLink = ({ children, href }: { children: string; href: string }) => {
   return (
-    <a href={href} className="font-bold hover:text-blue-700">
+    <a href={href} className="font-bold opacity-80 hover:opacity-100">
       {children}
     </a>
   )
