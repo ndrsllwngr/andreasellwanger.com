@@ -13,7 +13,7 @@ const Logo = ({
 }) => {
   return (
     <div className="m-4 flex justify-center py-6 px-10">
-      <a className="h-32 w-32 text-black hover:text-my-blue" href={link}>
+      <a className="h-32 w-32 text-white opacity-80 hover:opacity-100" href={link}>
         <img src={path} alt={`${name} icon`} />
         <span className="sr-only">{alt || ''}</span>
       </a>

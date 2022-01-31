@@ -21,42 +21,13 @@ const Index = () => {
             content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
           />
         </Head>
-        <Container>
+        <Container className={'min-h-screen'}>
           {/*<Intro />*/}
           <NavBar />
           {/* <RecentWork /> */}
           {/* <LogoCloud /> */}
-          <PanelHome />
-          <div className="container mx-auto flex max-w-7xl flex-row flex-wrap items-center justify-between px-4 py-16 sm:px-6 lg:px-8">
-            <p className="font-sans text-lg">
-              Andreas is a postgraduate student, currently pursuing a Masters&apos; degree of
-              Computer Sciences at LMU Munich, Germany. In 2018 he studied abroad at Leiden
-              University, The Netherlands. He graduated in April 2018 at the LMU Munich with a
-              Bachelor of Science in Media Informatics and Human-Computer Interaction. In 2020
-              Andreas joined <AboutLink href="https://www.celonis.com/">Celonis</AboutLink>, the
-              market leader in Process Mining, as Junior Software Engineer in the Core - Event
-              Collection department. Before that, he worked remotely for a Berlin-based startup
-              called <AboutLink href="https://aiderly.de/">Aiderly</AboutLink> as a Full Stack
-              Developer / UX Researcher. Since 2018 he is part of the{' '}
-              <AboutLink href="https://tech.4germany.org/ueber-uns/">Tech4Germany</AboutLink>{' '}
-              fellowship, Germany’s first e-Government fellowship with Germany’s Chief of Staff
-              Prof. Helge Braun as a patron, working for three months as a UX Researcher as well as
-              a Frontend Developer for the German government in Berlin. Together with eight other
-              fellows, they worked on topics related to digitalisation and e-government.
-            </p>
-          </div>
-          {/*<LogoCloud />*/}
-          <div className="container mx-auto flex max-w-7xl flex-col flex-wrap items-start justify-between px-4 py-16 sm:px-6 lg:px-8">
-            <p className="mb-2 text-lg font-bold">Follow me</p>
-            <ul className="ml-4 list-disc space-y-1 text-lg">
-              {SOCIAL_PROFILES.map((socialProfile, i) => (
-                <li key={i}>
-                  <a className="text-black hover:text-blue-700" href={socialProfile.href}>
-                    {socialProfile.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div className={'flex-grow'}>
+            <PanelHome />
           </div>
           <Footer />
         </Container>

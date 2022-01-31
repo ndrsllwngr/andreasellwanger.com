@@ -23,9 +23,7 @@ const ProjectsPage = () => {
         <NavBar />
         <section className="mx-auto flex max-w-7xl flex-col justify-center px-4 px-4 py-16 pb-16 sm:px-6 lg:px-8">
           <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
-            <span className="text-black opacity-90">
-              Passion projects and fun little experiments
-            </span>
+            <span className="opacity-90">Passion projects and fun little experiments</span>
           </h1>
           {PROJECTS.map((project, i) => (
             <Project {...project} className="pb-10" key={i} />
@@ -68,7 +66,7 @@ const Project = ({
       </header>
       <ul>
         {list.map((text, i) => (
-          <li key={i} className="mt-1 font-sans leading-normal text-black">
+          <li key={i} className="mt-1 font-sans leading-normal">
             <span className="absolute -ml-3 -translate-y-px transform select-none font-bold sm:-ml-3">
               ›
             </span>
