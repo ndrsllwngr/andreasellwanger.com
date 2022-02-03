@@ -6,9 +6,9 @@ import Container from '@/components/container'
 import Footer from '@/components/footer'
 import Layout from '@/components/layout'
 import NavBar from '@/components/old-nav-bar'
-import { PROJECTS } from '@/lib/constants'
+import { getTable } from '@/lib/airtable'
 
-const ProjectsPage = () => {
+const Projects = ({ projects }: { projects: Array<Project> }) => {
   return (
     <Layout>
       <Head>
@@ -26,8 +26,8 @@ const ProjectsPage = () => {
             <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
               <span className="opacity-90">Passion projects and fun little experiments</span>
             </h1>
-            {PROJECTS.map((project, i) => (
-              <Project {...project} className="pb-10" key={i} />
+            {projects.map((project, i) => (
+              <Project project={project} className="pb-10" key={i} />
             ))}
           </section>
         </div>
@@ -37,45 +37,57 @@ const ProjectsPage = () => {
   )
 }
 
-export default ProjectsPage
-
-const Project = ({
-  className,
-  title,
-  date,
-  stack,
-  url,
-  list,
-}: {
-  className: string
-  title: string
-  date: string
-  stack: string
-  url: string
-  list: string[]
-}) => {
+const Project = ({ className, project }: { className: string; project: Project }) => {
   return (
     <section className={className}>
       <header>
         <h3 className="font-sans font-bold">
-          <a className="inline-flex" href={url}>
-            <span>{title} ↖</span>
+          <a className="inline-flex" href={project.fields.Link}>
+            <span>{project.fields.Name} ↖</span>
           </a>
         </h3>
         <p className="font-sans opacity-90">
-          {date} | {stack}
+          {project.fields.Date} | {project.fields.Stack}
         </p>
       </header>
       <ul>
-        {list.map((text, i) => (
-          <li key={i} className="mt-1 font-sans leading-normal">
-            <span className="absolute -ml-3 -translate-y-px transform select-none font-bold sm:-ml-3">
-              ›
-            </span>
-            {text}
-          </li>
-        ))}
+        <li className="mt-1 font-sans leading-normal">
+          <span className="absolute -ml-3 -translate-y-px transform select-none font-bold sm:-ml-3">
+            ›
+          </span>
+          {project.fields.Description}
+        </li>
       </ul>
     </section>
   )
 }
+
+type Project = {
+  id: string
+  fields: {
+    Description: string
+    ID: number
+    Link: string
+    Name: string
+    Stack: Array<string>
+    Date: string
+  }
+}
+
+export async function getStaticProps() {
+  const projects: Array<Project> = await getTable('Projects', {
+    sort: [{ field: 'Order', direction: 'asc' }],
+  })
+
+  return {
+    props: {
+      projects,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 600, // In seconds
+  }
+}
+
+export default Projects

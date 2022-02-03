@@ -1,3 +1,6 @@
+import { QueryParams } from 'airtable/lib/query_params'
+import { Records } from 'airtable/lib/records'
+
 const Airtable = require('airtable')
 
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
@@ -5,20 +8,20 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
 const base = airtable.base(process.env.AIRTABLE_BASE_ID)
 
 // maps over the records, calling minifyRecord, giving us required data
-const getMinifiedRecords = (records: Array<any>) => {
+const getMinifiedRecords = (records: Records<any>) => {
   return records.map((record) => minifyRecord(record))
 }
 
 // gets the data we want and puts it into variables
-const minifyRecord = (record: { id: any; fields: any }) => {
+const minifyRecord = (record: { id: string; fields: any }) => {
   return {
     id: record.id,
     fields: record.fields,
   }
 }
 
-async function getTable(table: string) {
-  const records = await base(table).select({}).all()
+async function getTable(table: string, params?: QueryParams<any>) {
+  const records = await base(table).select(params).all()
   return getMinifiedRecords(records)
 }
 
