@@ -32,19 +32,20 @@ const Home = ({ projects }: { projects: Array<Project> }) => {
           <div className={'flex-grow'}>
             <PanelHome />
           </div>
-          <Container>
-            <div className="mx-auto w-full max-w-7xl flex-row px-4 sm:px-6 lg:px-8">
-              <div
-                className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
-              >
-                Selected Projects
-              </div>
-              {projects.map((project, i) => (
-                <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
-              ))}
+
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <div
+              className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+            >
+              Selected Projects
             </div>
-          </Container>
-          <Footer />
+            {projects.map((project, i) => (
+              <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
+            ))}
+          </div>
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <Footer />
+          </div>
         </Container>
       </Layout>
     </>

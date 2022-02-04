@@ -24,16 +24,16 @@ const Projects = ({ projects }: { projects: Array<Project> }) => {
       <Container className={'min-h-screen'}>
         <NavBar />
         <div className={'flex-grow'}>
-          <section className="container mx-auto flex max-w-7xl flex-col items-start px-4 py-16 sm:px-6 lg:px-8">
-            <h1 className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}>
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <div
+              className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+            >
               Projects
-            </h1>
-            <div>
-              {projects.map((project, i) => (
-                <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
-              ))}
             </div>
-          </section>
+            {projects.map((project, i) => (
+              <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
+            ))}
+          </div>
         </div>
         <Footer />
       </Container>
