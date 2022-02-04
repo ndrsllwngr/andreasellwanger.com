@@ -30,7 +30,7 @@ const Home = ({ projects }: { projects: Array<Project> }) => {
           {/* <RecentWork /> */}
           {/* <LogoCloud /> */}
           <div className={'flex-grow'}>
-            <PanelHome />
+            <PanelHome className={'my-8'} />
           </div>
 
           <div className="mx-auto w-full max-w-7xl flex-row">

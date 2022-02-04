@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PanelHome = () => {
+const PanelHome = ({ className }: { className?: string }) => {
   return (
-    <div className="text-black">
-      <div className="mx-auto max-w-7xl py-16 sm:px-6 lg:px-8">
+    <div className={`${className}`}>
+      <div className="mx-auto w-full max-w-7xl flex-row">
         <div className="relative bg-hero px-4 sm:px-16 lg:grid lg:grid-cols-2 lg:gap-4">
           {/*<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200"/>*/}
           <div className="relative col-span-1 px-4 pt-10 pb-12 sm:px-0 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20">
