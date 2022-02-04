@@ -1,32 +1,26 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import { Project } from '@/types/airtable'
 
-export const ProjectCard = ({ className, project }: { className: string; project: Project }) => {
-  useEffect(() => {
-    console.log({ project })
-  }, [project])
-
+const ProjectCard = ({ className, project }: { className: string; project: Project }) => {
   return (
-    <section className={className}>
-      <header>
-        <h3 className="font-sans font-bold">
-          <a className="inline-flex" href={project.fields.link}>
-            <span>{project.fields.name} ↖</span>
-          </a>
-        </h3>
-        <p className="font-sans opacity-90">
-          {project.fields.date} | {project.fields.stack}
-        </p>
-      </header>
-      <ul>
-        <li className="mt-1 font-sans leading-normal">
-          <span className="absolute -ml-3 -translate-y-px transform select-none font-bold sm:-ml-3">
-            ›
-          </span>
-          {project.fields.description}
-        </li>
-      </ul>
-    </section>
+    <a
+      href={project.fields.link}
+      className={`flex w-full flex-row rounded-lg border border-slate-400 p-6 transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-300 ${className}`}
+    >
+      <div className="flex w-full items-center justify-between space-x-6">
+        <div className="flex-1 truncate">
+          <div className="flex items-center space-x-3">
+            <h3 className="truncate text-sm font-medium">{project.fields.name}</h3>
+            <span className="inline-block flex-shrink-0 rounded-lg bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
+              {project.fields.stack}
+            </span>
+          </div>
+          <p className="mt-1 truncate text-sm opacity-80">{project.fields.description}</p>
+        </div>
+      </div>
+    </a>
   )
 }
+
+export { ProjectCard }

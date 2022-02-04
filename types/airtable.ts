@@ -18,6 +18,7 @@ type Project = {
     date: string
     description: string
     featured?: boolean
+    featured_order?: number
     id: number
     image?: string
     last_modified: Date

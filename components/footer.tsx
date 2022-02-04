@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex flex-row items-center justify-center">
               <div className="flex flex-col">
                 <div className={'leading-{1.5625rem} mb-4 text-xl'}>Munich</div>
-                <div className={'mb-4 tabular-nums leading-6 text-white/80'}>
+                <div className={'mb-4 tabular-nums leading-6 text-black/80'}>
                   {dateState.toLocaleTimeString('de-DE', {
                     hour: '2-digit',
                     minute: '2-digit',

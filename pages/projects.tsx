@@ -25,12 +25,14 @@ const Projects = ({ projects }: { projects: Array<Project> }) => {
         <NavBar />
         <div className={'flex-grow'}>
           <section className="container mx-auto flex max-w-7xl flex-col items-start px-4 py-16 sm:px-6 lg:px-8">
-            <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
-              <span className="opacity-90">Passion projects and fun little experiments</span>
+            <h1 className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}>
+              Projects
             </h1>
-            {projects.map((project, i) => (
-              <ProjectCard project={project} className="pb-10" key={i} />
-            ))}
+            <div>
+              {projects.map((project, i) => (
+                <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
+              ))}
+            </div>
           </section>
         </div>
         <Footer />

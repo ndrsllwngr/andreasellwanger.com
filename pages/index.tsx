@@ -7,9 +7,12 @@ import Footer from '@/components/footer'
 import Layout from '@/components/layout'
 import NavBar from '@/components/old-nav-bar'
 import PanelHome from '@/components/old-panel.home'
-import { SOCIAL_PROFILES } from '@/lib/constants'
+import { ProjectCard } from '@/components/project-card'
+import { getTable } from '@/lib/airtable'
+import Projects from '@/pages/projects'
+import { Project } from '@/types/airtable'
 
-const Index = () => {
+const Home = ({ projects }: { projects: Array<Project> }) => {
   return (
     <>
       <Layout>
@@ -29,6 +32,18 @@ const Index = () => {
           <div className={'flex-grow'}>
             <PanelHome />
           </div>
+          <Container>
+            <div className="mx-auto w-full max-w-7xl flex-row px-4 sm:px-6 lg:px-8">
+              <div
+                className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+              >
+                Selected Projects
+              </div>
+              {projects.map((project, i) => (
+                <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
+              ))}
+            </div>
+          </Container>
           <Footer />
         </Container>
       </Layout>
@@ -36,12 +51,21 @@ const Index = () => {
   )
 }
 
-export default Index
+export async function getStaticProps() {
+  const projects: Array<Project> = await getTable('Projects', {
+    filterByFormula: `AND({featured}=TRUE())`,
+    sort: [{ field: 'featured_order', direction: 'asc' }],
+  })
 
-const AboutLink = ({ children, href }: { children: string; href: string }) => {
-  return (
-    <a href={href} className="font-bold hover:text-blue-700">
-      {children}
-    </a>
-  )
+  return {
+    props: {
+      projects,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 600, // In seconds
+  }
 }
+
+export default Home
