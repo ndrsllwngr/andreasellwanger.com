@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 
 import { getTable } from '@/lib/airtable'
+import { Tool } from '@/types/airtable'
 
 const Tools = ({ tools }: { tools: Array<Tool> }) => {
   useEffect(() => {
@@ -10,21 +11,10 @@ const Tools = ({ tools }: { tools: Array<Tool> }) => {
   return (
     <div className={'text-white'}>
       {tools.map((tool: any) => (
-        <div key={tool.id}>{tool.fields.Name}</div>
+        <div key={tool.id}>{tool.fields.name}</div>
       ))}
     </div>
   )
-}
-
-type Tool = {
-  id: string
-  fields: {
-    Description: string
-    ID: number
-    Link: string
-    Name: string
-    Platform: Array<string>
-  }
 }
 
 export async function getStaticProps() {
