@@ -6,13 +6,13 @@ const ProjectCard = ({ className, project }: { className: string; project: Proje
   return (
     <a
       href={project.fields.link}
-      className={`flex w-full flex-row rounded-lg border border-slate-400 p-6 transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-300 ${className}`}
+      className={`flex w-full flex-row rounded-lg border border-gray-200 p-6 shadow-none shadow-slate-300 transition-all delay-75 duration-200 hover:-translate-y-[4px] hover:shadow-lg ${className}`}
     >
       <div className="flex w-full items-center justify-between space-x-6">
         <div className="flex-1 truncate">
           <div className="flex items-center space-x-3">
             <h3 className="truncate text-sm font-medium">{project.fields.name}</h3>
-            <span className="inline-block flex-shrink-0 rounded-lg bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
+            <span className="inline-block flex-shrink-0 rounded-lg bg-gray-100 px-2 py-0.5 text-xs font-semibold uppercase text-gray-700">
               {project.fields.stack}
             </span>
           </div>
