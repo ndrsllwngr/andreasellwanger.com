@@ -37,7 +37,9 @@ const Projects = ({ projects }: { projects: Array<Project> }) => {
             ))}
           </div>
         </div>
-        <Footer />
+        <div className="mx-auto w-full max-w-7xl flex-row">
+          <Footer />
+        </div>
       </Container>
     </Layout>
   )

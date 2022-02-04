@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-accent-1 border-accent-2 border-t">
-        <div className="my-12 flex flex-grow flex-row items-start justify-between">
+        <div className="my-12 flex flex-grow flex-col items-start justify-between space-y-4 sm:flex-row sm:space-y-0">
           <div>Andreas Ellwanger</div>
           <div className="flex flex-row items-center justify-center">
             <div className="flex flex-col">
