@@ -23,10 +23,12 @@ const Projects = ({ projects }: { projects: Array<Project> }) => {
       </Head>
       <Container className={'min-h-screen'}>
         <NavBar />
-        <div className={'flex-grow'}>
+        <div className={'mt-10 flex-grow'}>
           <div className="mx-auto w-full max-w-7xl flex-row">
             <div
-              className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+              className={
+                'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-2xl font-bold lg:text-4xl'
+              }
             >
               Projects
             </div>

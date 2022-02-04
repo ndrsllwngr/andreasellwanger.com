@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import Container from '@/components/container'
 import Footer from '@/components/footer'
+import Intro from '@/components/intro'
 import Layout from '@/components/layout'
 import NavBar from '@/components/old-nav-bar'
 import PanelHome from '@/components/old-panel.home'
@@ -24,18 +25,20 @@ const Home = ({ projects }: { projects: Array<Project> }) => {
             content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
           />
         </Head>
-        <Container className={'min-h-screen'}>
-          {/*<Intro />*/}
+        <Container>
           <NavBar />
-          {/* <RecentWork /> */}
-          {/* <LogoCloud /> */}
-          <div className={'flex-grow'}>
-            <PanelHome className={'my-8'} />
+        </Container>
+        <Container>
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <PanelHome className={'mb-6'} />
           </div>
-
+        </Container>
+        <Container>
           <div className="mx-auto w-full max-w-7xl flex-row">
             <div
-              className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+              className={
+                'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-2xl font-bold lg:text-4xl'
+              }
             >
               Selected Projects
             </div>
