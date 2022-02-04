@@ -8,31 +8,20 @@ const NavBar = () => {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex shrink-0 items-center">
                   <Link href="/">
-                    <a className="group py-1 font-sans text-lg font-medium hover:text-blue-700 sm:py-0">
-                      Andreas Ellwanger{' '}
-                      <span className="hidden font-normal opacity-70 group-hover:opacity-100 sm:visible md:inline">
-                        — (Junior) Software Engineer
-                      </span>
-                    </a>
+                    <a className="py-1 font-sans text-lg font-bold">Andreas Ellwanger</a>
                   </Link>
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <div className="items-center sm:space-x-8">
                   {/*<Page href="/blog" title="blog" />*/}
-                  <Page href="/projects" title="projects" />
-                  {/*<Page href="/about" title="About" />*/}
-                  <a
-                    href="/cv.pdf"
-                    className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-blue-700 px-4 py-2 text-white shadow-sm hover:opacity-70"
-                  >
-                    curriculum vitae
-                  </a>
+                  <Page href="/projects" title="Projects" />
+                  <Page href="/about" title="About" />
                 </div>
               </div>
               <div className="-mr-2 flex items-center sm:hidden">
@@ -50,15 +39,9 @@ const NavBar = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 pt-2 pb-3">
-              <Page className="block" href="/projects" title="Projects" />
-              {/*<Page className="block" href="/about" title="About" />*/}
-              <a
-                href="/cv.pdf"
-                className="ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-blue-700 px-4 py-2 text-white shadow-sm hover:opacity-70"
-              >
-                Curriculum Vitae
-              </a>
+            <div className="flex flex-col space-y-1 pt-2 pb-3">
+              <Page href="/projects" title="Projects" />
+              <Page href="/about" title="About" />
             </div>
           </Disclosure.Panel>
         </>
@@ -82,8 +65,8 @@ const Page = ({
   return (
     <Link href={href}>
       <a
-        className={`ml-5 py-1 text-lg text-blue-700 hover:opacity-70 ${className} ${
-          router.pathname === href ? 'underline' : ''
+        className={`ml-5 py-1 text-lg opacity-80 hover:opacity-100 ${className} ${
+          router.pathname === href ? 'opacity-100' : ''
         }`}
       >
         {title}

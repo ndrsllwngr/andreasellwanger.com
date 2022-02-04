@@ -6,9 +6,11 @@ import Container from '@/components/container'
 import Footer from '@/components/footer'
 import Layout from '@/components/layout'
 import NavBar from '@/components/old-nav-bar'
-import { PROJECTS } from '@/lib/constants'
+import { ProjectCard } from '@/components/project-card'
+import { getTable } from '@/lib/airtable'
+import { Project } from '@/types/airtable'
 
-const ProjectsPage = () => {
+const Projects = ({ projects }: { projects: Array<Project> }) => {
   return (
     <Layout>
       <Head>
@@ -19,63 +21,40 @@ const ProjectsPage = () => {
           content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
       </Head>
-      <Container>
+      <Container className={'min-h-screen'}>
         <NavBar />
-        <section className="mx-auto flex max-w-7xl flex-col justify-center px-4 px-4 py-16 pb-16 sm:px-6 lg:px-8">
-          <h1 className="mb-12 font-sans text-lg font-bold leading-tight tracking-wide md:text-4xl">
-            <span className="text-black opacity-90">
-              Passion projects and fun little experiments
-            </span>
-          </h1>
-          {PROJECTS.map((project, i) => (
-            <Project {...project} className="pb-10" key={i} />
-          ))}
-        </section>
+        <div className={'flex-grow'}>
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <div
+              className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+            >
+              Projects
+            </div>
+            {projects.map((project, i) => (
+              <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
+            ))}
+          </div>
+        </div>
         <Footer />
       </Container>
     </Layout>
   )
 }
 
-export default ProjectsPage
+export async function getStaticProps() {
+  const projects: Array<Project> = await getTable('Projects', {
+    sort: [{ field: 'order', direction: 'asc' }],
+  })
 
-const Project = ({
-  className,
-  title,
-  date,
-  stack,
-  url,
-  list,
-}: {
-  className: string
-  title: string
-  date: string
-  stack: string
-  url: string
-  list: string[]
-}) => {
-  return (
-    <section className={className}>
-      <header>
-        <h3 className="font-sans font-bold">
-          <a className="inline-flex" href={url}>
-            <span>{title} ↖</span>
-          </a>
-        </h3>
-        <p className="font-sans opacity-90">
-          {date} | {stack}
-        </p>
-      </header>
-      <ul>
-        {list.map((text, i) => (
-          <li key={i} className="mt-1 font-sans leading-normal text-black">
-            <span className="absolute -ml-3 -translate-y-px transform select-none font-bold sm:-ml-3">
-              ›
-            </span>
-            {text}
-          </li>
-        ))}
-      </ul>
-    </section>
-  )
+  return {
+    props: {
+      projects,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 600, // In seconds
+  }
 }
+
+export default Projects

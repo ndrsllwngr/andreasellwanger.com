@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
           <meta name="msapplication-config" content="/static/favicon/browserconfig.xml" />
           <meta name="theme-color" content="#000" />
         </Head>
-        <body className="bg-white font-sans text-black antialiased sm:min-h-screen sm:overflow-y-scroll">
+        <body className="overflow-y-scroll bg-white font-sans text-black antialiased sm:min-h-screen">
           <Main />
           <NextScript />
         </body>

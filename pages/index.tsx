@@ -7,9 +7,12 @@ import Footer from '@/components/footer'
 import Layout from '@/components/layout'
 import NavBar from '@/components/old-nav-bar'
 import PanelHome from '@/components/old-panel.home'
-import { SOCIAL_PROFILES } from '@/lib/constants'
+import { ProjectCard } from '@/components/project-card'
+import { getTable } from '@/lib/airtable'
+import Projects from '@/pages/projects'
+import { Project } from '@/types/airtable'
 
-const Index = () => {
+const Home = ({ projects }: { projects: Array<Project> }) => {
   return (
     <>
       <Layout>
@@ -21,56 +24,49 @@ const Index = () => {
             content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
           />
         </Head>
-        <Container>
+        <Container className={'min-h-screen'}>
           {/*<Intro />*/}
           <NavBar />
           {/* <RecentWork /> */}
           {/* <LogoCloud /> */}
-          <PanelHome />
-          <div className="container mx-auto flex max-w-7xl flex-row flex-wrap items-center justify-between px-4 py-16 sm:px-6 lg:px-8">
-            <p className="font-sans text-lg">
-              Andreas is a postgraduate student, currently pursuing a Masters&apos; degree of
-              Computer Sciences at LMU Munich, Germany. In 2018 he studied abroad at Leiden
-              University, The Netherlands. He graduated in April 2018 at the LMU Munich with a
-              Bachelor of Science in Media Informatics and Human-Computer Interaction. In 2020
-              Andreas joined <AboutLink href="https://www.celonis.com/">Celonis</AboutLink>, the
-              market leader in Process Mining, as Junior Software Engineer in the Core - Event
-              Collection department. Before that, he worked remotely for a Berlin-based startup
-              called <AboutLink href="https://aiderly.de/">Aiderly</AboutLink> as a Full Stack
-              Developer / UX Researcher. Since 2018 he is part of the{' '}
-              <AboutLink href="https://tech.4germany.org/ueber-uns/">Tech4Germany</AboutLink>{' '}
-              fellowship, Germany’s first e-Government fellowship with Germany’s Chief of Staff
-              Prof. Helge Braun as a patron, working for three months as a UX Researcher as well as
-              a Frontend Developer for the German government in Berlin. Together with eight other
-              fellows, they worked on topics related to digitalisation and e-government.
-            </p>
+          <div className={'flex-grow'}>
+            <PanelHome className={'my-8'} />
           </div>
-          {/*<LogoCloud />*/}
-          <div className="container mx-auto flex max-w-7xl flex-col flex-wrap items-start justify-between px-4 py-16 sm:px-6 lg:px-8">
-            <p className="mb-2 text-lg font-bold">Follow me</p>
-            <ul className="ml-4 list-disc space-y-1 text-lg">
-              {SOCIAL_PROFILES.map((socialProfile, i) => (
-                <li key={i}>
-                  <a className="text-black hover:text-blue-700" href={socialProfile.href}>
-                    {socialProfile.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <div
+              className={'mb-8 inline-block border-b-4 border-slate-400 pb-2 text-4xl font-bold'}
+            >
+              Selected Projects
+            </div>
+            {projects.map((project, i) => (
+              <ProjectCard project={project} className="mb-6 max-w-3xl" key={i} />
+            ))}
           </div>
-          <Footer />
+          <div className="mx-auto w-full max-w-7xl flex-row">
+            <Footer />
+          </div>
         </Container>
       </Layout>
     </>
   )
 }
 
-export default Index
+export async function getStaticProps() {
+  const projects: Array<Project> = await getTable('Projects', {
+    filterByFormula: `AND({featured}=TRUE())`,
+    sort: [{ field: 'featured_order', direction: 'asc' }],
+  })
 
-const AboutLink = ({ children, href }: { children: string; href: string }) => {
-  return (
-    <a href={href} className="font-bold hover:text-blue-700">
-      {children}
-    </a>
-  )
+  return {
+    props: {
+      projects,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 600, // In seconds
+  }
 }
+
+export default Home
