@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { PaperClipIcon } from '@heroicons/react/solid'
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 
 import Container from '@/components/container'
@@ -34,7 +36,7 @@ const AboutPage = () => {
             </div>
             <div className={'flex-grow'}>
               <div className="mx-auto flex max-w-7xl flex-col justify-between">
-                <p className="font-sans text-lg">
+                <p className="mb-10 font-sans text-lg">
                   Andreas is a postgraduate student, currently pursuing a Masters&apos; degree of
                   Computer Sciences at LMU Munich, Germany. In 2018 he studied abroad at Leiden
                   University, The Netherlands. He graduated in April 2018 at the LMU Munich with a
@@ -50,6 +52,32 @@ const AboutPage = () => {
                   as a Frontend Developer for the German government in Berlin. Together with eight
                   other fellows, they worked on topics related to digitalisation and e-government.
                 </p>
+                <motion.a
+                  href={'cv.pdf'}
+                  whileHover={{
+                    y: -4,
+                    transition: { duration: 0.25 },
+                    transitionTimingFunction: 'spring(1 100 10 10)',
+                    boxShadow:
+                      '0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                  }}
+                  className={
+                    'max-w-sm divide-y divide-gray-200 rounded-md border border-gray-200 bg-white'
+                  }
+                >
+                  <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                    <div className="flex w-0 flex-1 items-center">
+                      <PaperClipIcon
+                        className="h-5 w-5 flex-shrink-0 text-gray-400"
+                        aria-hidden="true"
+                      />
+                      <span className="ml-2 w-0 flex-1 truncate">cv.pdf</span>
+                    </div>
+                    <div className="ml-4 flex-shrink-0">
+                      <p className="font-medium hover:opacity-80">Download</p>
+                    </div>
+                  </li>
+                </motion.a>
               </div>
             </div>
             <div className="container mx-auto flex max-w-7xl flex-col flex-wrap items-start justify-between py-16">
