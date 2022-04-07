@@ -24,6 +24,7 @@
     "custom-husky": "yarn tsc --noEmit && yarn eslint . && yarn prettier --write ."
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "15.12.0",
     "@headlessui/react": "1.5.0",
     "@heroicons/react": "1.0.6",
     "airtable": "0.11.3",
@@ -51,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "5.18.0",
     "@typescript-eslint/parser": "5.18.0",
     "autoprefixer": "10.4.4",
+    "contentful-import": "8.2.28",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
     "eslint-config-prettier": "8.5.0",
