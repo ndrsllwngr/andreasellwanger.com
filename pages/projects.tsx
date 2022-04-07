@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Container from '@/components/container'
-import Footer from '@/components/footer'
-import Layout from '@/components/layout'
-import NavBar from '@/components/old-nav-bar'
-import { ProjectCard } from '@/components/project-card'
-import { getTable } from '@/lib/airtable'
-import { Project } from '@/types/airtable'
+import Container from '@/components/container';
+import Footer from '@/components/footer';
+import Layout from '@/components/layout';
+import NavBar from '@/components/old-nav-bar';
+import { ProjectCard } from '@/components/project-card';
+import { getTable } from '@/lib/airtable';
+import { Project } from '@/types/airtable';
 
 const Projects = ({ projects }: { projects: Array<Project> }) => {
   return (
@@ -42,13 +42,13 @@ const Projects = ({ projects }: { projects: Array<Project> }) => {
         </div>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   const projects: Array<Project> = await getTable('Projects', {
     sort: [{ field: 'order', direction: 'asc' }],
-  })
+  });
 
   return {
     props: {
@@ -58,7 +58,7 @@ export async function getStaticProps() {
     // - When a request comes in
     // - At most once every 10 seconds
     revalidate: 600, // In seconds
-  }
+  };
 }
 
-export default Projects
+export default Projects;

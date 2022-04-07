@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Old = () => {
   return (
@@ -248,7 +248,7 @@ const Old = () => {
         </section>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Old
+export default Old;

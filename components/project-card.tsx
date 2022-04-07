@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-import { Project } from '@/types/airtable'
+import { Project } from '@/types/airtable';
 
 const ProjectCard = ({ className, project }: { className: string; project: Project }) => {
   return (
@@ -28,7 +28,7 @@ const ProjectCard = ({ className, project }: { className: string; project: Proje
         </div>
       </div>
     </motion.a>
-  )
-}
+  );
+};
 
-export { ProjectCard }
+export { ProjectCard };

@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-import Container from '@/components/container'
-import { EXAMPLE_PATH } from '@/lib/constants'
+import Container from '@/components/container';
+import { EXAMPLE_PATH } from '@/lib/constants';
 
 const Footer = () => {
-  const [dateState, setDateState] = useState(new Date())
+  const [dateState, setDateState] = useState(new Date());
   useEffect(() => {
-    setInterval(() => setDateState(new Date()), 1000)
-    return () => {}
-  }, [])
+    setInterval(() => setDateState(new Date()), 1000);
+  }, []);
   return (
     <>
       <footer className="bg-accent-1 border-accent-2 border-t">
@@ -31,7 +30,7 @@ const Footer = () => {
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

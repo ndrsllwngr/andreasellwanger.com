@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Logo = ({
   link,
@@ -6,10 +6,10 @@ const Logo = ({
   path,
   name,
 }: {
-  link: string
-  alt: string
-  path: string
-  name: string
+  link: string;
+  alt: string;
+  path: string;
+  name: string;
 }) => {
   return (
     <div className="m-4 flex justify-center py-6 px-10">
@@ -18,8 +18,8 @@ const Logo = ({
         <span className="sr-only">{alt || ''}</span>
       </a>
     </div>
-  )
-}
+  );
+};
 
 const MyLogos = [
   {
@@ -47,7 +47,7 @@ const MyLogos = [
     alt: 'Leiden University',
     link: 'https://liacs.leidenuniv.nl/',
   },
-]
+];
 
 export const LogoCloud = () => {
   return (
@@ -58,5 +58,5 @@ export const LogoCloud = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};

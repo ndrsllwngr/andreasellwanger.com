@@ -1,18 +1,18 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import Avatar from '@/components/avatar'
-import CoverImage from '@/components/cover-image'
-import DateFormatter from '@/components/date-formatter'
-import Author from '@/types/author'
+import Avatar from '@/components/avatar';
+import CoverImage from '@/components/cover-image';
+import DateFormatter from '@/components/date-formatter';
+import Author from '@/types/author';
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
-}
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  author: Author;
+  slug: string;
+};
 
 const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
   return (
@@ -31,7 +31,7 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) 
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
     </div>
-  )
-}
+  );
+};
 
-export default PostPreview
+export default PostPreview;

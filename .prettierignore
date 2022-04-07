@@ -3,3 +3,5 @@
 .github/
 **/node_modules
 .next/
+.history/
+public/

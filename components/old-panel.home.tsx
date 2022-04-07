@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const PanelHome = ({ className }: { className?: string }) => {
   return (
@@ -24,15 +24,15 @@ const PanelHome = ({ className }: { className?: string }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PanelHome
+export default PanelHome;
 
 const HeroLink = ({ children, href }: { children: string; href: string }) => {
   return (
     <a href={href} className="font-bold opacity-80 hover:opacity-100">
       {children}
     </a>
-  )
-}
+  );
+};

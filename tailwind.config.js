@@ -1,4 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
@@ -48,4 +49,4 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'), // https://github.com/tailwindlabs/tailwindcss-typography
   ],
-}
+};

@@ -1,24 +1,28 @@
-import Airtable from 'airtable'
-import { QueryParams } from 'airtable/lib/query_params'
-import { Records } from 'airtable/lib/records'
+import Airtable from 'airtable';
+import { QueryParams } from 'airtable/lib/query_params';
+import { Records } from 'airtable/lib/records';
 
-const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
-const base = airtable.base(process.env.AIRTABLE_BASE_ID as string)
+const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY });
+const base = airtable.base(process.env.AIRTABLE_BASE_ID as string);
 
-const getMinifiedRecords = (records: Records<any>) => {
-  return records.map((record) => minifyRecord(record))
-}
+const getMinifiedRecords = (records: Records<never>) => {
+  return records.map((record) => minifyRecord(record));
+};
 
-const minifyRecord = (record: { id: string; fields: any }) => {
+const minifyRecord = (record: { id: string; fields: never }) => {
   return {
     id: record.id,
     fields: record.fields,
-  }
-}
+  };
+};
 
-async function getTable(table: string, params?: QueryParams<any>) {
-  const records = await base(table).select(params).all()
-  return getMinifiedRecords(records)
+async function getTable(table: string, params?: QueryParams<never>) {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const records = await base(table).select(params).all();
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return getMinifiedRecords(records);
 }
 
 async function getAllPosts() {
@@ -26,9 +30,11 @@ async function getAllPosts() {
     .select({
       filterByFormula: `OR({status} = "Published", {status} = "Draft")`,
     })
-    .all()
+    .all();
 
-  return getMinifiedRecords(records)
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return getMinifiedRecords(records);
 }
 
 async function getAllNewsletters() {
@@ -36,69 +42,24 @@ async function getAllNewsletters() {
     .select({
       filterByFormula: `{status} = "Published"`,
     })
-    .all()
+    .all();
 
-  return getMinifiedRecords(records)
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return getMinifiedRecords(records);
 }
 
 async function getAllNewsletterPaths() {
-  const newsletter = await getAllNewsletters()
+  const newsletter = await getAllNewsletters();
 
   return newsletter.map((nl) => {
     return {
       params: {
         id: nl.id,
-        slug: nl.fields.Slug,
+        slug: nl.fields['Slug'],
       },
-    }
-  })
+    };
+  });
 }
 
-async function getAllPostsPaths() {
-  const posts = await getAllPosts()
-
-  return posts.map((post) => {
-    return {
-      params: {
-        id: post.id,
-        slug: post.fields.slug,
-      },
-    }
-  })
-}
-
-async function getNewsletterData(slug: any) {
-  const records = await base('Newsletter')
-    .select({
-      maxRecords: 1,
-      filterByFormula: `{Slug} = "${slug}"`,
-    })
-    .all()
-
-  return {
-    newsletter: getMinifiedRecords(records),
-  }
-}
-
-async function getPostData(slug: any) {
-  const records = await base('Blog')
-    .select({
-      maxRecords: 1,
-      filterByFormula: `{slug} = "${slug}"`,
-    })
-    .all()
-
-  return {
-    post: getMinifiedRecords(records),
-  }
-}
-
-export {
-  getTable,
-  getAllPosts,
-  getPostData,
-  getAllPostsPaths,
-  getNewsletterData,
-  getAllNewsletterPaths,
-  getAllNewsletters,
-}
+export { getTable, getAllPosts, getAllNewsletterPaths, getAllNewsletters };

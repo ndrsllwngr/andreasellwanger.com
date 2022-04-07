@@ -1,16 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import { PaperClipIcon } from '@heroicons/react/solid'
-import { motion } from 'framer-motion'
-import Head from 'next/head'
+import { PaperClipIcon } from '@heroicons/react/solid';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
 
-import Container from '@/components/container'
-import Footer from '@/components/footer'
-import Layout from '@/components/layout'
-import { LogoCloud } from '@/components/old-logo-cloud'
-import NavBar from '@/components/old-nav-bar'
-import { ProjectCard } from '@/components/project-card'
-import { SOCIAL_PROFILES } from '@/lib/constants'
+import Container from '@/components/container';
+import Footer from '@/components/footer';
+import Layout from '@/components/layout';
+import NavBar from '@/components/old-nav-bar';
+import { SOCIAL_PROFILES } from '@/lib/constants';
 
 const AboutPage = () => {
   return (
@@ -99,15 +97,15 @@ const AboutPage = () => {
         </div>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
 
 const AboutLink = ({ children, href }: { children: string; href: string }) => {
   return (
     <a href={href} className="font-bold hover:text-blue-700">
       {children}
     </a>
-  )
-}
+  );
+};

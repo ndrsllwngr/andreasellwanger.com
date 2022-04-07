@@ -1,21 +1,21 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Container from '@/components/container'
-import HeroPost from '@/components/hero-post'
-import Intro from '@/components/intro'
-import Layout from '@/components/layout'
-import MoreStoriesSlim from '@/components/more-stories-slim'
-import { getAllPosts } from '@/lib/api'
-import { CMS_NAME } from '@/lib/constants'
-import Post from '@/types/post'
+import Container from '@/components/container';
+import HeroPost from '@/components/hero-post';
+import Intro from '@/components/intro';
+import Layout from '@/components/layout';
+import MoreStoriesSlim from '@/components/more-stories-slim';
+import { getAllPosts } from '@/lib/api';
+import { CMS_NAME } from '@/lib/constants';
+import Post from '@/types/post';
 
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 const Blog = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
@@ -38,15 +38,15 @@ const Blog = ({ allPosts }: Props) => {
         </Container>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt'])
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};

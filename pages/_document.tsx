@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
   render() {
@@ -12,10 +12,12 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=optional"
             rel="preload"
+            as="style"
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=optional"
             rel="preload"
+            as="style"
           />
           <link
             rel="apple-touch-icon"
@@ -47,6 +49,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

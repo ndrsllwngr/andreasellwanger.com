@@ -1,7 +1,7 @@
-import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavBar = () => {
   return (
@@ -47,21 +47,21 @@ const NavBar = () => {
         </>
       )}
     </Disclosure>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
 
 const Page = ({
   className = '',
   title,
   href,
 }: {
-  className?: string
-  title: string
-  href: string
+  className?: string;
+  title: string;
+  href: string;
 }) => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Link href={href}>
       <a
@@ -72,5 +72,5 @@ const Page = ({
         {title}
       </a>
     </Link>
-  )
-}
+  );
+};

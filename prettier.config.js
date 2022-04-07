@@ -1,5 +1,5 @@
 module.exports = {
-  semi: false,
+  semi: true,
   singleQuote: true,
   printWidth: 100,
   trailingComma: 'es5',
@@ -11,4 +11,4 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   tailwindConfig: './tailwind.config.js',
-}
+};

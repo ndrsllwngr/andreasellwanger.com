@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const RecentWork = () => {
   return (
@@ -44,17 +44,17 @@ const RecentWork = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 type WorkLinkProps = {
-  url: string
-  image: string
-  name: string
-  dates: string
-  width: number
-  height: number
-}
+  url: string;
+  image: string;
+  name: string;
+  dates: string;
+  width: number;
+  height: number;
+};
 
 const WorkLink = ({ url, image, name, dates, width, height }: WorkLinkProps) => {
   return (
@@ -75,7 +75,7 @@ const WorkLink = ({ url, image, name, dates, width, height }: WorkLinkProps) => 
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};
 
-export default RecentWork
+export default RecentWork;

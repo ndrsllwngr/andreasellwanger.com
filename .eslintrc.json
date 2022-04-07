@@ -1,14 +1,14 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["@typescript-eslint"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
+    "prefer-const": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal"
-        ],
+        "groups": ["builtin", "external", "internal"],
         "pathGroups": [
           {
             "pattern": "react",
@@ -16,9 +16,7 @@
             "position": "before"
           }
         ],
-        "pathGroupsExcludedImportTypes": [
-          "react"
-        ],
+        "pathGroupsExcludedImportTypes": ["react"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",

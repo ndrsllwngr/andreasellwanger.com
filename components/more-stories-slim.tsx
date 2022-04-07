@@ -1,8 +1,8 @@
-import Post from '@/types/post'
+import Post from '@/types/post';
 
 type Props = {
-  posts: Post[]
-}
+  posts: Post[];
+};
 
 const MoreStoriesSlim = ({ posts }: Props) => {
   return (
@@ -27,7 +27,7 @@ const MoreStoriesSlim = ({ posts }: Props) => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default MoreStoriesSlim
+export default MoreStoriesSlim;

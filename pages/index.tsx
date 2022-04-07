@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Container from '@/components/container'
-import Footer from '@/components/footer'
-import Intro from '@/components/intro'
-import Layout from '@/components/layout'
-import NavBar from '@/components/old-nav-bar'
-import PanelHome from '@/components/old-panel.home'
-import { ProjectCard } from '@/components/project-card'
-import { getTable } from '@/lib/airtable'
-import Projects from '@/pages/projects'
-import { Project } from '@/types/airtable'
+import Container from '@/components/container';
+import Footer from '@/components/footer';
+import Layout from '@/components/layout';
+import NavBar from '@/components/old-nav-bar';
+import PanelHome from '@/components/old-panel.home';
+import { ProjectCard } from '@/components/project-card';
+import { getTable } from '@/lib/airtable';
+import { Project } from '@/types/airtable';
 
 const Home = ({ projects }: { projects: Array<Project> }) => {
   return (
@@ -52,14 +50,14 @@ const Home = ({ projects }: { projects: Array<Project> }) => {
         </Container>
       </Layout>
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   const projects: Array<Project> = await getTable('Projects', {
     filterByFormula: `AND({featured}=TRUE())`,
     sort: [{ field: 'featured_order', direction: 'asc' }],
-  })
+  });
 
   return {
     props: {
@@ -69,7 +67,7 @@ export async function getStaticProps() {
     // - When a request comes in
     // - At most once every 10 seconds
     revalidate: 600, // In seconds
-  }
+  };
 }
 
-export default Home
+export default Home;
