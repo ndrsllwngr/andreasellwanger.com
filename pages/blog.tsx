@@ -5,8 +5,8 @@ import HeroPost from '@/components/hero-post';
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
 import MoreStoriesSlim from '@/components/more-stories-slim';
-import { getAllPosts } from '@/lib/api';
 import { CMS_NAME } from '@/lib/constants';
+import { getAllDocs } from '@/lib/docs';
 import Post from '@/types/post';
 
 type Props = {
@@ -26,12 +26,12 @@ const Blog = ({ allPosts }: Props) => {
           <Intro />
           {heroPost && (
             <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
+              title={heroPost.meta.title}
+              coverImage={heroPost.meta.coverImage}
+              date={heroPost.meta.date}
+              author={heroPost.meta.author}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+              excerpt={heroPost.meta.excerpt}
             />
           )}
           {morePosts.length > 0 && <MoreStoriesSlim posts={morePosts} />}
@@ -44,7 +44,7 @@ const Blog = ({ allPosts }: Props) => {
 export default Blog;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
+  const allPosts = getAllDocs();
 
   return {
     props: { allPosts },

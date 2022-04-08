@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Head from 'next/head';
 
@@ -12,6 +12,10 @@ import { getTable } from '@/lib/airtable';
 import { Project } from '@/types/airtable';
 
 const Home = ({ projects }: { projects: Array<Project> }) => {
+  useEffect(() => {
+    console.log({ projects });
+  }, [projects]);
+
   return (
     <>
       <Layout>

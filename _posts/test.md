@@ -338,3 +338,7 @@ export function getDocBySlug(slug) {
   return { slug: realSlug, meta: data, content };
 }
 ```
+
+```rust
+const test: i64 = 100;
+```

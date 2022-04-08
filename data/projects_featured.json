@@ -10,9 +10,7 @@
       "name": "Chord",
       "id": 5,
       "date": "2018/19",
-      "stack": [
-        "Rust"
-      ],
+      "stack": ["Rust"],
       "last_modified": "2022-02-04T09:37:49.000Z",
       "created": "2022-02-03T19:52:47.000Z"
     }
@@ -28,9 +26,7 @@
       "name": "zoll-auktion.de",
       "id": 6,
       "date": "2018",
-      "stack": [
-        "JavaScript"
-      ],
+      "stack": ["JavaScript"],
       "last_modified": "2022-02-04T09:37:53.000Z",
       "created": "2022-02-03T19:53:46.000Z"
     }
@@ -46,9 +42,7 @@
       "name": "Minesweepskell",
       "id": 1,
       "date": "2020",
-      "stack": [
-        "Haskell"
-      ],
+      "stack": ["Haskell"],
       "last_modified": "2022-02-04T09:38:03.000Z",
       "created": "2022-02-03T19:39:54.000Z"
     }
@@ -64,9 +58,7 @@
       "name": "Classified Information System",
       "id": 2,
       "date": "2019/20",
-      "stack": [
-        "Prolog"
-      ],
+      "stack": ["Prolog"],
       "last_modified": "2022-03-08T20:10:14.000Z",
       "created": "2022-02-03T19:39:54.000Z"
     }
@@ -82,9 +74,7 @@
       "name": "BodyPose",
       "id": 3,
       "date": "2019/20",
-      "stack": [
-        "JavaScript"
-      ],
+      "stack": ["JavaScript"],
       "last_modified": "2022-03-08T20:09:41.000Z",
       "created": "2022-02-03T19:39:54.000Z"
     }

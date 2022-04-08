@@ -17,10 +17,10 @@ const MoreStoriesSlim = ({ posts }: Props) => {
               className="md:flex-gap-x-16 justify-between transition-colors hover:text-blue-400 md:flex"
               href={`posts/${post.slug}`}
             >
-              <h2>{post.title}</h2>
-              <time dateTime={post.date} className="mt-1 text-base text-gray-300">
-                {new Date(post.date).getDate()}/{new Date(post.date).getMonth()}/
-                {new Date(post.date).getFullYear()}
+              <h2>{post.meta.title}</h2>
+              <time dateTime={post.meta.date} className="mt-1 text-base text-gray-300">
+                {new Date(post.meta.date).getDate()}/{new Date(post.meta.date).getMonth()}/
+                {new Date(post.meta.date).getFullYear()}
               </time>
             </a>
           </div>
