@@ -8,17 +8,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="UTF-8" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=optional"
-            rel="preload"
-            as="style"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=optional"
-            rel="preload"
-            as="style"
-          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
