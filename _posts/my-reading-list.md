@@ -28,3 +28,4 @@ A collection of software engineering and engineering management books and furthe
 - [The Unicorn Project: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data](https://www.goodreads.com/book/show/17255186-the-phoenix-project) by Gene Kim
 - [The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](https://www.goodreads.com/book/show/44333183-the-unicorn-project) by Gene Kim
 - [The Art of Leadership: Small Things, Done Well](https://www.goodreads.com/book/show/50083106-the-art-of-leadership) by Michael Lopp
+- [rustc AST](https://doc.rust-lang.org/beta/nightly-rustc/rustc_ast/ast/index.html)
