@@ -26,6 +26,7 @@ import {
   CelonisLogo,
   Tech4GermanyLogo,
 } from '@/components/WorkLogos'
+import Balancer from 'react-wrap-balancer'
 
 function MailIcon(props) {
   return (
@@ -279,11 +280,14 @@ export default function Home({ articles, socialData }) {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software Engineer at Celonis.
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Andreas, a software engineer based in Munich. I work on Data
-            Integration at Celonis as software engineer. Previously Aiderly and
-            Tech4Germany.
-          </p>
+          <Balancer
+            as="p"
+            className="mt-6 text-base text-zinc-600 dark:text-zinc-400"
+          >
+            I’m Andreas, a Software Engineer based in Munich. I work on Data
+            Integration at Celonis with a curious mind about everything
+            technology related. Previously Aiderly and Tech4Germany.
+          </Balancer>
           <div className="mt-6 flex gap-6">
             <SocialLink
               href={socialData?.twitter?.href}
