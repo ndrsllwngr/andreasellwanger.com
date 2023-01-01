@@ -71,26 +71,44 @@ export default function About({ socialData }) {
               Software Engineer.
             </Balancer>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-              <p>
-                Andreas is a postgraduate student, currently pursuing a
-                Masters&apos; degree of Computer Sciences at LMU Munich,
-                Germany. In 2018 he studied abroad at Leiden University, The
-                Netherlands. He graduated in April 2018 at the LMU Munich with a
-                Bachelor of Science in Media Informatics and Human-Computer
-                Interaction. In 2020 Andreas joined Celonis, the market leader
-                in Process Mining, as Junior Software Engineer in the Core -
-                Event Collection department. Before that, he worked remotely for
-                a Berlin-based startup called Aiderly as a Full Stack Developer
-                / UX Researcher.
-              </p>
-              <p>
-                Since 2018 he is part of the Tech4Germany fellowship, Germany’s
-                first e-Government fellowship with Germany’s Chief of Staff
-                Prof. Helge Braun as a patron, working for three months as a UX
-                Researcher as well as a Frontend Developer for the German
-                government in Berlin. Together with eight other fellows, they
-                worked on topics related to digitalisation and e-government.
-              </p>
+              <Balancer as="p">
+                Andreas Ellwanger is a Software Engineer at Celonis, the global
+                leader in execution management. The company provides a modern
+                way for businesses to run their processes using data and
+                intelligence through the Celonis Execution Management System.
+                Celonis pioneered the process mining category a decade ago by
+                developing the ability to analyze processes and identify
+                inefficiencies automatically. Andreas has been with the company
+                since 2020, starting as a Junior Software Engineer before being
+                promoted to his current role. In his time at Celonis, Andreas
+                has worked on projects involving technologies such as Java,
+                Spring Boot, TypeScript, Angular, Docker, and Kubernetes.
+              </Balancer>
+              <Balancer as="p">
+                Prior to joining Celonis, Andreas worked as a Full Stack
+                Developer at Aiderly in Berlin, where he used technologies such
+                as React, TypeScript, GraphQL, Apollo, and Hasura to design and
+                develop new features and maintain existing ones. He also
+                consulted on technology stack decisions and user flows and
+                ensured compliance with accessibility standards.
+              </Balancer>
+              <Balancer as="p">
+                Andreas previously served as an Engineering-Fellow at
+                Tech4Germany in Berlin as part of Germany's first e-Government
+                fellowship program. In this role, he worked as a UX researcher
+                and front-end developer for the German government for three
+                months, collaborating with other fellows on projects related to
+                digitalization and e-government.
+              </Balancer>
+              <Balancer as="p">
+                Andreas holds a B.Sc. in Media Informatics and a minor in
+                Human-Computer Interaction from the Ludwig Maximilian University
+                of Munich. He is pursuing an M.Sc. in Computer Science at the
+                same institution. In addition to his professional experience and
+                education, Andreas has received scholarships and grants,
+                published a paper, given a presentation at a conference, and
+                volunteered as a mentor.
+              </Balancer>
             </div>
           </div>
           <div className="flex flex-grow items-end lg:row-span-2 lg:pl-20">
