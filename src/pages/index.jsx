@@ -17,13 +17,15 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+import { getSocialData } from '@/lib/getSocialData'
+import {
+  AiderlyLogo,
+  CelonisLogo,
+  Tech4GermanyLogo,
+} from '@/components/WorkLogos'
 
 function MailIcon(props) {
   return (
@@ -99,6 +101,16 @@ function Article({ article }) {
   )
 }
 
+function WorkLogo({ logo: Logo, alt, ...props }) {
+  return (
+    <Logo
+      alt={alt}
+      className="h-7 w-7 fill-black transition dark:fill-white"
+      {...props}
+    />
+  )
+}
+
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
@@ -139,35 +151,34 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Celonis',
+      title: 'Software Engineer',
+      logo: CelonisLogo,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
+      company: 'Celonis',
+      title: 'Junior Software Engineer',
+      logo: CelonisLogo,
+      start: '2020',
+      end: '2022',
+    },
+    {
+      company: 'Aiderly',
+      title: 'Full Stack Developer',
+      logo: AiderlyLogo,
+      start: '2018',
       end: '2019',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Tech4Germany',
+      title: 'Engineering Fellow',
+      logo: Tech4GermanyLogo,
+      start: '2018',
     },
   ]
 
@@ -181,7 +192,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <WorkLogo logo={role.logo} alt={role.company} />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -195,23 +206,29 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
+                aria-label={`${role.start.label ?? role.start} ${
+                  role.end && `until ${role.end.label ?? role.end}`
                 }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
                 </time>
+
+                {role.end && (
+                  <>
+                    {' '}
+                    <span aria-hidden="true">—</span>{' '}
+                    <time dateTime={role.end.dateTime ?? role.end}>
+                      {role.end.label ?? role.end}
+                    </time>
+                  </>
+                )}
               </dd>
             </dl>
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button href="cv.pdf" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -238,6 +255,7 @@ function Photos() {
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
+              placeholder={'blur'}
             />
           </div>
         ))}
@@ -246,54 +264,51 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home({ articles, socialData }) {
   return (
     <>
       <Head>
-        <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
-        </title>
+        <title>Andreas Ellwanger — Software Engineer.</title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="Andreas is a Software Engineer at Celonis and studies Computer Science at LMU Munich. He graduated in April 2018 at the LMU Munich with a Bachelor of Science in Media Informatics and Human-Computer Interaction."
         />
       </Head>
-      <Container className="mt-9">
+      <Container className="mt-16 sm:mt-32">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Software Engineer at Celonis.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I’m Andreas, a software engineer based in Munich. I work on Data
+            Integration at Celonis as software engineer. Previously Aiderly and
+            Tech4Germany.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
+              href={socialData?.twitter?.href}
+              aria-label={'Follow on ' + socialData?.twitter?.name}
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
+              href={socialData?.instagram?.href}
+              aria-label={'Follow on ' + socialData?.instagram?.name}
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
+              href={socialData?.github?.href}
+              aria-label={'Follow on ' + socialData?.github?.name}
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
+              href={socialData?.linkedin?.href}
+              aria-label={'Follow on ' + socialData?.linkedin?.name}
               icon={LinkedInIcon}
             />
           </div>
         </div>
       </Container>
-      <Photos />
+      {/*<Photos />*/}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
@@ -302,7 +317,7 @@ export default function Home({ articles }) {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/*<Newsletter />*/}
             <Resume />
           </div>
         </div>
@@ -316,11 +331,14 @@ export async function getStaticProps() {
     await generateRssFeed()
   }
 
+  const socialData = await getSocialData()
+
   return {
     props: {
       articles: (await getAllArticles())
         .slice(0, 4)
         .map(({ component, ...meta }) => meta),
+      socialData,
     },
   }
 }

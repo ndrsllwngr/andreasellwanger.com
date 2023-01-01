@@ -11,6 +11,8 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import { getSocialData } from '@/lib/getSocialData'
+import Balancer from 'react-wrap-balancer'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -37,7 +39,7 @@ function MailIcon(props) {
   )
 }
 
-export default function About() {
+export default function About({ socialData }) {
   return (
     <>
       <Head>
@@ -55,27 +57,31 @@ export default function About() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover grayscale filter dark:bg-zinc-800"
+                placeholder={'blur'}
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <Balancer
+              as="h1"
+              className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+            >
               I’m Andreas Ellwanger. I work on Data Integration at Celonis as
               Software Engineer.
-            </h1>
+            </Balancer>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Andreas is a postgraduate student, currently pursuing a Masters'
-                degree of Computer Sciences at LMU Munich, Germany. In 2018 he
-                studied abroad at Leiden University, The Netherlands. He
-                graduated in April 2018 at the LMU Munich with a Bachelor of
-                Science in Media Informatics and Human-Computer Interaction. In
-                2020 Andreas joined Celonis, the market leader in Process
-                Mining, as Junior Software Engineer in the Core - Event
-                Collection department. Before that, he worked remotely for a
-                Berlin-based startup called Aiderly as a Full Stack Developer /
-                UX Researcher.
+                Andreas is a postgraduate student, currently pursuing a
+                Masters&apos; degree of Computer Sciences at LMU Munich,
+                Germany. In 2018 he studied abroad at Leiden University, The
+                Netherlands. He graduated in April 2018 at the LMU Munich with a
+                Bachelor of Science in Media Informatics and Human-Computer
+                Interaction. In 2020 Andreas joined Celonis, the market leader
+                in Process Mining, as Junior Software Engineer in the Core -
+                Event Collection department. Before that, he worked remotely for
+                a Berlin-based startup called Aiderly as a Full Stack Developer
+                / UX Researcher.
               </p>
               <p>
                 Since 2018 he is part of the Tech4Germany fellowship, Germany’s
@@ -87,41 +93,38 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="lg:pl-20">
+          <div className="flex flex-grow items-end lg:row-span-2 lg:pl-20">
             <ul role="list">
-              <SocialLink
-                href="https://twitter.com/ndrsllwngr/"
-                icon={TwitterIcon}
-              >
-                Follow on Twitter
+              <SocialLink href={socialData?.twitter?.href} icon={TwitterIcon}>
+                Follow on {socialData?.twitter?.name}
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/ndrsllwngr/"
+                href={socialData?.instagram?.href}
                 icon={InstagramIcon}
                 className="mt-4"
               >
-                Follow on Instagram
+                Follow on {socialData?.instagram?.name}
               </SocialLink>
               <SocialLink
-                href="https://github.com/ndrsllwngr"
+                href={socialData?.github?.href}
                 icon={GitHubIcon}
                 className="mt-4"
               >
-                Follow on GitHub
+                Follow on {socialData?.github?.name}
               </SocialLink>
               <SocialLink
-                href="https://de.linkedin.com/in/ellwanger/en/"
+                href={socialData?.linkedin?.href}
                 icon={LinkedInIcon}
                 className="mt-4"
               >
-                Follow on LinkedIn
+                Follow on {socialData?.linkedin?.name}
               </SocialLink>
               <SocialLink
-                href="mailto:hello@andreasellwanger.com"
+                href={socialData?.email?.href}
                 icon={MailIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
-                hello@andreasellwanger.com
+                {socialData?.email?.name}
               </SocialLink>
             </ul>
           </div>
@@ -129,4 +132,11 @@ export default function About() {
       </Container>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const socialData = await getSocialData()
+  return {
+    props: { socialData },
+  }
 }
