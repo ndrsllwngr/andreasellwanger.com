@@ -1,31 +1,28 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
+# https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 name: Node.js CI
 
 on:
   push:
-    branches: [ master, develop ]
+    branches: [main]
   pull_request:
-    branches: [ master, develop ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: node --version && npm --version && yarn --version
-    - run: yarn install
-    - run: yarn lint
-    - run: yarn build
-    - run: yarn export
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        id: node-setup
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        id: install-deps
+        run: yarn install --frozen-lockfile
+      - name: Lint
+        id: lint-app
+        run: yarn lint
+      - name: Build
+        id: build-app
+        run: yarn build

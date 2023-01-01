@@ -1,36 +1,42 @@
-# Personal Website
+# Spotlight
 
-![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/workflows/Node.js%20CI/badge.svg?branch=develop) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndrsllwngr_andreasellwanger.com&metric=alert_status)](https://sonarcloud.io/dashboard?id=ndrsllwngr_andreasellwanger.com) 
-
----
+Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
 ## Getting started
 
-### System Requirements
-- [Node.js 14.x](https://nodejs.org/en/)
+To get started with this template, first install the npm dependencies:
 
-### Setup
-- `node --version && npm --version && yarn --version` - Ensure that required versions are installed.
-- `yarn install` - Installs the project using [Yarn](https://yarnpkg.com/getting-started/install).
+```bash
+npm install
+```
 
-### Commands
-- `yarn dev` - Runs next which starts Next.js in development mode.
-- `yarn build` - Runs next build which creates an optimized production build of your application. The output displays information about each route.
-- `yarn start` - Runs next start which starts a Next.js production server.
-- `yarn export` - Runs next export which allows you to export your app to static HTML, which can be run standalone without the need of a Node.js server.
+Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
 
-##### CUSTOM
-- `yarn preview-export` - Runs a HTTP server (`python3 -m http.server`) in `out/` to preview the static HTML output from `yarn export`.
+```
+NEXT_PUBLIC_SITE_URL=https://example.com
+```
 
----
+Next, run the development server:
 
-### Dependency management
-- `yarn add <package...>` - Installs the “latest” version of the package.
-- `yarn remove <package...>` - Removes the package from your direct dependencies updating your package.json and yarn.lock files in the process.
-- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) upgrades your package.json dependencies to the latest versions, ignoring specified versions.
+```bash
+npm run dev
+```
 
-### Absolute Imports and Aliases
-- https://nextjs.org/blog/next-9-4#absolute-imports-and-aliases
-- [`jsconfig`](https://code.visualstudio.com/docs/languages/jsconfig#_jsconfig-options) / [`tsconfig`](https://www.typescriptlang.org/tsconfig#baseUrl)
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
+## Customizing
 
+You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+
+## License
+
+This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+
+## Learn more
+
+To learn more about the technologies used in this site template, see the following resources:
+
+- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
+- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
+- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+- [MDX](https://mdxjs.com) - the MDX documentation

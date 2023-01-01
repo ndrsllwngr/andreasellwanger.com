@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb54770d-e2ef-44f7-8284-4c01a71f0c75" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/nodejs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/nodejs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/andreasellwanger.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/andreasellwanger.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/remark-html.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/dynamic-routing.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/hello-world.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/interviews.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/my-reading-list.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/preview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/rust.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/test.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/alert.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/avatar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/container.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cover-image.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/date-formatter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/hero-post.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/intro.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/meta.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/more-stories-slim.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/more-stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/old-logo-cloud.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/old-nav-bar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/old-panel.home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/post-body.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/post-header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/post-preview.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/post-title.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project-card.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/recent-work.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/section-separator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contentful/setup.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/projects_featured.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/VSC_EXTENSIONS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/airtable.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/docs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/markdownToHtml.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/archive/2019.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/posts/[slug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/projects.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tools.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prettier.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/prettier.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/CNAME" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/blog/authors/jj.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/blog/authors/joe.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/blog/authors/tim.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/blog/dynamic-routing/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/blog/hello-world/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/blog/preview/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/sounds/plunger.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/document-download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/email.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/external-link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/logo-aiderly.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/logo-celonis.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/logo-leiden.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/logo-lmu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/svg/logo-tech4germany.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cv.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/browserconfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/mstile-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/safari-pinned-tab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/google8e3eabd04fb9a85a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/keybase.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/browserconfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/mstile-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/safari-pinned-tab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/favicon/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/airtable.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/author.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/post.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="kanz2q6p" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Jigks8hcgZMaq0bxiQllkw4YVF" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/andreasellwanger/dev/andreasellwanger.com",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/andreasellwanger/dev/andreasellwanger.com/node_modules/prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb54770d-e2ef-44f7-8284-4c01a71f0c75" name="Changes" comment="" />
+      <created>1672566463675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672566463675</updated>
+      <workItem from="1672566468483" duration="1213000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
