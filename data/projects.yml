@@ -1,0 +1,80 @@
+- id: recyCRgQCf3IfZ6L3
+  fields:
+    link: 'https://github.com/ndrsllwngr/hll-rust'
+    featured: true
+    description: >-
+      Chord is a protocol and algorithm for a peer-to-peer distributed hash
+      table.
+    featured_order: 1
+    order: 5
+    name: Chord
+    id: 5
+    date: 2018/19
+    stack:
+      - Rust
+    last_modified: '2022-02-04T09:37:49.000Z'
+    created: '2022-02-03T19:52:47.000Z'
+- id: rect6EknujHcMrAOd
+  fields:
+    link: 'https://github.andreasellwanger.com/zoll-auktion.de/'
+    featured: true
+    description: Tech4Germany project.
+    featured_order: 2
+    order: 6
+    name: zoll-auktion.de
+    id: 6
+    date: '2018'
+    stack:
+      - JavaScript
+    last_modified: '2022-02-04T09:37:53.000Z'
+    created: '2022-02-03T19:53:46.000Z'
+- id: recyl7I7sX3ndbX1H
+  fields:
+    link: 'https://github.com/ndrsllwngr/ffp'
+    featured: true
+    description: >-
+      Minesweepskell - a fun(ctional) Web Minesweeper written in Haskell. Join
+      other players on their game either to view them playing or to play
+      together
+    featured_order: 3
+    order: 1
+    name: Minesweepskell
+    id: 1
+    date: '2020'
+    stack:
+      - Haskell
+    last_modified: '2022-02-04T09:38:03.000Z'
+    created: '2022-02-03T19:39:54.000Z'
+- id: recngpk7VnPY9fJKf
+  fields:
+    link: 'https://github.com/ndrsllwngr/hll-prolog'
+    featured: true
+    description: >-
+      Testing Interaction Scenarios - Classified Information System (CIS).
+      Different clearance levels, which get assigned to documents and users
+      (topsecret, secret, confidential, restricted, official, unclassified).
+      Based on their clearance level users can perform different actions and
+      access documents.
+    featured_order: 4
+    order: 2
+    name: Classified Information System
+    id: 2
+    date: 2019/20
+    stack:
+      - Prolog
+    last_modified: '2022-03-08T20:10:14.000Z'
+    created: '2022-02-03T19:39:54.000Z'
+- id: recYdSugpxaQOEHPs
+  fields:
+    link: 'https://github.com/ndrsllwngr/aceai'
+    featured: true
+    description: Improve your posture with BodyPose.
+    featured_order: 5
+    order: 3
+    name: BodyPose
+    id: 3
+    date: 2019/20
+    stack:
+      - JavaScript
+    last_modified: '2022-03-08T20:09:41.000Z'
+    created: '2022-02-03T19:39:54.000Z'
