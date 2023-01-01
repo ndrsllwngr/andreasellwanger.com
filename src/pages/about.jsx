@@ -94,11 +94,11 @@ export default function About({ socialData }) {
               </Balancer>
               <Balancer as="p">
                 Andreas previously served as an Engineering-Fellow at
-                Tech4Germany in Berlin as part of Germany's first e-Government
-                fellowship program. In this role, he worked as a UX researcher
-                and front-end developer for the German government for three
-                months, collaborating with other fellows on projects related to
-                digitalization and e-government.
+                Tech4Germany in Berlin as part of Germany&apos;s first
+                e-Government fellowship program. In this role, he worked as a UX
+                researcher and front-end developer for the German government for
+                three months, collaborating with other fellows on projects
+                related to digitalization and e-government.
               </Balancer>
               <Balancer as="p">
                 Andreas holds a B.Sc. in Media Informatics and a minor in
