@@ -6,7 +6,7 @@
 
 ## Getting started
 
-To get started install the npm dependencies:
+To get started install the dependencies:
 
 ```bash
 yarn install
