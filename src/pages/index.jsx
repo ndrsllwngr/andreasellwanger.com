@@ -119,7 +119,7 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-function Newsletter() {
+/*function Newsletter() {
   return (
     <form
       action="/thank-you"
@@ -146,7 +146,7 @@ function Newsletter() {
       </div>
     </form>
   )
-}
+}*/
 
 function Resume() {
   let resume = [
