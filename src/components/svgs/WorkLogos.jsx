@@ -17,7 +17,7 @@ export function CelonisLogo(props) {
   )
 }
 
-export function AiderlyLogo(props) {
+export function Tech4GermanyLogo(props) {
   return (
     <svg
       aria-hidden="true"
@@ -42,7 +42,7 @@ export function AiderlyLogo(props) {
   )
 }
 
-export function Tech4GermanyLogo(props) {
+export function AiderlyLogo(props) {
   return (
     <svg
       aria-hidden="true"

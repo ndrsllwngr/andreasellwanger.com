@@ -7,11 +7,14 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
+  AiderlyLogo,
+  CelonisLogo,
+  Tech4GermanyLogo,
   TwitterIcon,
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-} from '@/components/SocialIcons'
+} from '@/components/svgs'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -21,11 +24,6 @@ import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 import { getSocialData } from '@/lib/getSocialData'
-import {
-  AiderlyLogo,
-  CelonisLogo,
-  Tech4GermanyLogo,
-} from '@/components/WorkLogos'
 import Balancer from 'react-wrap-balancer'
 
 function MailIcon(props) {
