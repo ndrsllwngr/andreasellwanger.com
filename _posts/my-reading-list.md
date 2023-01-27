@@ -14,6 +14,9 @@ ogImage:
 
 A collection of software engineering and engineering management books and further reading material.
 
+- https://slack.engineering/how-we-design-our-apis-at-slack/
+- https://github.com/zalando/restful-api-guidelines
+
 ## Software Engineering
 
 - Refactoring
