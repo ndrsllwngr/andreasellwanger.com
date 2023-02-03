@@ -63,7 +63,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "6.5.15",
     "@storybook/addon-essentials": "^7.0.0-beta.19",
-    "@storybook/addon-interactions": "^7.0.0-beta.19",
+    "@storybook/addon-interactions": "^7.0.0-beta.41",
     "@storybook/addon-links": "^7.0.0-beta.19",
     "@storybook/blocks": "^7.0.0-beta.19",
     "@storybook/nextjs": "^7.0.0-beta.19",
