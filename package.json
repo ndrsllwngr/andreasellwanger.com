@@ -1,80 +1,27 @@
 {
+  "name": "my-project",
+  "version": "0.1.0",
   "private": true,
-  "version": "1.0.0",
-  "license": "UNLICENSED",
-  "name": "andreasellwanger.com",
-  "description": "Personal website of Andreas Ellwanger",
-  "repository": "ndrsllwngr/andreasellwanger.com",
-  "author": "Andreas Ellwanger",
-  "homepage": "https://www.andreasellwanger.com",
-  "bugs": {
-    "url": "https://github.com/ndrsllwngr/andreasellwanger.com/issues"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "concurrently \"yarn:watch:*\"",
-    "build-storybook": "concurrently \"yarn:build:*\"",
-    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css",
-    "build:storybook": "storybook build",
-    "watch:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css --watch",
-    "watch:storybook": "storybook dev -p 6006"
-  },
-  "engines": {
-    "node": "16.x"
-  },
-  "browserslist": {
-    "production": [
-      ">1%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.12",
-    "@mapbox/rehype-prism": "^0.8.0",
-    "@mdx-js/loader": "^2.3.0",
-    "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.2.1",
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.13",
-    "clsx": "^1.2.1",
-    "fast-glob": "^3.2.12",
-    "feed": "^4.2.2",
-    "focus-visible": "^5.2.0",
-    "framer-motion": "10.0.0",
-    "js-yaml": "4.1.0",
-    "next": "13.2.1",
-    "next-themes": "0.2.1",
-    "postcss-focus-visible": "^8.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-wrap-balancer": "0.4.0",
-    "remark-gfm": "^3.0.1",
-    "tailwindcss": "^3.2.7"
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "^7.0.0-beta.54",
-    "@storybook/addon-essentials": "^7.0.0-beta.54",
-    "@storybook/addon-interactions": "^7.0.0-beta.54",
-    "@storybook/addon-links": "^7.0.0-beta.54",
-    "@storybook/blocks": "^7.0.0-beta.54",
-    "@storybook/nextjs": "^7.0.0-beta.54",
-    "@storybook/react": "^7.0.0-beta.54",
-    "@storybook/testing-library": "^0.0.13",
-    "concurrently": "7.6.0",
+    "@types/node": "18.14.1",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.1",
-    "eslint-plugin-storybook": "0.6.11",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.3",
-    "storybook": "^7.0.0-beta.54"
+    "next": "13.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }
