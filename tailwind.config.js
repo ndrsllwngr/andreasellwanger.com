@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+        caveat: ['var(--font-caveat)', ...defaultTheme.fontFamily.sans],
       },
     },
   },

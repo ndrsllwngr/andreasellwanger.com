@@ -1,6 +1,6 @@
 {
-  "name": "my-project",
-  "version": "0.1.0",
+  "name": "andreasellwanger.com",
+  "version": "4.1.0",
   "private": true,
   "engines": {
     "node": "16.x",
@@ -19,6 +19,7 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "framer-motion": "^10.0.1",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

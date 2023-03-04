@@ -1,3 +1,7 @@
+# andreasellwanger.com
+
+[![Node.js CI](https://github.com/ndrsllwngr/andreasellwanger.com/actions/workflows/nodejs.yml/badge.svg)](https://github.com/ndrsllwngr/andreasellwanger.com/actions/workflows/nodejs.yml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndrsllwngr_andreasellwanger.com&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ndrsllwngr_andreasellwanger.com)
+
 ## Getting Started
 
 First, run the development server:

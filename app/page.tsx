@@ -1,64 +1,14 @@
 "use client";
 
-import { ScrambledText } from "@/components/ScrambledText";
-import { Separator } from "@radix-ui/react-separator";
+import { Header } from "@/components/Header";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
 export default function Home() {
   return (
     <main className="p-6 pt-16">
+      <Header />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
-        <div className="flex flex-col">
-          <Link href={"./"} className="text-white font-[575] leading-5">
-            Andreas Ellwanger
-          </Link>
-          <Separator
-            className="bg-transparent data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-0"
-            orientation="horizontal"
-          />
-          <p className="text-neutral-400 font-normal">
-            <ScrambledText>Software Engineer</ScrambledText>
-          </p>
-        </div>
-        <div className="md:col-span-2 flex flex-col">
-          <p className="text-white font-[575] leading-5">Routes</p>
-          <Separator
-            className="bg-transparent data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-0"
-            orientation="horizontal"
-          />
-          <nav>
-            {ROUTES.map((route, index) => {
-              return (
-                <Link
-                  href={route.href}
-                  className="text-neutral-400 font-normal"
-                  key={index}
-                >
-                  /{route.label}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-        <div className="flex flex-col">
-          <p className="text-white font-[575] leading-5">Connect</p>
-          <Separator
-            className="bg-transparent data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-0"
-            orientation="horizontal"
-          />
-          {CONNECT.map((connection, index) => {
-            return (
-              <Link
-                href={connection.href}
-                className="text-neutral-400 font-normal"
-                key={index}
-              >
-                {connection.label} ↗
-              </Link>
-            );
-          })}
-        </div>
         <div className="md:col-start-2 md:col-end-4 max-w-3xl">
           <Balancer className="text-transparent text-xl bg-clip-text bg-gradient-to-br from-gray-200 to-neutral-400">
             A detail-oriented software engineer interested in Java, Spring,
@@ -75,42 +25,49 @@ export default function Home() {
             processes.
           </Balancer>
         </div>
+        {/* <section className="col-span-4 grid grid-cols-1 md:grid-cols-4">
+          <div className="md:col-start-2 md:col-end-4 max-w-3xl">
+            <h2 className="text-lg font-[575]">Experience &not;</h2>
+          </div>
+          <ul className="col-span-4">
+            {JOBS.map((job, index) => {
+              return (
+                <li className="border-neutral-700 border-t" key={index}>
+                  <h3>{job.company}</h3>
+                  <p>{job.description}</p>
+                  <p>{job.tags}</p>
+                  <p>
+                    {new Date(job.startDate).toLocaleDateString("en-GB", {
+                      year: "numeric",
+                      month: "2-digit",
+                    })}
+                    &mdash;{" "}
+                    {job.endDate
+                      ? new Date(job.endDate).toLocaleDateString("en-GB", {
+                          year: "numeric",
+                          month: "2-digit",
+                        })
+                      : "Now"}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+        </section> */}
       </div>
     </main>
   );
 }
-
-const ROUTES = [
-  {
-    label: "index",
-    href: "/",
-  },
-];
-
-const CONNECT = [
-  {
-    label: "Twitter",
-    href: "https://twitter.com/ndrsllwngr",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/ndrsllwngr",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/ellwanger",
-  },
-];
 
 const JOBS = [
   {
     company: "Celonis",
     startDate: "2020-01-01",
     endDate: null,
-    title: "Software Engineer (IC 2)",
+    title: "Software Engineer",
     description: "tbd",
     link: "https://www.celonis.com/",
-    tags: "Java, Spring, RabbitMQ, PostgreSQL, K8, TypeScript, Angular",
+    tags: "Java, Spring, RabbitMQ, PostgreSQL, K8s, TypeScript, Angular",
   },
   {
     company: "Aiderly",
