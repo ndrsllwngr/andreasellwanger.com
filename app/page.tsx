@@ -1,31 +1,33 @@
 "use client";
 
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
 export default function Home() {
   return (
-    <main className="p-6 pt-16">
-      <Header />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
-        <div className="md:col-start-2 md:col-end-4 max-w-3xl">
-          <Balancer className="text-transparent text-xl bg-clip-text bg-gradient-to-br from-gray-200 to-neutral-400">
-            A detail-oriented software engineer interested in Java, Spring,
-            TypeScript, React, and robust and scalable systems. Currently
-            working at{" "}
-            <Link
-              href={"https://www.celonis.com/"}
-              className={"hover:text-[#5cfe50]"}
-            >
-              Celonis
-            </Link>
-            , designing and building both performant and user-friendly systems,
-            developing a platform that helps companies optimize their business
-            processes.
-          </Balancer>
-        </div>
-        {/* <section className="col-span-4 grid grid-cols-1 md:grid-cols-4">
+    <div className="flex flex-col grow">
+      <main className="p-6 pt-16 grow">
+        <Header />
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+          <div className="md:col-start-2 md:col-end-4 max-w-3xl">
+            <Balancer className="text-transparent text-xl bg-clip-text bg-gradient-to-br from-gray-200 to-neutral-400">
+              A detail-oriented software engineer interested in Java, Spring,
+              TypeScript, React, and robust and scalable systems. Currently
+              working at{" "}
+              <Link
+                href={"https://www.celonis.com/"}
+                className={"hover:text-[#5cfe50]"}
+              >
+                Celonis
+              </Link>
+              , designing and building both performant and user-friendly
+              systems, developing a platform that helps companies optimize their
+              business processes.
+            </Balancer>
+          </div>
+          {/* <section className="col-span-4 grid grid-cols-1 md:grid-cols-4">
           <div className="md:col-start-2 md:col-end-4 max-w-3xl">
             <h2 className="text-lg font-[575]">Experience &not;</h2>
           </div>
@@ -54,8 +56,10 @@ export default function Home() {
             })}
           </ul>
         </section> */}
-      </div>
-    </main>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
