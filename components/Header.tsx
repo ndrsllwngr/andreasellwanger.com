@@ -49,13 +49,13 @@ export const Header = () => {
         />
         {CONNECT.map((connection, index) => {
           return (
-            <Link
+            <a
               href={connection.href}
               className="text-neutral-400 font-normal"
               key={index}
             >
               {connection.label} &#8599;
-            </Link>
+            </a>
           );
         })}
       </div>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,12 +16,12 @@ export default function AboutPage() {
           <div className="md:col-start-2 md:col-end-4 max-w-3xl text-transparent text-xl bg-clip-text bg-gradient-to-br from-gray-200 to-neutral-400">
             <Balancer as="p" className="pb-4">
               Andreas Ellwanger is a Software Engineer at{" "}
-              <Link
+              <a
                 href={"https://www.celonis.com/"}
                 className={"hover:text-[#5cfe50]"}
               >
                 Celonis
-              </Link>
+              </a>
               , the global leader in execution management. The company provides
               a modern way for businesses to run their processes using data and
               intelligence through the Celonis Execution Management System.

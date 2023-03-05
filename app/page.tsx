@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,12 +16,12 @@ export default function HomePage() {
               A detail-oriented software engineer interested in Java, Spring,
               TypeScript, React, and robust and scalable systems. Currently
               working at{" "}
-              <Link
+              <a
                 href={"https://www.celonis.com/"}
                 className={"hover:text-[#5cfe50]"}
               >
                 Celonis
-              </Link>
+              </a>
               , designing and building both performant and user-friendly
               systems, developing a platform that helps companies optimize their
               business processes.
@@ -38,12 +37,12 @@ export default function HomePage() {
           {JOBS.map((job) => (
             <div className={"col-span-4"} key={job.id}>
               <Grid className={"border-t border-neutral-700 py-6"}>
-                <Link
+                <a
                   className="text-gray-200 text-base font-[575] hover:underline hover:decoration-gray-200"
                   href={job.link}
                 >
                   {job.company}
-                </Link>
+                </a>
                 <div className="flex flex-col space-y-1 md:col-start-2 md:col-span-2">
                   <div className="w-full flex flex-col max-w-3xl">
                     <h2 className="text-base text-gray-200 pb-4 pt-4 md:pt-0">
