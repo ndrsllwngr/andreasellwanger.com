@@ -13,7 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@radix-ui/react-separator": "1.0.1",
+    "@radix-ui/react-separator": "1.0.2",
     "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
     "eslint": "8.35.0",
