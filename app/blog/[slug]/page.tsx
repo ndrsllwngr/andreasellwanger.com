@@ -6,6 +6,7 @@ import Balancer from "react-wrap-balancer";
 import { Header } from "@/components/Header";
 import { Grid } from "@/components/Grid";
 import { Footer } from "@/components/Footer";
+import "./mdx.css";
 
 export async function generateStaticParams() {
   return allBlogs.map((post) => ({
