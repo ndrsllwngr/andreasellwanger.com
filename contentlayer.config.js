@@ -26,7 +26,7 @@ const computedFields = {
       "@type": "BlogPosting",
       headline: doc.title,
       datePublished: doc.publishedAt,
-      dateModified: doc.publishedAt,
+      dateModified: doc.updatedAt,
       description: doc.summary,
       // image: doc.image
       //   ? `https://leerob.io${doc.image}`
@@ -50,6 +50,10 @@ export const Blog = defineDocumentType(() => ({
       required: true,
     },
     publishedAt: {
+      type: "string",
+      required: true,
+    },
+    updatedAt: {
       type: "string",
       required: true,
     },
