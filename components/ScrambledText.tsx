@@ -151,11 +151,26 @@ const scramble = (text: string) => {
     if (/^\s$/.test(char)) {
       return char;
     }
-    const randomIndex = Math.floor(Math.random() * CHARACTERS.length);
+    const randomIndex = getRandomInt(CHARACTERS.length);
     return CHARACTERS[randomIndex];
   });
   return obfuscatedChars.join("");
 };
+
+function getRandomInt(max: number) {
+  if (typeof window !== 'undefined' && window.crypto && window.crypto.getRandomValues) {
+    // On the client side, use the window.crypto.getRandomValues method
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    return array[0] % max;
+  } else {
+    // On the server side, use the built-in crypto module
+    const crypto = require('crypto');
+    const randomBytes = crypto.randomBytes(4);
+    const randomNumber = randomBytes.readUInt32BE(0);
+    return randomNumber % max;
+  }
+}
 
 export const getScrambledState = (
   text: string,
