@@ -1,8 +1,8 @@
-"use client";
+'use client'; // Error components must be Client components
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-export default function Error({
+export default function ErrorUiBoundary({
   error,
   reset,
 }: {
@@ -16,7 +16,15 @@ export default function Error({
 
   return (
     <div>
-      <p>Oh no, something went wrong... maybe refresh?</p>
+      <h2>Something went wrong!</h2>
+      <button
+        onClick={
+          // Attempt to recover by trying to re-render the segment
+          () => reset()
+        }
+      >
+        Try again
+      </button>
     </div>
   );
 }
