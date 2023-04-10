@@ -1,5 +1,3 @@
-"use client";
-
 export const Footer = () => {
   return (
     <footer className="p-6 pt-16 grid grid-cols-1 md:grid-cols-4 gap-16">

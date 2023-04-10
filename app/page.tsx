@@ -1,5 +1,3 @@
-"use client";
-
 import Balancer from "react-wrap-balancer";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -64,9 +62,9 @@ export default function HomePage() {
                     &mdash;{" "}
                     {job.endDate
                       ? new Date(job.endDate).toLocaleDateString("en-GB", {
-                          year: "numeric",
-                          month: "2-digit",
-                        })
+                        year: "numeric",
+                        month: "2-digit",
+                      })
                       : "Now"}
                   </p>
                 </div>
