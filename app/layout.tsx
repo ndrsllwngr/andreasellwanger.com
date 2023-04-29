@@ -1,5 +1,6 @@
-import { Caveat, Inter } from "next/font/google";
 import "./globals.css";
+
+import { Caveat, Inter } from "next/font/google";
 import { Metadata } from "next";
 
 const inter = Inter({

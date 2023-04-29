@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Grid } from "@/components/Grid";
 
+export const revalidate = 60;
+
 export default function HomePage() {
   return (
     <div className="flex flex-col grow">

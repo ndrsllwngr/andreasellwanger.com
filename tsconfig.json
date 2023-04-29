@@ -15,7 +15,6 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"],
       "@/*": ["./*"]
     },
     "incremental": true,
@@ -31,7 +30,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { allBlogs } from "contentlayer/generated";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
@@ -8,20 +7,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date().toISOString(),
   }));
 
-  const posts = allBlogs
-    .sort((a, b) => {
-      if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
-        return -1;
-      }
-      return 1;
-    })
-    .map((post) => ({
-      url: `https://www.andreasellwanger.com/blog/${post.slug}`,
-      lastModified: post.publishedAt,
-    }));
+  // const posts = allBlogs
+  //   .sort((a, b) => {
+  //     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
+  //       return -1;
+  //     }
+  //     return 1;
+  //   })
+  //   .map((post) => ({
+  //     url: `https://www.andreasellwanger.com/blog/${post.slug}`,
+  //     lastModified: post.publishedAt,
+  //   }));
 
   return [
     ...routes,
-    ...posts
+    //...posts
   ];
 }

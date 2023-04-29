@@ -1,14 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require('tailwindcss/plugin');
 const { blackA, mauve, violet, indigo, purple } = require('@radix-ui/colors');
 
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,md,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,md,mdx}",
   ],
   theme: {
     extend: {
@@ -69,11 +68,4 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), plugin(({ matchUtilities }) => {
-    matchUtilities({
-      perspective: (value) => ({
-        perspective: value,
-      }),
-    });
-  }),],
 };

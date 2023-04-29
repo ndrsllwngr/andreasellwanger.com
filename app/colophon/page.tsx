@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
+import Content from "./rust-learning-path.mdx";
 
 export const metadata: Metadata = {
   title: "Colophon",
@@ -28,6 +29,9 @@ export default function ColophonPage() {
                 );
               })}
             </div>
+          </section>
+          <section>
+            <Content/>
           </section>
         </div>
       </main>

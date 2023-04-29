@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Mdx } from "components/mdx";
-import { allBlogs } from "contentlayer/generated";
 import Balancer from "react-wrap-balancer";
 import { Header } from "@/components/Header";
 import { Grid } from "@/components/Grid";
@@ -9,15 +7,16 @@ import { Footer } from "@/components/Footer";
 import "./mdx.css";
 
 export async function generateStaticParams() {
-  return allBlogs.map((post) => ({
-    slug: post.slug,
-  }));
+  return null;
+  // allBlogs.map((post) => ({
+  //   slug: post.slug,
+  // }));
 }
 
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
-  const post = allBlogs.find((post) => post.slug === params.slug);
+  const post = null //allBlogs.find((post) => post.slug === params.slug);
   if (!post) {
     return;
   }
@@ -84,7 +83,7 @@ export default async function Blog({ params }) {
           {/*  <div className="h-[0.2em] bg-neutral-50 dark:bg-neutral-800 mx-2" />*/}
           {/*</div>*/}
           <div className="md:col-start-2 md:col-end-4 max-w-3xl text-transparent text-xl bg-clip-text bg-gradient-to-br from-gray-200 to-neutral-400">
-            <Mdx code={post.body.code} />
+            <div></div>
           </div>
         </Grid>
       </main>
