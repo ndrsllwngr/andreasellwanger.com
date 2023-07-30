@@ -1,6 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const { blackA, mauve, violet, indigo, purple } = require('@radix-ui/colors');
-
+const { blackA, mauve, violet, indigo, purple } = require("@radix-ui/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,12 +7,21 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,md,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,md,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,md,mdx}",
+    "./.storybook/**/*.{js,ts,jsx,tsx,md,mdx}",
+    "./stories/**/*.{js,ts,jsx,tsx,md,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
+      boxShadow: {
+        skeuo: "0 0 0 1px rgba(0,0,0,.05),0 1px 0 0 rgba(0,0,0,.1)",
+        "inset-skeuo":
+          "inset 0 0 0 1px rgba(0,0,0,.1),inset 0 -2px 0 1px rgba(0,0,0,.1)",
+      },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         caveat: ["var(--font-caveat)", ...defaultTheme.fontFamily.sans],
+        fraunces: ["var(--font-fraunces)", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         ...blackA,
@@ -22,30 +30,33 @@ module.exports = {
         ...purple,
         ...indigo,
       },
+      width: {
+        prose: "65ch",
+      },
       keyframes: {
         enterFromRight: {
-          from: { opacity: 0, transform: 'translateX(200px)' },
-          to: { opacity: 1, transform: 'translateX(0)' },
+          from: { opacity: 0, transform: "translateX(200px)" },
+          to: { opacity: 1, transform: "translateX(0)" },
         },
         enterFromLeft: {
-          from: { opacity: 0, transform: 'translateX(-200px)' },
-          to: { opacity: 1, transform: 'translateX(0)' },
+          from: { opacity: 0, transform: "translateX(-200px)" },
+          to: { opacity: 1, transform: "translateX(0)" },
         },
         exitToRight: {
-          from: { opacity: 1, transform: 'translateX(0)' },
-          to: { opacity: 0, transform: 'translateX(200px)' },
+          from: { opacity: 1, transform: "translateX(0)" },
+          to: { opacity: 0, transform: "translateX(200px)" },
         },
         exitToLeft: {
-          from: { opacity: 1, transform: 'translateX(0)' },
-          to: { opacity: 0, transform: 'translateX(-200px)' },
+          from: { opacity: 1, transform: "translateX(0)" },
+          to: { opacity: 0, transform: "translateX(-200px)" },
         },
         scaleIn: {
-          from: { opacity: 0, transform: 'rotateX(-10deg) scale(0.9)' },
-          to: { opacity: 1, transform: 'rotateX(0deg) scale(1)' },
+          from: { opacity: 0, transform: "rotateX(-10deg) scale(0.9)" },
+          to: { opacity: 1, transform: "rotateX(0deg) scale(1)" },
         },
         scaleOut: {
-          from: { opacity: 1, transform: 'rotateX(0deg) scale(1)' },
-          to: { opacity: 0, transform: 'rotateX(-10deg) scale(0.95)' },
+          from: { opacity: 1, transform: "rotateX(0deg) scale(1)" },
+          to: { opacity: 0, transform: "rotateX(-10deg) scale(0.95)" },
         },
         fadeIn: {
           from: { opacity: 0 },
@@ -57,15 +68,16 @@ module.exports = {
         },
       },
       animation: {
-        scaleIn: 'scaleIn 200ms ease',
-        scaleOut: 'scaleOut 200ms ease',
-        fadeIn: 'fadeIn 200ms ease',
-        fadeOut: 'fadeOut 200ms ease',
-        enterFromLeft: 'enterFromLeft 250ms ease',
-        enterFromRight: 'enterFromRight 250ms ease',
-        exitToLeft: 'exitToLeft 250ms ease',
-        exitToRight: 'exitToRight 250ms ease',
+        scaleIn: "scaleIn 200ms ease",
+        scaleOut: "scaleOut 200ms ease",
+        fadeIn: "fadeIn 200ms ease",
+        fadeOut: "fadeOut 200ms ease",
+        enterFromLeft: "enterFromLeft 250ms ease",
+        enterFromRight: "enterFromRight 250ms ease",
+        exitToLeft: "exitToLeft 250ms ease",
+        exitToRight: "exitToRight 250ms ease",
       },
     },
   },
+  plugins: [require("tailwindcss-animate")],
 };

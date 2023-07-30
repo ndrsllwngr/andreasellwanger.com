@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 import Content from "./rust-learning-path.mdx";
 
@@ -31,7 +31,7 @@ export default function ColophonPage() {
             </div>
           </section>
           <section>
-            <Content/>
+            <Content />
           </section>
         </div>
       </main>

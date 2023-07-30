@@ -1,17 +1,9 @@
 import "./globals.css";
 
-import { Caveat, Inter } from "next/font/google";
 import { Metadata } from "next";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
-});
+import { cn } from "@/lib/utils";
+import { caveat, fraunces, inter } from "@/lib/fonts";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -25,18 +17,16 @@ export const metadata: Metadata = {
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
   ],
   manifest: "/site.webmanifest",
-  themeColor: "#171717",
+  themeColor: "#ffffff",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="h-full js-focus-visible dark">
+    <html lang="en" className="h-full js-focus-visible">
       <body
-        className={`${inter.variable} ${caveat.variable} antialiased font-sans flex h-full flex-col overflow-y-scroll bg-neutral-900 text-gray-200`}
+        className={cn(
+          `${inter.variable} ${caveat.variable} ${fraunces.variable} antialiased font-sans flex h-full flex-col overflow-y-scroll`,
+        )}
       >
         {children}
       </body>

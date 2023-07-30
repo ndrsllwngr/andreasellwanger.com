@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 import { Grid } from "@/components/Grid";
 
