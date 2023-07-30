@@ -59,7 +59,8 @@ const HeroLink = ({
       {external ? (
         <a
           href={href}
-          target={"_blank"}
+          target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             "rounded focus-visible:ring-4 focus-visible:ring-blue-200 focus:underline hover:underline cursor-alias",
             underlineColor,

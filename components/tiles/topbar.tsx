@@ -53,6 +53,7 @@ export const TopBar = ({ domain, section, link }: Props) => {
               <a
                 href={link?.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-8 w-8 items-center justify-center rounded-full transition-colors focus-visible:ring-4 focus-visible:ring-blue-200 group-focus-within:bg-white group-focus-within:text-neutral-900 group-focus-within:shadow-skeuo cursor-alias group-hover:bg-white group-hover:text-neutral-900 group-hover:shadow-skeuo"
               >
                 <svg
