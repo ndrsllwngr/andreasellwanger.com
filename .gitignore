@@ -38,8 +38,5 @@ next-env.d.ts
 # turborepo
 .turbo
 
-# contentlayer
-.contentlayer
-
 # intellij
 .idea

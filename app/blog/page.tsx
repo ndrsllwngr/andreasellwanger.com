@@ -1,7 +1,5 @@
-import Link from "next/link";
-import { allBlogs } from "contentlayer/generated";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 import { Grid } from "@/components/Grid";
 
@@ -23,7 +21,7 @@ export default async function BlogPage() {
           </div>
         </Grid>
         <Grid className="text-transparent text-xl bg-clip-text bg-gradient-to-br from-gray-200 to-neutral-400">
-          {allBlogs
+          {/* {allBlogs
             .sort((a, b) => {
               if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
                 return -1;
@@ -61,7 +59,7 @@ export default async function BlogPage() {
                   </div>
                 </Grid>
               </div>
-            ))}
+            ))} */}
         </Grid>
       </main>
       <Footer />

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
+/* ::selection {
   @apply bg-blue-400 text-white;
+} */
+
+.font-fraunces-variation {
+  font-variation-settings: "opsz" 72,"SOFT" 50;
+  letter-spacing: -.03em;
 }
