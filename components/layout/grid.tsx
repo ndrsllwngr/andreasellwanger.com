@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export interface GridProps {
   children: ReactNode;
@@ -26,8 +27,25 @@ export interface SectionProps {
 }
 
 export const Section = ({ sectionType, children }: SectionProps) => {
+  const variants = {
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
   return (
-    <div
+    <motion.div
+      variants={variants}
       className={cn({
         "row-span-2 px-1 pb-2 sm:col-span-2 lg:aspect-square":
           sectionType === SectionType.HERO,
@@ -43,6 +61,6 @@ export const Section = ({ sectionType, children }: SectionProps) => {
       ) : (
         children
       )}
-    </div>
+    </motion.div>
   );
 };

@@ -1,3 +1,5 @@
+"use client";
+
 import { NavigationBar } from "@/components/navigation-bar";
 import { Footer } from "@/components/footer";
 import ZollAuktion from "@/public/images/projects/zoll-auktion.png";
@@ -5,7 +7,8 @@ import LittleWomen from "@/public/images/books/little-women.jpg";
 import Valencia from "@/public/images/travel/valencia.jpg";
 import Bavaria from "@/public/images/travel/bavaria.jpg";
 import { ProjectTile } from "@/components/tiles/project-tile";
-import { Grid, Section, SectionType } from "@/components/layout/grid";
+import { Section, SectionType } from "@/components/layout/grid";
+import { motion } from "framer-motion";
 import { ReadingTile, Status } from "@/components/tiles/reading-tile";
 import { FilmTile } from "@/components/tiles/film-tile";
 import { BlogTile } from "@/components/tiles/blog-tile";
@@ -22,16 +25,34 @@ import { cn } from "@/lib/utils";
 export const revalidate = 60;
 
 export default function HomePage() {
+  const container = {
+    hidden: { rotate: 0 },
+    show: {
+      rotate: 0,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <main className="mx-auto w-full max-w-screen-sm px-8 font-sans md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-2xl">
       <NavigationBar />
-      <Grid>
+      <motion.div
+        className={
+          "grid grid-cols-1 sm:grid-flow-row-dense sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        }
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         {CONTENT.map((section, index) => (
           <Section sectionType={section.sectionType} key={index}>
             {section.component}
           </Section>
         ))}
-      </Grid>
+      </motion.div>
       <Footer></Footer>
     </main>
   );
