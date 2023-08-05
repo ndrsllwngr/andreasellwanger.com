@@ -68,6 +68,9 @@ export const TopBar = ({ domain, section, link }: Props) => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
+                <span className={"sr-only"}>
+                  {`${link?.tooltip} (opens in new window)`}
+                </span>
               </a>
             </TooltipTrigger>
             <TooltipContent side={"left"} sideOffset={8}>
