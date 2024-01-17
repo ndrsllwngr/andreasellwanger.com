@@ -2,7 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
-  const routes = ['', '/about', '/blog', '/cv.pdf'].map((route) => ({
+  // TMP: removed '/cv.pdf' for now
+  const routes = ['', '/about', '/blog'].map((route) => ({
     url: `https://www.andreasellwanger.com${route}`,
     lastModified: new Date().toISOString(),
   }));
