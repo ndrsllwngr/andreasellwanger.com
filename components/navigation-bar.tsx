@@ -30,13 +30,6 @@ export const NavigationBar = () => {
         >
           Twitter
         </Link>
-        <Link
-          href="https://read.cv/ndrsllwngr"
-          target="_blank"
-          className="rounded py-1 px-2 text-sm text-neutral-400 decoration-wavy underline-offset-4 focus-visible:ring-4 focus-visible:ring-blue-200 focus:text-neutral-900 cursor-alias transition-colors hover:text-neutral-900 hover:underline"
-        >
-          CV
-        </Link>
       </div>
     </nav>
   );

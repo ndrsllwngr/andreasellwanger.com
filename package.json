@@ -3,7 +3,7 @@
   "version": "4.1.0",
   "private": true,
   "engines": {
-    "node": "18.x",
+    "node": "24.x",
     "pnpm": "8.x"
   },
   "scripts": {
