@@ -1,4 +1,3 @@
-#:schema https://moderne-dev.cloudflare.com/schemas/wrangler.json
 name = "andreasellwanger-com"
 compatibility_date = "2024-04-26"
 compatibility_flags = [ "nodejs_compat" ]
